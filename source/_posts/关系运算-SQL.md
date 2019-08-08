@@ -1,5 +1,4 @@
 ---
-
 title: 关系运算-SQL
 date: 2019-07-31 11:05:24
 tags: [数据库,编程语言]
@@ -40,7 +39,7 @@ Select * from R Intersect Select * from S
 
 ## 笛卡尔积
 
-![1564974862127](关系运算-SQL/1564974862127.png)
+![1565058855783](关系运算-SQL/1565058855783.png)
 
 ```sql
 Select * from R,S
@@ -70,14 +69,55 @@ SELECT 课程名 FROM R;
 
 从关系R和关系S的广义笛卡儿积中选取满足给定条件的元组组成新的关系称为R和S的连接
 
+### 自然连接
+
+给定一个关系R和关系S，R与S的等值连接运算结果也是一个关系，记作 $R⋈S$ ，它由关系R和关系S的笛卡尔积中，选取R与S的笛卡尔积中选取相同属性组B上值相等的元组组成。 
+
+```sql
+SELECT * from R natual join S
+```
+
+![1565060913297](关系运算-SQL/1565060913297.png)
+
+### $\theta$连接
+
+给定一个关系R 和关系S，R 与S 的 $θ$ 连接运算结果也是一个关系，记作$R\underset{A\theta B}{\bowtie} S$，它由关系R和关系S的笛卡尔积中，选取R中属性A与S中属性E之间满足 $θ$ 条件的元组组成。 
+
 ```sql
 SELECT * from R 
 join
 SELECT * from S
-on R.C<S.E
+on R.B<S.H
 ```
 
-![1564989613458](关系运算-SQL/1564989613458.png)
+![1565060112787](关系运算-SQL/1565060112787.png)
+
+### 等值连接
+
+给定一个关系R和关系S，R与S的等值连接运算结果也是一个关系，记作$R\underset{A= B}{\bowtie} S$，它由关系R和关系S的笛卡尔积中，选取R中属性A与S中属性B上值相等的元组组成。 
+
+```shell
+SELECT * from R 
+join
+SELECT * from S
+on R.B=S.H
+```
+
+![1565060172932](关系运算-SQL/1565060172932.png)
+
+### 外连接
+
+两个关系R与S进行连接时，如果关系R(或S)中的元组在S（或R）中找不到相匹配的元组，则为了避免该元组信息丢失，从而将该元组与S（或R）中假定存在的全为空值的元组形成连接，放置在结果关系中，这种连接称之为外连接（Outer Join）
+
+```sql
+select * from R left outer join S;
+select * from R right outer join S;
+select * from R full outer join S;
+```
+
+![1565063996276](关系运算-SQL/1565063996276.png)
+
+![1565064351620](关系运算-SQL/1565064351620.png)
 
 ## 除
 

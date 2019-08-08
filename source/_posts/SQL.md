@@ -22,7 +22,7 @@ categories: SQL
 
 
 
-## [关系运算](.\关系运算-SQL.md)
+# [关系运算](.\关系运算-SQL.md)
 
 <table>
   <tr>
@@ -75,6 +75,34 @@ categories: SQL
   <tr>
     <td>÷ </td>
     <td>除</td>
-    <td>给定关系R (X， Y) 和S (Y， Z)， 其中X， Y， Z为属性组。R中的Y与S中的Y出自相同的域集。R与S的除运算得到一个新的关系P(X)。其中P(x)与S(Y)组成的元组都在R(X,Y)中<br>·SELECT DISTINCT R.X FROM R  R1<br>WHERE NOT EXISTS <br>(	<br>    SELECT S.Y FROM S <br>    WHERE NOT EXISTS <br>    (<br>        SELECT * FROM R R2 <br>        where R1.X=R2.X and R2.Y=S.Y<br>    )<br>)`</td>
+    <td>给定关系R (X， Y) 和S (Y， Z)， 其中X， Y， Z为属性组。R中的Y与S中的Y出自相同的域集。R与S的除运算得到一个新的关系P(X)。其中P(x)与S(Y)组成的元组都在R(X,Y)中<br>`SELECT DISTINCT R.X FROM R  R1<br>WHERE NOT EXISTS <br>(	<br>    SELECT S.Y FROM S <br>    WHERE NOT EXISTS <br>    (<br>        SELECT * FROM R R2 <br>        where R1.X=R2.X and R2.Y=S.Y<br>    )<br>)`</td>
   </tr>
 </table>
+
+# 数据定义语言-DDL
+
+| 命令   | 描述                                   |
+| ------ | -------------------------------------- |
+| CREATE | 创建新的表、视图或者其他数据库中的对象 |
+| ALTER  | 修改现存数据库对象，比如一张表         |
+| DROP   | 删除表、视图或者数据库中的其他对象     |
+
+
+
+# 数据操纵语言-DML
+
+| 命令   | 描述                             |
+| ------ | -------------------------------- |
+| SELECT | 从一张或者多张表中检索特定的数据 |
+| INSERT | 创建一条新记录                   |
+| UPDATE | 修改记录                         |
+| DELETE | 删除记录                         |
+
+
+
+# 数据控制语言-DCL
+
+| 命令   | 描述               |
+| ------ | ------------------ |
+| GRANT  | 赋予用户特权       |
+| REVOKE | 收回赋予用户的特权 |
