@@ -83,8 +83,6 @@ categories: SQL
 | ALTER  | 修改现存数据库对象，比如一张表         |
 | DROP   | 删除表、视图或者数据库中的其他对象     |
 
-
-
 # [数据操纵语言-DML](./DML-SQL.md)
 
 | 命令   | 描述                             |
@@ -93,8 +91,6 @@ categories: SQL
 | UPDATE | 修改记录                         |
 | DELETE | 删除记录                         |
 | SELECT | 从一张或者多张表中检索特定的数据 |
-
-
 
 # [数据控制语言-DCL](./DCL-SQL.md)
 

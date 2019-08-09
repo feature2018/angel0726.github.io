@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/线性代数基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/循环链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -305,7 +305,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/17/线性代数基础/" itemprop="url">线性代数基础</a></h1>
+                <a class="post-title-link" href="/2017/08/28/循环链表/" itemprop="url">循环链表</a></h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T14:23:52+08:00">
-                2017-08-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T21:52:59+08:00">
+                2017-08-28
               </time>
             
 
@@ -340,8 +340,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -378,14 +378,12 @@
 
       
         
-          <h1 id="标量，向量，矩阵和张量"><a href="#标量，向量，矩阵和张量" class="headerlink" title="标量，向量，矩阵和张量"></a>标量，向量，矩阵和张量</h1><p><strong>标量（scalar）</strong>：一个标量就是一个单独的数。用斜体表示标量，如 $s∈R$.</p>
-<p><strong>向量（vector）</strong>：一个向量是一列数，我们用粗体的小写名称表示向量。比如 $x$，将向量x 写成方括号包含的纵柱：</p>
-<script type="math/tex; mode=display">{\bf x}=  \begin {bmatrix} x_1\\x_2\\ \vdots \\x_n\\ \end{bmatrix}</script><p><strong>矩阵（matrix）</strong>：矩阵是二维数组，我们通常赋予矩阵粗体大写变量名称，比如 $A​$ 。如果一个矩阵高度是 $m​$，宽度是 $n$​，那么说 $\bf A\in \bf R ^{m \times n}​$​ 。一个矩阵可以表示如下：</p>
-<script type="math/tex; mode=display">{\bf A}= \begin{bmatrix} x_{11} &x_{12}\\ x_{21} & x_{22}\\  \end{bmatrix}</script><p><strong>张量（tensor）</strong>：某些情况下，我们会讨论不止维坐标的数组。如果一组数组中的元素分布在若干维坐标的规则网络中，就将其称为张量。用 $A$​ 表示，如张量中坐标为 $(i,j,k)$ ​的元素记作 $A_{i,j,k}$ ​。<br><strong>转置（transpose）</strong>：矩阵的转置是以对角线为轴的镜像，这条从左上角到右下角的对角线称为主对角线（main diagonal）。将矩阵 $A$ 的转置表示为 $A^⊤$ 。定义如下：</p>
-<script type="math/tex; mode=display">({\bf A^\top})_{i,j}=\bf A_{j,i}</script><script type="math/tex; mode=display">{\bf A} = \begin{bmatrix} x_{11} &x_{12}\\ x_{21} & x_{22}\\ x_{31} & x_{32} \end{bmatrix} \implies {\bf A^\top}= \begin{bmatrix} x_{11} &x_{21}&x_{31} \\ x_{21} & x_{22}& x_{32} \end{bmatrix}</script>
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a><a href="https://www.jianshu.com/p/8f536664fa38" target="_blank" rel="noopener">定义</a></h1><p>将单链表中终端结点的指针端有空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表成为单循环链表，简称单链表(circle linked list)</p>
+<p>但是循环链表进过改造，不用头指针，而是用指向终端结点的尾指针来表示循环链表，这样查找开始结点和终端结点都很方便。</p>
+<p><img src="/2017/08/28/循环链表/循环链表-30ed5658.png" alt=""><br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/17/线性代数基础/#more" rel="contents">
+            <a class="btn" href="/2017/08/28/循环链表/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -436,7 +434,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/矩阵的逆/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/单链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -455,7 +453,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/17/矩阵的逆/" itemprop="url">矩阵的逆</a></h1>
+                <a class="post-title-link" href="/2017/08/28/单链表/" itemprop="url">单链表</a></h1>
         
 
         <div class="post-meta">
@@ -467,8 +465,699 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T10:54:38+08:00">
-                2017-08-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T21:52:41+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a><a href="https://www.jianshu.com/p/a34924b229d9" target="_blank" rel="noopener">定义</a></h1><p>数据域：存储数据元素信息的域，指针域：存储直接后继位置的域。指针域中存储的信息成为指针或链。这两部分信息组成数据元素成为存储映像，成为结点(Node)。<br>数据域|指针域<br>-|-<br>data|next</p>
+<h1 id="头结点与头指针"><a href="#头结点与头指针" class="headerlink" title="头结点与头指针"></a>头结点与头指针</h1><ul>
+<li>头结点<br>头结点是加在单链表之前附设的一个头结点。头结点的数据域一般不存储任何信息，也可以存放一些关于线性表的长度的附加信息。<br>-头指针<br>头指针是指链表指向第一个结点的指针，若链表有头结点，则是指向头结点的指针。</li></ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/单链表/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/顺序表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/28/顺序表/" itemprop="url">顺序表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T21:52:29+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>顺序存储结构是指用一段地址连续的存储单元依次存储线性表的数据元素。通常都用数组来描述数据结构中的顺序存储结构。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/顺序表/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/数据结构目录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/28/数据结构目录/" itemprop="url">数据结构目录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T21:50:27+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、绪论"><a href="#一、绪论" class="headerlink" title="一、绪论"></a>一、绪论</h1><h1 id="二、抽象数据类型ADT"><a href="#二、抽象数据类型ADT" class="headerlink" title="二、抽象数据类型ADT"></a>二、抽象数据类型ADT</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名称&#123;</span><br><span class="line">      数据对象(Data):&lt;数据对象的定义&gt;</span><br><span class="line">      数据关系      :&lt;数据关系的定义&gt;</span><br><span class="line">      基本操作(Operation):&lt;基本操作的定义&gt;</span><br><span class="line">&#125;ADT抽象数据类型名称</span><br></pre></td></tr></table></figure>
+<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">ADT 线性表（List）</span><br><span class="line"></span><br><span class="line">Data</span><br><span class="line">    线性表的数据对象集合为&#123;a1,a2,…,an&#125;，每个元素的类型均为DataType。</span><br><span class="line">    其中，除第一个元素a1外，每一个元素有且只有一个直接前驱元素，除了最后一个元素an外，每一个元素有且只有一个直接后继元素。</span><br><span class="line">    数据元素之间的关系是一对一的关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitList(): 初始化操作，建立一个空的线性表L。</span><br><span class="line">    DestroyList():线性表已经存在，释放该线性表所占用的存储空间</span><br><span class="line">    ClearList(): 线性表已经存在，重置线性表为空表，将线性表清空。</span><br><span class="line">    ListLength(): 线性表已经存在返回线性表L的元素个数。</span><br><span class="line">    GetElem(): 求线性表L中的第i个位置元素值。</span><br><span class="line">        初始条件：线性表已存在</span><br><span class="line">        输入参数：元素序号i，<span class="number">1</span>&lt;=i&lt;=ListLength(L)</span><br><span class="line">        实现功能：取线性表中序号为i的元素值</span><br><span class="line">        输出数据：如果序号不合理，则给出错误信息；否则返回序号为i的元素序号值</span><br><span class="line">        操作结果：线性表不变</span><br><span class="line">    LocateElem(): 在线性表L中查找与给定值x相等的元素，如果查找成功，返回线性表中第<span class="number">1</span>个值等于x的元素序号;否则返回<span class="number">0</span>。</span><br><span class="line">        初始条件：线性表已存在</span><br><span class="line">        输入参数：元素x</span><br><span class="line">        实现功能：查找线性表中第<span class="number">1</span>个值等于x的元素</span><br><span class="line">        输出数据：如果查找成功，返回线性表中第<span class="number">1</span>个值等于x的元素序号；否则返回<span class="number">0</span></span><br><span class="line">        操作结果：线性表不变</span><br><span class="line">    ListInsert(): 在线性表L中第i个位置插入新元素e。</span><br><span class="line">        初始条件：线性表已存在</span><br><span class="line">        输入参数：插入位置i,<span class="number">1</span>&lt;=i&lt;=ListLength(L)+<span class="number">1</span>,ListLength(L)表示插入前的表长;待插入元素x</span><br><span class="line">        实现功能：插入x到线性表的第i个位置上</span><br><span class="line">        输出数据：如果插入不成功，则给出错误信息</span><br><span class="line">        操作结果：当插入成功时，线性表中增加了一个元素x，且表长增<span class="number">1</span></span><br><span class="line">    ListDelete(): 删除线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">        初始条件：线性表已存在</span><br><span class="line">        输入参数：删除位置i,<span class="number">1</span>&lt;=i&lt;=ListLength(L)+<span class="number">1</span>,ListLength(L)表示插入前的表长</span><br><span class="line">        实现功能：删除线性表中的第i个元素</span><br><span class="line">        输出数据：如果删除不成功，则给出错误信息。否则返回第i个元素值</span><br><span class="line">        操作结果：当删除成功时，线性表中减少了一个元素，且表长减<span class="number">1</span></span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+<p><a href="/2017/08/28/顺序表/">顺序表</a><br><a href="/2017/08/28/单链表/">单链表</a><br>静态链表.md   没有审核代码<br><a href="/2017/08/28/循环链表/">循环链表</a><br>双向链表.md   没有审核代码</p>
+<h2 id="特殊线性表-栈、队列和串"><a href="#特殊线性表-栈、队列和串" class="headerlink" title="特殊线性表-栈、队列和串"></a>特殊线性表-栈、队列和串</h2><h3 id="栈：后进先出"><a href="#栈：后进先出" class="headerlink" title="栈：后进先出"></a>栈：后进先出</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ADT Stack&#123;</span><br><span class="line">    Data：</span><br><span class="line">        栈中元素具有相同类型及后进先出特性，相邻元素具有前驱和后继关系</span><br><span class="line">    Operation：</span><br><span class="line">        InitStack()：初始化栈，构造一个空栈</span><br><span class="line">        DestroyStack()：销毁栈，释放栈所占用的存储空间</span><br><span class="line">        StackLength()：求栈的长度</span><br><span class="line">        GetTop()：</span><br><span class="line">              实现功能：读取当前栈顶元素</span><br><span class="line">              输出数据：如果栈空，则给出错误信息；否则返回当前栈顶元素值</span><br><span class="line">        Push()：</span><br><span class="line">              输入参数：待插入元素</span><br><span class="line">              实现功能：插入元素到栈顶</span><br><span class="line">              输出数据：如果插入不成功，则给出错误信息</span><br><span class="line">              操作结果：当插入成功时，栈顶增加了一个元素</span><br><span class="line">        Pop()：</span><br><span class="line">              输入参数：无</span><br><span class="line">              实现功能：删除栈顶元素</span><br><span class="line">              输出数据：如果栈为空，则给出错误信息；否则返回栈顶元素</span><br><span class="line">              操作结果：当删除成功时，栈顶减少了一个元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>栈的顺序储结构栈.md<br>栈的链式存储结构.md</p>
+<h3 id="队列：先进先出"><a href="#队列：先进先出" class="headerlink" title="队列：先进先出"></a>队列：先进先出</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ADT Queue&#123;</span><br><span class="line">    Data：</span><br><span class="line">        队列中元素具有相同类型及先进先出特性，相邻元素具有前驱和后继关系</span><br><span class="line">    Operation：</span><br><span class="line">        InitQueue()：初始化队列，构造一个空队列</span><br><span class="line">        DestroyQueue()：销毁队列，释放队列所占用的存储空间</span><br><span class="line">        QueueLength()：求队列的长度</span><br><span class="line">        GetHead()：</span><br><span class="line">              实现功能：读取当前队列头元素</span><br><span class="line">              输出数据：如果队列空，则给出错误信息；否则返回当前队列头元素值</span><br><span class="line">       EnQueue()：</span><br><span class="line">              输入参数：待插入元素</span><br><span class="line">              实现功能：插入元素到队列尾</span><br><span class="line">              输出数据：如果插入不成功，则给出错误信息</span><br><span class="line">              操作结果：当插入成功时，队列尾增加了一个元素</span><br><span class="line">       DeQueue()：</span><br><span class="line">              输入参数：无</span><br><span class="line">              实现功能：删除队列头元素</span><br><span class="line">              输出数据：如果队列为空，则给出错误信息；否则返回队列头元素</span><br><span class="line">              操作结果：当删除成功时，队列尾减少了一个元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>队列的顺序存储结构.md<br>队列链式存储结构.md</p>
+<h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ADT 串(<span class="built_in">string</span>)</span><br><span class="line">&#123;</span><br><span class="line">    Data</span><br><span class="line">        串中元素仅由一个字符组成,相邻元素具有前驱和后继关系.</span><br><span class="line"></span><br><span class="line">    Operation</span><br><span class="line">        StrAssign(T,*chars):生成一个其值等于字符常量chars的串T.</span><br><span class="line">        StrCopy(T,S):串S存在,由S复制得到T.</span><br><span class="line">        ClearString(S):串S存在,将串清空.</span><br><span class="line">        StringEmpty(S):  若串为空,返回<span class="literal">true</span>,否则返回<span class="literal">false</span>.</span><br><span class="line">        StrLentgth(S) :返回串S的元素个数,即串的长度.</span><br><span class="line">        StrCompare(S,L):比较S和T,若S&gt;T,返回&gt;<span class="number">0</span>,S==T返回<span class="number">0</span>, S&lt;T返回&lt;<span class="number">0</span></span><br><span class="line">        SubString(Sub, S, pos, len): 串S存在,<span class="number">1</span>&lt;=pos&lt;=StrLentgth(S),且 <span class="number">0</span>&lt;=len&lt;=StrLentgth(S)-pos+<span class="number">1</span>,用Sub返回串S的第pos个起,长度为len的子串.</span><br><span class="line">        Index(S,T,pos)</span><br><span class="line">        Replace(S,T,V)串S,T,V存在,T是非空串,用V替换S中出现的所有与T相等的不重叠的子串.</span><br><span class="line">        StrInsert(S,T,pos): 在串S的第pos个字符之前插入串T.</span><br><span class="line">        StrDelete(S,pos,len):从串S中删除第pos个字符起的长度为len的子串.</span><br><span class="line">&#125;endADT</span><br></pre></td></tr></table></figure>
+<p>串的顺序存储结构.md</p>
+<h2 id="数组和广义表"><a href="#数组和广义表" class="headerlink" title="数组和广义表"></a>数组和广义表</h2><h3 id="数组：由一组类型相同、下标不同的变量构成。"><a href="#数组：由一组类型相同、下标不同的变量构成。" class="headerlink" title="数组：由一组类型相同、下标不同的变量构成。"></a>数组：由一组类型相同、下标不同的变量构成。</h3><p><strong>根据数组中存储的数据元素之间的逻辑关系，可以将数组分为 : 一维数组、二维数组、…、n维数组。</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">ADT Array &#123;</span><br><span class="line"></span><br><span class="line">Data:</span><br><span class="line"></span><br><span class="line">    相同类型元素有序集合，每个元素受n(n&gt;=<span class="number">1</span>)个线性关系的约束并由一组下标唯一标识</span><br><span class="line"></span><br><span class="line">Operation:</span><br><span class="line"></span><br><span class="line">    InitArray():  <span class="comment">//构造一个空数组,数组的维数和各维的长度</span></span><br><span class="line"></span><br><span class="line">    DestroyArray()：<span class="comment">//销毁数组,释放数组所占用的存储空间</span></span><br><span class="line"></span><br><span class="line">    GetValue(A,&amp;e,index1,…,indexn) <span class="comment">//求值函数,求某个下标元素的值</span></span><br><span class="line"></span><br><span class="line">        初始条件:A是维数组,e为元素变量,随后是n个下标值.</span><br><span class="line"></span><br><span class="line">        操作结果:若各下标不超界,则e赋值为所指定的A的元素值,并返回OK.</span><br><span class="line"></span><br><span class="line">    Assign(&amp;A,e,index1,…,indexn)<span class="comment">//赋值函数,给下具体的下标的元素赋值</span></span><br><span class="line"></span><br><span class="line">        初始条件:A是n维数组,e为元素变量,随后是n个下标值.</span><br><span class="line"></span><br><span class="line">        操作结果:若下标不超界,则将e的值赋给所指定的A的元素,并返回OK.</span><br><span class="line"></span><br><span class="line">&#125;ADT Array</span><br></pre></td></tr></table></figure></p>
+<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">ADT Tree&#123;</span><br><span class="line">    Data:</span><br><span class="line">        树</span><br><span class="line">    Operation：</span><br><span class="line">        InitTree(&amp;T):构造空树</span><br><span class="line">        DestroyTree(&amp;T)：销毁树</span><br><span class="line">        CreateTree(&amp;T,dfinition):</span><br><span class="line">            初始条件:defination给出树T的定义</span><br><span class="line">            操作结果：按defination构造树T</span><br><span class="line">        ClearTree(&amp;T):将树清为空树</span><br><span class="line">        TreeEmpty(T):若树为空树，则返回TRUE,否则FALSE</span><br><span class="line">        TreeDepth(T)：返回树的深度</span><br><span class="line">        Root(T):返回T的根</span><br><span class="line">        Value(T,node):树T存在，node是T中的某一个结点，返回node的值</span><br><span class="line">        Assign(T,node,value):树T存在，node是T中的某一个结点，结点node赋值为value</span><br><span class="line">        Parent(T,node):若node是T的非根结点,返回它的双亲，否则函数值为空</span><br><span class="line">        LeftChild(T,node):若node是T的非叶子结点,返回它的最左孩子，否则函数值为空</span><br><span class="line">        RightSiblingChild(T,node):若node右兄弟,返回它的右兄弟，否则函数值为空</span><br><span class="line">        InsertChild(&amp;T,&amp;p,i,c):树T存在，p指向是T中某一个结点，插入c为T中p所指节点的第i颗子树</span><br><span class="line">        DeleteChild(&amp;T,&amp;p,i,c):树T存在，p指向是T中某一个结点，删除T中p所指节点的第i颗子树</span><br><span class="line">        TraveseTree():遍历树</span><br><span class="line">&#125;ADT Tree</span><br></pre></td></tr></table></figure>
+<p>树与森林.md<br>树的存储结构.md    <a href="https://www.cnblogs.com/sun-haiyu/p/7494171.html" target="_blank" rel="noopener">java版</a><br>二叉树.md<br>线索二叉树.md<br>哈赫夫曼树.md</p>
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a><a href="https://www.zybuluo.com/guoxs/note/249812#31-%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener">图</a></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">ADT 图(Graph)</span><br><span class="line">Data</span><br><span class="line">    顶点的有穷非空集合和边的集合。</span><br><span class="line">Operation</span><br><span class="line">    CreateGraph(*G, V, VR): 按照顶点集V和边弧集VR的定义构造图G。</span><br><span class="line">    DestroyGraph(*G):      图G存在则销毁。</span><br><span class="line">    LocateVex(G, u):        若图G中存在顶点u，则返回图中的位置。</span><br><span class="line">    GetVex(G, v):          返回图G中顶点v的值。</span><br><span class="line">    PutVex(G, v, value):    将图G中顶点v赋值value。</span><br><span class="line">    FirstAdjVex(G, *v):    返回顶点v的一个邻接顶点，若顶点在G中无邻接顶点返回空。</span><br><span class="line">    NextAdjVex(G, v, *w):  返回顶点v相对于顶点w的下一个邻接顶点，</span><br><span class="line">                            若w是v的最后一个邻接点则返回“空”。</span><br><span class="line">    InsertVex(*G, v):      在图G中增添新顶点v。</span><br><span class="line">    DeleteVex(*G, v):      删除图G中顶点v及其相关的弧。</span><br><span class="line">    InsertArc(*G, v, w):    在图G中增添弧&lt;v,w&gt;，若G是无向图，还需要增添对称弧&lt;w,v&gt;。</span><br><span class="line">    DeleteArc(*G, v, w):    在图G中删除弧&lt;v,w&gt;，若G是无向图，则还删除对称弧&lt;w,v&gt;。</span><br><span class="line">    DFSTraverse(G):        对图G中进行深度优先遍历，在遍历过程对每个顶点调用。</span><br><span class="line">    HFSTraverse(G):        对图G中进行广度优先遍历，在遍历过程对每个顶点调用。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+<p>图的术语与定义.md<br>图的抽象结构与存储结构.md(无向图采用多重邻接表，有向图采用十字链表)<br>图的遍历.md<br>最小生成树.md<br>最短路径问题.md<br>拓扑排序.md<br>关键路径.md</p>
+<h2 id="区别-md"><a href="#区别-md" class="headerlink" title="区别.md"></a>区别.md</h2><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><ul>
+<li>静态查找(Static Search Table)：只作查找操作的查找表。主要操作有：<ul>
+<li>查询某个“特定的”数据元素是否在查找表中。</li>
+<li>检索某个“特定的”数据元素和各种属性。<br>线性表的查找.md</li>
+</ul>
+</li>
+<li>动态查找表(Dynamic Search Table)：在查找过程中同时插入查找表中不存在的数据元素，或者从查找表中删除已经存在的某个特定的数据元素。主要操作有两个：<ul>
+<li>查找时插入数据元素；</li>
+<li>查找时删除数据元素。<br>查找树.md<br>平衡二叉树.md<br>2-3树.md<br>B树<br>红黑树</li>
+</ul>
+</li>
+<li>哈希表<br>散列查找.md</li>
+</ul>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a><a href="http://www.atool.org/sort.php" target="_blank" rel="noopener">排序</a></h1><ul>
+<li>排序基础代码<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> r[MAXSIZE + <span class="number">1</span>]; <span class="comment">// 用于存储要排序的数组， r[0]用作哨兵或者临时变量</span></span><br><span class="line">    <span class="keyword">int</span> length;  <span class="comment">// 用于记录顺序表的长度</span></span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 交换数组r中下标i和j的值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(SqList *L, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = L-&gt;r[i];</span><br><span class="line">    L-&gt;r[i] = L-&gt;r[j];</span><br><span class="line">    L-&gt;r[j] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>插入排序.md  (直接插入排序，希尔排序。希尔排序根据直接插入排序而来)<br>选择排序.md<br>交换排序.md<br>归并排序.md(从0开始)</p>
+<p>排序代码集合(从0开始).md</p>
+<h3 id="性能比较"><a href="#性能比较" class="headerlink" title="性能比较"></a>性能比较</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>排序方法</th>
+<th>平均情况</th>
+<th>最好情况</th>
+<th>最坏情况</th>
+<th>辅助空间</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冒泡排序</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>简单选择排序</td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>直接插入排序</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>$O(nlogn)~O(n^2)$</td>
+<td>$O(n^{1.3})$</td>
+<td>$O(n^2)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>$O(nlogn)$</td>
+<td>$O(nlogn)$</td>
+<td>$O(nlogn)$</td>
+<td>$O(1)$</td>
+<td>不稳定</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>$O(nlogn)$</td>
+<td>$O(nlogn)$</td>
+<td>$O(nlogn)$</td>
+<td>$O(n)$</td>
+<td>稳定</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>$O(nlogn)$</td>
+<td>$O(nlogn)$</td>
+<td>$O(n^2)$</td>
+<td>$O(nlogn)~O(n)$</td>
+<td>不稳定</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>图-邻接矩阵代码.md<br>邻接表代码.md<br>邻接矩阵与邻接表深度遍历.md<br>邻接矩阵与邻接表的广度优先遍历算法.md<br>普里姆（Prim）算法代码.md<br>克鲁斯卡尔（Kruskal）算法代码.md<br>迪杰斯特拉（Dijkstra）算法代码.md</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/26/随机森林/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/26/随机森林/" itemprop="url">随机森林</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-26T19:16:35+08:00">
+                2017-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Bagging（套袋法）"><a href="#Bagging（套袋法）" class="headerlink" title="Bagging（套袋法）"></a>Bagging（套袋法）</h2><p>bagging的算法过程如下：</p>
+<ol>
+<li>从原始样本集中使用Bootstraping方法随机抽取n个训练样本，共进行k轮抽取，得到k个训练集。（k个训练集之间相互独立，元素可以有重复）</li>
+<li>对于k个训练集，我们训练k个模型（这k个模型可以根据具体问题而定，比如决策树，knn等）</li>
+<li>对于分类问题：由投票表决产生分类结果；对于回归问题：由k个模型预测结果的均值作为最后预测结果。（所有模型的重要性相同）</li></ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/26/随机森林/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/梯度类方法与对偶算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/梯度类方法与对偶算法/" itemprop="url">梯度类方法与对偶算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T20:37:34+08:00">
+                2017-08-18
               </time>
             
 
@@ -528,1201 +1217,643 @@
 
       
         
-          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设A是数域上的一个n阶方阵，若在相同数域上存在另一个n阶矩阵$A^{-1}$，使得： $AA^{-1}=A^{-1}A=I$。 则我们称$A^{-1}$是A的逆矩阵，而A则被称为可逆矩阵。<br>注：单位矩阵</p>
+          <h1 id="梯度类方法"><a href="#梯度类方法" class="headerlink" title="梯度类方法"></a>梯度类方法</h1><p>梯度类方法是无约束优化中非常常用的方法，其依据的最根本的事实就是梯度的负方向是函数值下降最快的方向。但是常用的 <strong>gradient descent 必须要求函数的连续可导</strong>，而对于某些<strong>连续不可导</strong>的问题（如lasso regression），gradient descent 无能为力，这是需要用到<strong>subgradient descent</strong>和<strong>proximal gradient descent</strong>.<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/18/梯度类方法与对偶算法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/凸集，凸函数和凸优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/凸集，凸函数和凸优化/" itemprop="url">凸集，凸函数和凸优化</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T17:51:00+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>凸优化也可以解释为目标函数 $f(x)$ 为凸函数而起约束围成的可行域为一个凸集。</strong></p>
+<h1 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h1><p>对于集合 $K$ ，$\forall x_1,x_2 \in K$,若 $\alpha x_1 + (1-\alpha)x_2 \in K$,其中$α∈[0,1])$,则 $K$ 为凸集，即集合中任意两点的连线均在凸集中，如在下图所示</p>
+<p><img src="/2017/08/18/凸集，凸函数和凸优化/凸集，凸函数和凸优化-6040dc5b.png" alt="凸集概念"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/18/凸集，凸函数和凸优化/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/矩阵的基础概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/矩阵的基础概念/" itemprop="url">矩阵的基础概念</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T15:45:40+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="零向量"><a href="#零向量" class="headerlink" title="零向量"></a>零向量</h1><p>变换后落在原点的向量的集合被称为矩阵的‘零空间’或者‘核’。</p>
+<ul>
+<li>零向量一定在列空间中</li>
+<li>对于一个满秩变换来说，唯一能在变换后落在原点的就是零向量自身</li>
+<li>对于一个非满秩的矩阵来说，它将空间压缩到一个更低的维度上，变换后的已给向量落在零向量上，而“零空间”正是这些向量所构成的空间</li>
+</ul>
+<h1 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h1><p>在方阵中，对角线（从左上到右下）上的值称为对角元素。<br>非对角元素全部为0的矩阵称为对角矩阵。<br>对角矩阵表示的映射是沿着坐标轴伸缩，其中对角元素就是各坐标轴伸缩的倍率</p>
+<h1 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h1><p>矩阵的秩，为变换后的空间的维数</p>
+<h1 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h1><p>方阵中，如果除了对角线（从左上到右下）上的元素为1，其余元素都为0，则该矩阵称为单位矩阵，记为 $I$ 。 $I_{n}$ 表示 $n$ 阶单位矩阵。<strong>单位矩阵表示的映射是“什么都不做”的映射。</strong></p>
 <script type="math/tex; mode=display">I_{n}=\begin{bmatrix}
 1 & 0 & \cdots  & 0\\
 0 & 1 & \cdots  & 0\\
 \vdots  & \vdots  & \ddots  & \vdots \\
 0 & 0 & \cdots  & 1
-\end{bmatrix}</script>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/17/矩阵的逆/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/随机变量的统计特征/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/16/随机变量的统计特征/" itemprop="url">随机变量的统计特征</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T11:08:09+08:00">
-                2017-08-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>随机变量的统计特征主要包括期望，方差，协方差以及相关系数。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/16/随机变量的统计特征/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/二维随机变量/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/二维随机变量/" itemprop="url">二维随机变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:24:02+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="联合分布函数"><a href="#联合分布函数" class="headerlink" title="联合分布函数"></a>联合分布函数</h1><p>假设 $X$ 和 $Y$ 都是随机变量，那么我们定义其分布函数如下：</p>
-<script type="math/tex; mode=display">F(x,y) = P ((X \le x)\cap(Y \le y)) =  P (X \le x, Y \le y )</script><p>上面的 $F(x,y)$ 称作随机变量$(X,Y)$的分布函数，也叫作联合分布函数。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/二维随机变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/一维随机变量/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/一维随机变量/" itemprop="url">一维随机变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:23:46+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>本文主要讲述三种离散型随机变量的分布(伯努利分布,二项分布,泊松分布)和三种连续型随机变量的分布(均匀分布,指数分布,正态分布)。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/一维随机变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/先验概率与后验概率/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/先验概率与后验概率/" itemprop="url">先验概率与后验概率</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:18:36+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>本文主要讲述先验概率，后验概率，共轭分布和共轭先验这几个概念。</strong></p>
-<p>众所周知，概率论中有两大学派：频率学派和贝叶斯学派。先验概率，后验概率，共轭分布和共轭先验是贝叶斯学派中的几个概念。原因是贝叶斯学派认为分布存在先验分布和后验分布的不同，而频率学派则认为一个事件的概率只有一个。</p>
-<p>下面先以一个直观的例子来说明先验概率和后验概率的概念</p>
-<p>比如说，你来到一个山洞,这个山洞里可能有熊也可能没有熊, 记你觉得山洞有熊的为事件 $Y$. 然后,你也许听到山洞里传来熊的吼声, 记听到熊吼声为事件 $X$. 你一开始认为山洞有熊的概率是 $P(Y)$; 听到熊的吼声之后,你认为有熊的概率是 $P(Y|X)$。在这里，$P(Y)$ 就是先验概率, $P(Y|X)$ 是后验概率.<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/先验概率与后验概率/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/样本以及抽样分布/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/样本以及抽样分布/" itemprop="url">样本以及抽样分布</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T19:41:01+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>概率论与数理统计的主要区别为</strong>，在<strong>概率论</strong>中所研究的随机变量，其<strong>分布都是假设已知的</strong>，在这一前提下去研究它的性质（数字特征，分布函数等）；而在<strong>数理统计</strong>中研究的随机变量其<strong>分布是未知的</strong>，通过对所研究的随机变量进行<strong>重复独立的试验和观察</strong>，得到许多观察值，再对观察值进行分析，从而<strong>对所研究的随机变量的分布做出各种推断</strong></p>
-<p>因此数理统计的主要内容包括两部分，一是如何收集，整理数据资料，二是如何对得到的数据资料进行分析和研究，从而对所研究的对象的性质和特点做出推断。第二部分其实就是统计推断的问题，也是后面主要讲述的内容。本文主要讲述数理统计中的两个基本概念：<strong>样本和抽样分布</strong>。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/样本以及抽样分布/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/常见分布/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/常见分布/" itemprop="url">常见分布</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T19:37:33+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>本文主要讲述三种离散型随机变量的分布(伯努利分布,二项分布,泊松分布)和三种连续型随机变量的分布(均匀分布,指数分布,正态分布)。三大抽样分布<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/常见分布/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/参数估计/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/15/参数估计/" itemprop="url">参数估计</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T16:46:06+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在数理统计中，常常需要通过样本来估计总体的参数，估计可划分为两大类：点估计和区间估计。点估计就是估计总体中某个参数的值，而区间估计是估计总体的某个参数落在某个区间的概率大小。本文主要讲述点估计中的矩估计法和最大似然估计法，以及针对服从正态分布的期望和方差进行区间估计。</p>
-<h1 id="参数估计定义"><a href="#参数估计定义" class="headerlink" title="参数估计定义"></a>参数估计定义</h1><ul>
-<li>已知一个随机变量的分布函数 $Xf_θ(x)$, 其中 $θ = (θ_1,··· ,θ_k)$ 为未知参数.</li>
-<li>样本 $X_1,··· ,X_n$</li>
-<li>利用样本对参数 $θ$ 做出估计，或者估计 $θ$ 的某个函数 $g(θ)$<ul>
-<li>点估计: 用样本的一个函数 $T(X_1,··· ,X_n)$ 去估计 $g(θ)$</li>
-<li>区间估计: 用一个区间去估计 $g(θ)$</li></ul></li></ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/15/参数估计/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/概率/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/14/概率/" itemprop="url">概率</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T22:00:04+08:00">
-                2017-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="随机变量与概率"><a href="#随机变量与概率" class="headerlink" title="随机变量与概率"></a>随机变量与概率</h1><h2 id="概率密度函数的积分"><a href="#概率密度函数的积分" class="headerlink" title="概率密度函数的积分"></a>概率密度函数的积分</h2><ul>
-<li><p>离散随机变量<br>假设随机变量 $X$ 的取值域为 $Ω = \{x_i\}_{i=1}^\infty$，那么对于任何一个 $x_i$，事件 $X = x_i$ 的概率记为 $P(x_i)$. 对于 $Ω$ 的任何一个子集 $S = \{x_i\}_{i=1}^\infty =1$，事件 $X ∈ S$ 的概率为</p>
-<script type="math/tex; mode=display">P(S) = \sum_{i=1}^{\infty }P(x_1)</script><p>对于离散随机变量，概率为概率函数的求和</p>
-</li>
-<li><p>连续随机变量<br>假设随机变量 $X$ 的取值域为 $\mathbb{R}$，那么对于几乎所有 $x ∈R$, 事件 $X = x$ 的概率 $P(X = x)$ 都等于 0. 所以我们转而定义概率密度函数 $f : \mathbb{R}→ [0,∞)$. 对于任何区间 $(a,b)$, 事件 $X ∈ (a,b)$ 的概率为</p>
-<script type="math/tex; mode=display">P((a,b)) = \int_{a}^{b}f(x)dx</script></li>
+\end{bmatrix}</script><h1 id="奇异矩阵"><a href="#奇异矩阵" class="headerlink" title="奇异矩阵"></a>奇异矩阵</h1><p>行列式为零的矩阵</p>
+<h1 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h1><script type="math/tex; mode=display">AA^{-1}=A^{-1}A=I</script><h1 id="零矩阵"><a href="#零矩阵" class="headerlink" title="零矩阵"></a>零矩阵</h1><p>所有元素都为0的矩阵称为零矩阵，记为 $O$ 。<strong>零矩阵表示的映射是将所有的点都映射到原点的映射</strong></p>
+<h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>线性变换的行列式即线性变换改变面积的比例。</p>
+<script type="math/tex; mode=display">det(M_1M_2) = det(M_1)det(M_2)</script><ul>
+<li>检验一个矩阵的行列式是否为0，就能了解这个矩阵所代表的变换是否将空间压缩到更小的维度上</li>
+<li>在三维空间下，行列式可以简单看作这个平行六面体的体积，行列式为0则意味着整个空间被压缩为零体积的东西，也就是一个平面或者一条直线，或者更极端情况下的一个点</li>
 </ul>
+<h1 id="特征分解"><a href="#特征分解" class="headerlink" title="特征分解"></a>特征分解</h1><p>如果说一个向量 $v$ 是方阵 $A$ 的特征向量，将一定可以表示成下面的形式：</p>
+<script type="math/tex; mode=display">Av=\lambda v</script><p>$\lambda$ 为特征向量 $v$ 对应的特征值。特征值分解是将一个矩阵分解为如下形式：</p>
+<script type="math/tex; mode=display">A=Q\Sigma Q^{-1}</script><p>其中， $Q$ 是这个矩阵 $A$ 的特征向量组成的矩阵， $\Sigma$ 是一个对角矩阵，每一个对角线元素就是一个特征值，里面的特征值是由大到小排列的，这些特征值所对应的特征向量就是描述这个矩阵变化方向（从主要的变化到次要的变化排列）。也就是说矩阵A的信息可以由其特征值和特征向量表示。</p>
+<p>对于矩阵为高维的情况下，那么这个矩阵就是高维空间下的一个线性变换。可以想象，这个变换也同样有很多的变换方向，我们通过特征值分解得到的前N个特征向量，那么就对应了这个矩阵最主要的N个变化方向。我们利用这前N个变化方向，就可以近似这个矩阵（变换）。</p>
+<p>总结一下，特征值分解可以得到特征值与特征向量，特征值表示的是这个特征到底有多重要，而特征向量表示这个特征是什么。不过，特征值分解也有很多的局限，比如说变换的矩阵必须是方阵。</p>
+<h1 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a>奇异值分解</h1><p>特征值分解是一个提取矩阵特征很不错的方法，但是它只是对方阵而言的，在现实的世界中，我们看到的大部分矩阵都不是方阵，比如说有N个学生，每个学生有M科成绩，这样形成的一个 $N \ast  M $的矩阵就不可能是方阵，我们怎样才能描述这样普通的矩阵呢的重要特征呢？奇异值分解可以用来干这个事情，奇异值分解是一个能适用于任意的矩阵的一种分解的方法：</p>
+<p>分解形式：<br><img src="/2017/08/18/矩阵的基础概念/矩阵的基础概念-bced7336.png" alt=""><br>假设A是一个 $M*N$ 的矩阵，那么得到的U是一个$M\ast M$ 的方阵（称为左奇异向量），$Σ$ 是一个 $M\ast N$ 的矩阵（除了对角线的元素都是0，对角线上的元素称为奇异值），$V^T$ ($V$的转置)是一个 $N\ast N$ 的矩阵（称为右奇异向量）。</p>
+<h1 id="LU分解"><a href="#LU分解" class="headerlink" title="LU分解"></a>LU分解</h1><p>给定矩阵 $A$，将$A$表示成下三角矩阵L和上三角矩阵U的乘积，称为LU分解</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/线性方程求解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/线性方程求解/" itemprop="url">线性方程求解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T11:57:48+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <script type="math/tex; mode=display">\begin{align*}
+2x+5y+3z &= -3\\
+4x+8z &= 0\\
+x+3y &= 2
+\end{align*}\Leftrightarrow \overset{A}{\overbrace{\begin{bmatrix}
+2 & 5 & 3\\
+4 & 0 & 8\\
+1 & 3 & 0
+\end{bmatrix}}}\overset{\overrightarrow{x}}{\overbrace{\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}}}=\overset{\overrightarrow{v}}{\overbrace{\begin{bmatrix}
+-3\\
+0\\
+2
+\end{bmatrix}}}</script><script type="math/tex; mode=display">A\overrightarrow{x}=\overrightarrow{v}</script><p>可以看做向量 $\overrightarrow{x}$ 经过空间变换后变为向量 $\overrightarrow{v}$ ，矩阵 $A$ 的变换过程有两种情况</p>
+<ol>
+<li>空间变换之后，空间没有发生压缩。即$det(A)\neq0$ ，矩阵 $A$ 满秩</li>
+<li>空间变换之后，空间发生压缩，即$det(A)=0$ ，矩阵 $A$ 不是满秩</li>
+</ol>
+<p><img src="/2017/08/18/线性方程求解/c6434a24e6ccf9742ac38be2ceeb6393.gif" alt="线性方程求解"></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/14/概率/#more" rel="contents">
+            <a class="btn" href="/2017/08/18/线性方程求解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/特征值与特征向量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/18/特征值与特征向量/" itemprop="url">特征值与特征向量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T11:51:18+08:00">
+                2017-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><h2 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h2><p>矩阵在空间变换过程中，没有发生旋转的向量。因此特征向量可以看过空间变换的旋转轴。</p>
+<h2 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h2><p>特征向量在变换中拉伸或压缩比例的因子</p>
+<p><img src="/2017/08/18/特征值与特征向量/b913d5fe665fdfb4c375bd44c0472610.gif" alt="特征值与特征向量意图"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/18/特征值与特征向量/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1764,7 +1895,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1814,7 +1945,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1825,7 +1956,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1836,7 +1967,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

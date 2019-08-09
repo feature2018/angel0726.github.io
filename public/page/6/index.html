@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/积分学/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/正定二次型和正定矩阵/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -305,7 +305,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/14/积分学/" itemprop="url">积分学</a></h1>
+                <a class="post-title-link" href="/2017/08/18/正定二次型和正定矩阵/" itemprop="url">正定二次型和正定矩阵</a></h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T21:47:31+08:00">
-                2017-08-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T11:31:57+08:00">
+                2017-08-18
               </time>
             
 
@@ -378,14 +378,23 @@
 
       
         
-          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>令 $f(x)$ 为开区间 $(a,b)$ 上的一个连续函数，对于任何一个正整 数 $n$ 定义,$x_i = a + \frac{i(b-a)}{n}$ 求和式：</p>
-<script type="math/tex; mode=display">S_n(f) =\sum_{i=0}^{n-1}f(x_i)(x_{i+1}-x_i)</script><p>如果极限 $\underset{n→∞}{lim}S_n(f)$ 存在, 那么函数 $f(x)$ 在这个区间上的黎曼积分为</p>
-<script type="math/tex; mode=display">\int_{a}^{b}f(x)dx=\lim_{n\rightarrow \infty }S_n(f)</script><ul>
-<li>代数意义: 无穷求和</li>
-<li>几何意义: 函数与 X 轴之间的有向面积</li></ul>
+          <h1 id="二次型矩阵"><a href="#二次型矩阵" class="headerlink" title="二次型矩阵"></a>二次型矩阵</h1><p>对于一个方阵$A∈ R^{n×n}$和一个向量$x∈ R^n$，标量$x^TAx$被称作一个二次型。显式地写出来，</p>
+<script type="math/tex; mode=display">x^TAx=\sum_{i=1}^{n}x_i(Ax)_i=\sum_{i=1}^{n}x_i\left ( \sum_{j=1}^{n}A_{ij}x_j \right )=\sum_{i=1}^{n}\sum_{j=1}^{n}A_{ij}x_ix_j</script><p>上式实际为一个二次多项式例如：</p>
+<script type="math/tex; mode=display">\left [ x_1 x_2 \right ]
+\begin{bmatrix}
+1 & 3\\
+2 & 4
+\end{bmatrix}\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}=[x_1,x_2]
+\begin{bmatrix}
+x_1+3x_2\\
+2x_1+4x_2
+\end{bmatrix}=x_1^2+5x_1x_2+4x_2^2</script>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/14/积分学/#more" rel="contents">
+            <a class="btn" href="/2017/08/18/正定二次型和正定矩阵/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -436,7 +445,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/微积分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/行列式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -455,7 +464,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/14/微积分/" itemprop="url">微积分</a></h1>
+                <a class="post-title-link" href="/2017/08/18/行列式/" itemprop="url">行列式</a></h1>
         
 
         <div class="post-meta">
@@ -467,8 +476,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T12:03:49+08:00">
-                2017-08-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T11:28:57+08:00">
+                2017-08-18
               </time>
             
 
@@ -528,11 +537,16 @@
 
       
         
-          <h1 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>函数 $f$ 在 $x_0$ 处的极限为 $L$</p>
-<script type="math/tex; mode=display">\lim_{x\rightarrow 0} f(x) = L</script>
+          <h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><p>行列式在数学中，是一个函数，其定义域为det的矩阵A，取值为一个标量，写作$det(A)$或 $| A |$。对于行列式的几何描述如下所示：</p>
+<ol>
+<li>行列式求得是矩阵的面积。</li>
+<li>行列式等于0时候，说明矩阵的空间操作把空间压缩为低维空间</li>
+<li>行列式为负数的时候，说明空间发生了翻转</li>
+<li>方阵特征值之积等于行列式值也可以如下这样理解</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/14/微积分/#more" rel="contents">
+            <a class="btn" href="/2017/08/18/行列式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -583,7 +597,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/13/PCA主成分分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/线性代数基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -602,7 +616,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/13/PCA主成分分析/" itemprop="url">PCA主成分分析</a></h1>
+                <a class="post-title-link" href="/2017/08/17/线性代数基础/" itemprop="url">线性代数基础</a></h1>
         
 
         <div class="post-meta">
@@ -614,8 +628,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-13T16:10:58+08:00">
-                2017-08-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T14:23:52+08:00">
+                2017-08-17
               </time>
             
 
@@ -637,8 +651,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -675,33 +689,14 @@
 
       
         
-          <div class="table-container">
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>特征中心化。即每一维的数据都减去该维的均值。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>计算协方差矩阵.协方差就是衡量两个变量相关性的变量</td>
-</tr>
-<tr>
-<td>3</td>
-<td>计算协方差矩阵的特征值和特征向量</td>
-</tr>
-<tr>
-<td>4</td>
-<td>选取从大到小依次选取若干个的特征值对应的特征向量，映射得到新的样本集：样本乘以特征向量</td>
-</tr>
-</tbody>
-</table>
-</div>
+          <h1 id="标量，向量，矩阵和张量"><a href="#标量，向量，矩阵和张量" class="headerlink" title="标量，向量，矩阵和张量"></a>标量，向量，矩阵和张量</h1><p><strong>标量（scalar）</strong>：一个标量就是一个单独的数。用斜体表示标量，如 $s∈R$.</p>
+<p><strong>向量（vector）</strong>：一个向量是一列数，我们用粗体的小写名称表示向量。比如 $x$，将向量x 写成方括号包含的纵柱：</p>
+<script type="math/tex; mode=display">{\bf x}=  \begin {bmatrix} x_1\\x_2\\ \vdots \\x_n\\ \end{bmatrix}</script><p><strong>矩阵（matrix）</strong>：矩阵是二维数组，我们通常赋予矩阵粗体大写变量名称，比如 $A​$ 。如果一个矩阵高度是 $m​$，宽度是 $n$​，那么说 $\bf A\in \bf R ^{m \times n}​$​ 。一个矩阵可以表示如下：</p>
+<script type="math/tex; mode=display">{\bf A}= \begin{bmatrix} x_{11} &x_{12}\\ x_{21} & x_{22}\\  \end{bmatrix}</script><p><strong>张量（tensor）</strong>：某些情况下，我们会讨论不止维坐标的数组。如果一组数组中的元素分布在若干维坐标的规则网络中，就将其称为张量。用 $A$​ 表示，如张量中坐标为 $(i,j,k)$ ​的元素记作 $A_{i,j,k}$ ​。<br><strong>转置（transpose）</strong>：矩阵的转置是以对角线为轴的镜像，这条从左上角到右下角的对角线称为主对角线（main diagonal）。将矩阵 $A$ 的转置表示为 $A^⊤$ 。定义如下：</p>
+<script type="math/tex; mode=display">({\bf A^\top})_{i,j}=\bf A_{j,i}</script><script type="math/tex; mode=display">{\bf A} = \begin{bmatrix} x_{11} &x_{12}\\ x_{21} & x_{22}\\ x_{31} & x_{32} \end{bmatrix} \implies {\bf A^\top}= \begin{bmatrix} x_{11} &x_{21}&x_{31} \\ x_{21} & x_{22}& x_{32} \end{bmatrix}</script>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/13/PCA主成分分析/#more" rel="contents">
+            <a class="btn" href="/2017/08/17/线性代数基础/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -752,7 +747,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/矩阵的逆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -771,7 +766,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/13/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/08/17/矩阵的逆/" itemprop="url">矩阵的逆</a></h1>
         
 
         <div class="post-meta">
@@ -783,8 +778,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-13T11:11:19+08:00">
-                2017-08-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T10:54:38+08:00">
+                2017-08-17
               </time>
             
 
@@ -806,8 +801,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/测试/" itemprop="url" rel="index">
-                    <span itemprop="name">测试</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -844,10 +839,16 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on [GitHub](<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues</a></p>
+          <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>设A是数域上的一个n阶方阵，若在相同数域上存在另一个n阶矩阵$A^{-1}$，使得： $AA^{-1}=A^{-1}A=I$。 则我们称$A^{-1}$是A的逆矩阵，而A则被称为可逆矩阵。<br>注：单位矩阵</p>
+<script type="math/tex; mode=display">I_{n}=\begin{bmatrix}
+1 & 0 & \cdots  & 0\\
+0 & 1 & \cdots  & 0\\
+\vdots  & \vdots  & \ddots  & \vdots \\
+0 & 0 & \cdots  & 1
+\end{bmatrix}</script>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/13/hello-world/#more" rel="contents">
+            <a class="btn" href="/2017/08/17/矩阵的逆/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -898,7 +899,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/C-存储类/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/随机变量的统计特征/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -917,7 +918,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/29/C-存储类/" itemprop="url">C++存储类</a></h1>
+                <a class="post-title-link" href="/2017/08/16/随机变量的统计特征/" itemprop="url">随机变量的统计特征</a></h1>
         
 
         <div class="post-meta">
@@ -929,8 +930,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T15:45:48+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T11:08:09+08:00">
+                2017-08-16
               </time>
             
 
@@ -952,8 +953,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -990,45 +991,10 @@
 
       
         
-          <div class="table-container">
-<table>
-<thead>
-<tr>
-<th>存储类</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>auto</td>
-<td>声明变量时根据初始化表达式自动推断该变量的类型、声明函数时函数返回值的占位符</td>
-</tr>
-<tr>
-<td>register</td>
-<td>register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。这意味着变量的最大尺寸等于寄存器的大小（通常是一个词），且不能对它应用一元的 ‘&amp;’ 运算符（因为它没有内存位置）。</td>
-</tr>
-<tr>
-<td>static</td>
-<td>static 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值。<br>static 修饰符也可以应用于全局变量。当 static 修饰全局变量时，会使变量的作用域限制在声明它的文件内。</td>
-</tr>
-<tr>
-<td>extern</td>
-<td>当您有多个文件且定义了一个可以在其他文件中使用的全局变量或函数时，可以在其他文件中使用 extern 来得到已定义的变量或函数的引用。可以这么理解，extern 是用来在另一个文件中声明一个全局变量或函数。</td>
-</tr>
-<tr>
-<td>mutable</td>
-<td>mutable 说明符仅适用于类的对象，这将在本教程的最后进行讲解。它允许对象的成员替代常量。也就是说，mutable 成员可以通过 const 成员函数修改。</td>
-</tr>
-<tr>
-<td>thread_local</td>
-<td>使用 thread_local 说明符声明的变量仅可在它在其上创建的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。可以将 thread_local 仅应用于数据声明和定义，thread_local 不能用于函数声明或定义。<br>thread_local 说明符可以与 static 或 extern 合并。</td>
-</tr>
-</tbody>
-</table>
-</div>
+          <p>随机变量的统计特征主要包括期望，方差，协方差以及相关系数。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/29/C-存储类/#more" rel="contents">
+            <a class="btn" href="/2017/08/16/随机变量的统计特征/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1079,7 +1045,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/回归树/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/二维随机变量/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -1098,7 +1064,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/21/回归树/" itemprop="url">CART</a></h1>
+                <a class="post-title-link" href="/2017/08/15/二维随机变量/" itemprop="url">二维随机变量</a></h1>
         
 
         <div class="post-meta">
@@ -1110,8 +1076,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T11:07:40+08:00">
-                2017-07-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:24:02+08:00">
+                2017-08-15
               </time>
             
 
@@ -1133,8 +1099,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -1171,10 +1137,11 @@
 
       
         
-          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>决策树的生成就是递归地构建二叉决策树的过程。对回归树用<strong>平方误差最小化准则</strong>，对分类树用<strong>基尼指数（Gini index）</strong>最小化准则，进行特征选择，生成二叉树。CART算法有两步：<strong>决策树生成和剪枝。</strong><br></p>
+          <h1 id="联合分布函数"><a href="#联合分布函数" class="headerlink" title="联合分布函数"></a>联合分布函数</h1><p>假设 $X$ 和 $Y$ 都是随机变量，那么我们定义其分布函数如下：</p>
+<script type="math/tex; mode=display">F(x,y) = P ((X \le x)\cap(Y \le y)) =  P (X \le x, Y \le y )</script><p>上面的 $F(x,y)$ 称作随机变量$(X,Y)$的分布函数，也叫作联合分布函数。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/21/回归树/#more" rel="contents">
+            <a class="btn" href="/2017/08/15/二维随机变量/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1225,7 +1192,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/21/决策树/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/一维随机变量/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -1244,7 +1211,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/21/决策树/" itemprop="url">决策树</a></h1>
+                <a class="post-title-link" href="/2017/08/15/一维随机变量/" itemprop="url">一维随机变量</a></h1>
         
 
         <div class="post-meta">
@@ -1256,8 +1223,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T11:24:28+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:23:46+08:00">
+                2017-08-15
               </time>
             
 
@@ -1279,8 +1246,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -1317,38 +1284,452 @@
 
       
         
-          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>分类决策树模型是一种描述对实例进行分类的树形结构。决策树由结点（node）和有向边（directed edge）组成。结点有两种类型：内部结点（internal node）和叶结点（leaf node）。内部结点表示一个特征或属性，叶结点表示一个类。决策树案例图如下图所示。<br><img src="/2017/06/21/决策树/决策树-b46cf4a2.png" alt="决策树案例图"></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>算法</th>
-<th>特征选择</th>
-<th>目标</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID3</td>
-<td>信息增益<br>$g(D,A)=H(D)-H(D\mid A)$</td>
-<td>信息增益最大的</td>
-</tr>
-<tr>
-<td>C4.5</td>
-<td>信息增益比<br>$g_{R}(D,A)=\frac{g(D,A)}{H_A(D)}$</td>
-<td>信息增益比大的</td>
-</tr>
-<tr>
-<td>CART</td>
-<td>分类：基尼指数<br>$Gini( p )=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2$<br>回归：平方差</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
+          <p>本文主要讲述三种离散型随机变量的分布(伯努利分布,二项分布,泊松分布)和三种连续型随机变量的分布(均匀分布,指数分布,正态分布)。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/21/决策树/#more" rel="contents">
+            <a class="btn" href="/2017/08/15/一维随机变量/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/先验概率与后验概率/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/15/先验概率与后验概率/" itemprop="url">先验概率与后验概率</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:18:36+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>本文主要讲述先验概率，后验概率，共轭分布和共轭先验这几个概念。</strong></p>
+<p>众所周知，概率论中有两大学派：频率学派和贝叶斯学派。先验概率，后验概率，共轭分布和共轭先验是贝叶斯学派中的几个概念。原因是贝叶斯学派认为分布存在先验分布和后验分布的不同，而频率学派则认为一个事件的概率只有一个。</p>
+<p>下面先以一个直观的例子来说明先验概率和后验概率的概念</p>
+<p>比如说，你来到一个山洞,这个山洞里可能有熊也可能没有熊, 记你觉得山洞有熊的为事件 $Y$. 然后,你也许听到山洞里传来熊的吼声, 记听到熊吼声为事件 $X$. 你一开始认为山洞有熊的概率是 $P(Y)$; 听到熊的吼声之后,你认为有熊的概率是 $P(Y|X)$。在这里，$P(Y)$ 就是先验概率, $P(Y|X)$ 是后验概率.<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/15/先验概率与后验概率/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/样本以及抽样分布/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/15/样本以及抽样分布/" itemprop="url">样本以及抽样分布</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T19:41:01+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>概率论与数理统计的主要区别为</strong>，在<strong>概率论</strong>中所研究的随机变量，其<strong>分布都是假设已知的</strong>，在这一前提下去研究它的性质（数字特征，分布函数等）；而在<strong>数理统计</strong>中研究的随机变量其<strong>分布是未知的</strong>，通过对所研究的随机变量进行<strong>重复独立的试验和观察</strong>，得到许多观察值，再对观察值进行分析，从而<strong>对所研究的随机变量的分布做出各种推断</strong></p>
+<p>因此数理统计的主要内容包括两部分，一是如何收集，整理数据资料，二是如何对得到的数据资料进行分析和研究，从而对所研究的对象的性质和特点做出推断。第二部分其实就是统计推断的问题，也是后面主要讲述的内容。本文主要讲述数理统计中的两个基本概念：<strong>样本和抽样分布</strong>。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/15/样本以及抽样分布/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/常见分布/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/15/常见分布/" itemprop="url">常见分布</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T19:37:33+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>本文主要讲述三种离散型随机变量的分布(伯努利分布,二项分布,泊松分布)和三种连续型随机变量的分布(均匀分布,指数分布,正态分布)。三大抽样分布<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/15/常见分布/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1390,7 +1771,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1440,7 +1821,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">69</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1451,7 +1832,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1462,7 +1843,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

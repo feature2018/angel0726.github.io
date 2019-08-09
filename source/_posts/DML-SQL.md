@@ -47,9 +47,13 @@ Order by 列名 [asc|desc]
     <th colspan="2">说明</th>
   </tr>
   <tr>
-    <td rowspan="15">select</td>
+    <td rowspan="16">select</td>
     <td>expr</td>
     <td colspan="2">常量</td>
+  </tr>
+  <tr>
+    <td>when case</td>
+    <td colspan="2">select when st.score&gt;90 then 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when st.score&lt;60 then 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end label</td>
   </tr>
   <tr>
     <td rowspan="14">function</td>
@@ -131,17 +135,17 @@ Order by 列名 [asc|desc]
     <td>保留两个表中所有的数据，，两个表中不能匹配的数据使用空值填充</td>
   </tr>
   <tr>
-    <td rowspan="7">where</td>
+    <td rowspan="8">where</td>
     <td>运算符</td>
     <td colspan="2">=、&lt;&gt;、&gt;、&lt;、&gt;=、&lt;=</td>
   </tr>
   <tr>
-    <td rowspan="6">函数</td>
+    <td rowspan="7">函数</td>
     <td>between</td>
     <td>BETWEEN ... AND 会选取介于两个值之间的数据范围。这些值可以是数值、文本或者日期</td>
   </tr>
   <tr>
-    <td rowspan="4">like</td>
+    <td rowspan="5">like</td>
     <td>"%" : 可以匹配0个或者多个字符 <br></td>
   </tr>
   <tr>
@@ -152,6 +156,9 @@ Order by 列名 [asc|desc]
   </tr>
   <tr>
     <td>[charlist]：字符列中的任何单一字符</td>
+  </tr>
+  <tr>
+    <td>[^charlist]或者[!charlist]：不在字符列中的任何单一字符</td>
   </tr>
   <tr>
     <td>in = exists</td>
