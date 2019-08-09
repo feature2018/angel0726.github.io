@@ -3,6 +3,7 @@ title: 关系运算-SQL
 date: 2019-07-31 11:05:24
 tags: [数据库,编程语言]
 categories: SQL
+permalink: SQL/关系运算-SQL.md
 ---
 
 # 集合运算
@@ -16,7 +17,7 @@ categories: SQL
 ![1564974696180](关系运算-SQL/1564974696180.png)
 
 ```sql
-Select * from R Union Select * from S;
+Select * from R UNION Select * from S;
 ```
 
 ## 差
