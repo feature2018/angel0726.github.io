@@ -20,6 +20,8 @@ Spark有4中运行模式：
 | yarn       | 最流行的方式，使用yarn集群调度资源            |
 | mesos      | 国外使用的多                                  |
 
+<!--more-->
+
 ## RDD
 
 RDD是**弹性分布式数据集**，**是Spark中最基本的数据抽象**。
@@ -28,7 +30,8 @@ RDD是**弹性分布式数据集**，**是Spark中最基本的数据抽象**。
 
 ```mermaid
 graph TD
-[]
+A[加载数据集]--> B[使用transformations算子对RDD进行操作]
+B-->C[使用actions算子触发执行]
 ```
 
 </center>
