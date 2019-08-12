@@ -6,11 +6,11 @@ categories: SQL
 permalink: SQL/DML-SQL.md
 ---
 
-| 命令     | 作用     |
-| -------- | -------- |
-| `insert` | 插入语句 |
-| `UPDATE` | 更新语句 |
-| `DELETE` | 删除语句 |
+| 命令     | 作用                                                         |
+| -------- | ------------------------------------------------------------ |
+| `insert` | 插入语句<br>`insert into`:追加数据<br>`insert overwrite`:覆盖数据 |
+| `UPDATE` | 更新语句                                                     |
+| `DELETE` | 删除语句                                                     |
 
 <!--more-->
 
@@ -20,6 +20,10 @@ permalink: SQL/DML-SQL.md
 -- 插入语句
 Insert Into Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')
 Insert Into St (S#, Sname, avgScore)
+            Select S#, Sname, Avg(Score) From Student, SC
+            Where Student.S# = SC.S#
+            Group by Student.S# ;
+Insert overwrite St (S#, Sname, avgScore)
             Select S#, Sname, Avg(Score) From Student, SC
             Where Student.S# = SC.S#
             Group by Student.S# ;
