@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="命令 作用     insert 插入语句   UPDATE 更新语句   DELETE 删除语句">
+<meta name="description" content="命令 作用     insert 插入语句insert into:追加数据insert overwrite:覆盖数据   UPDATE 更新语句   DELETE 删除语句">
 <meta name="keywords" content="数据库,编程语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DML-SQL">
 <meta property="og:url" content="http://yoursite.com/2019/07/31/SQL/DML-SQL.md/index.html">
 <meta property="og:site_name" content="黎明晨光">
-<meta property="og:description" content="命令 作用     insert 插入语句   UPDATE 更新语句   DELETE 删除语句">
+<meta property="og:description" content="命令 作用     insert 插入语句insert into:追加数据insert overwrite:覆盖数据   UPDATE 更新语句   DELETE 删除语句">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-09T06:16:32.998Z">
+<meta property="og:updated_time" content="2019-08-12T06:56:48.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DML-SQL">
-<meta name="twitter:description" content="命令 作用     insert 插入语句   UPDATE 更新语句   DELETE 删除语句">
+<meta name="twitter:description" content="命令 作用     insert 插入语句insert into:追加数据insert overwrite:覆盖数据   UPDATE 更新语句   DELETE 删除语句">
 
 
 
@@ -392,7 +392,7 @@
 <tbody>
 <tr>
 <td><code>insert</code></td>
-<td>插入语句</td>
+<td>插入语句<br><code>insert into</code>:追加数据<br><code>insert overwrite</code>:覆盖数据</td>
 </tr>
 <tr>
 <td><code>UPDATE</code></td>
@@ -406,7 +406,7 @@
 </table>
 </div>
 <a id="more"></a>
-<h1 id="增、删、改"><a href="#增、删、改" class="headerlink" title="增、删、改"></a>增、删、改</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 插入语句</span></span><br><span class="line"><span class="keyword">Insert</span> <span class="keyword">Into</span> Persons (LastName, Address) <span class="keyword">VALUES</span> (<span class="string">'Wilson'</span>, <span class="string">'Champs-Elysees'</span>)</span><br><span class="line"><span class="keyword">Insert</span> <span class="keyword">Into</span> St (S#, Sname, avgScore)</span><br><span class="line">            <span class="keyword">Select</span> S#, Sname, <span class="keyword">Avg</span>(Score) <span class="keyword">From</span> Student, SC</span><br><span class="line">            <span class="keyword">Where</span> Student.S# = SC.S#</span><br><span class="line">            <span class="keyword">Group</span> <span class="keyword">by</span> Student.S# ;</span><br><span class="line"><span class="comment">-- 更新语句-UPDATE  修改某一行数据</span></span><br><span class="line"><span class="keyword">UPDATE</span> Person <span class="keyword">SET</span> Address = <span class="string">'Zhongshan 23'</span>, City = <span class="string">'Nanjing'</span> <span class="keyword">WHERE</span> LastName = <span class="string">'Wilson'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除语句-DELETE</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Person <span class="keyword">WHERE</span> LastName = <span class="string">'Wilson'</span>        <span class="comment">--删除行名为Wilson</span></span><br></pre></td></tr></table></figure>
+<h1 id="增、删、改"><a href="#增、删、改" class="headerlink" title="增、删、改"></a>增、删、改</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 插入语句</span></span><br><span class="line"><span class="keyword">Insert</span> <span class="keyword">Into</span> Persons (LastName, Address) <span class="keyword">VALUES</span> (<span class="string">'Wilson'</span>, <span class="string">'Champs-Elysees'</span>)</span><br><span class="line"><span class="keyword">Insert</span> <span class="keyword">Into</span> St (S#, Sname, avgScore)</span><br><span class="line">            <span class="keyword">Select</span> S#, Sname, <span class="keyword">Avg</span>(Score) <span class="keyword">From</span> Student, SC</span><br><span class="line">            <span class="keyword">Where</span> Student.S# = SC.S#</span><br><span class="line">            <span class="keyword">Group</span> <span class="keyword">by</span> Student.S# ;</span><br><span class="line"><span class="keyword">Insert</span> overwrite St (S#, Sname, avgScore)</span><br><span class="line">            <span class="keyword">Select</span> S#, Sname, <span class="keyword">Avg</span>(Score) <span class="keyword">From</span> Student, SC</span><br><span class="line">            <span class="keyword">Where</span> Student.S# = SC.S#</span><br><span class="line">            <span class="keyword">Group</span> <span class="keyword">by</span> Student.S# ;</span><br><span class="line"><span class="comment">-- 更新语句-UPDATE  修改某一行数据</span></span><br><span class="line"><span class="keyword">UPDATE</span> Person <span class="keyword">SET</span> Address = <span class="string">'Zhongshan 23'</span>, City = <span class="string">'Nanjing'</span> <span class="keyword">WHERE</span> LastName = <span class="string">'Wilson'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除语句-DELETE</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Person <span class="keyword">WHERE</span> LastName = <span class="string">'Wilson'</span>        <span class="comment">--删除行名为Wilson</span></span><br></pre></td></tr></table></figure>
 <h1 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> expr,列名 <span class="keyword">as</span> 列的别名,<span class="keyword">function</span>(列名) <span class="keyword">as</span> 列的别名</span><br><span class="line"><span class="keyword">from</span> 表名 <span class="keyword">as</span> 表的别名</span><br><span class="line"><span class="keyword">where</span> 条件(对每一个元组进行过滤)</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 列名(分组) <span class="keyword">having</span> 对每一组进行过滤</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">by</span> 列名 [<span class="keyword">asc</span>|<span class="keyword">desc</span>]</span><br></pre></td></tr></table></figure>
 <table>
   <tr>
@@ -582,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/SQL/DDL-SQL.md/" rel="next" title="DDL-SQL">
-                <i class="fa fa-chevron-left"></i> DDL-SQL
+              <a href="/2019/07/31/SQL/DCL-SQL.md/" rel="next" title="DCL-SQL">
+                <i class="fa fa-chevron-left"></i> DCL-SQL
               </a>
             
           </div>
@@ -680,7 +680,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -691,7 +691,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -702,7 +702,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -793,6 +793,15 @@
 
 
 
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
         
 <div class="busuanzi-count">

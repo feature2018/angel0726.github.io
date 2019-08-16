@@ -107,10 +107,10 @@ rdd.foreachPartition(x => {
 | `map(func)`                           | 以元素为单位，遍历`RDD`，运行`func`函数。                    |
 | `mapPartitions(func)`                 | 以分区为单位，遍历`RDD`，运行`func`函数。                    |
 | `mapPartitionsWithIndex`              | 与`mapPartitions`基本相同，只是在处理函数的参数是一个二元元组，元组的第一个元素是当前处理的分区的`index`，元组的第二个元素是当前处理的分区元素组成的`Iterator` |
-| `coalesce`                            |                                                              |
-|                                       |                                                              |
-|                                       |                                                              |
-|                                       |                                                              |
+| `coalesce(n,shuffle)`                 | 改变RDD的分区数<br>n：新的分区数目<br>shuffle：false:不产生shuffle；true:产生shuffle，如果重分区的数量大于原来的分区数量,必须设置为true,否则分区数不变 |
+| `repartition(n)`                      | 改变RDD分区数。`repartition(int n) = coalesce(int n, true)`  |
+| `partitionBy`                         | 通过自定义分区器改变RDD分区数                                |
+| `randomSplit(Array)`                  | 根据传入的 `Array`中每个元素的权重将`rdd`拆分成`Array.size`个`RDD`拆分后的`RDD`中元素数量由权重来决定， |
 | `groupWith(otherDataset, [numTasks])` | 在类型为（K,V)和(K,W)类型的数据集上调用，返回一个数据集，组成元素为（K, Seq[V], Seq[W]) Tuples。这个操作在其它框架，称为CoGroup |
 
 ## map和flatMap
@@ -254,4 +254,49 @@ for(x <- resultArr){
   println(x)
 }
 ```
+
+## coalesce：改变RDD的分区数
+
+```scala
+/*
+ * false:不产生shuffle
+ * true:产生shuffle
+ * 如果重分区的数量大于原来的分区数量,必须设置为true,否则分区数不变
+ * 增加分区会把原来的分区中的数据随机分配给设置的分区个数
+ */
+val coalesceRdd = result.coalesce(6,true)
+   
+val results = coalesceRdd.mapPartitionsWithIndex((index,x) => {
+  val list = ListBuffer[String]()
+  while (x.hasNext) {
+      list += "partition:"+ index + " content:[" + x.next + "]"
+  }
+  list.iterator
+})
+   
+println("分区数量:" + results.partitions.size)
+val resultArr = results.collect()
+for(x <- resultArr){
+  println(x)
+}
+
+```
+
+![img](http://chant00.com/media/15050414638959.jpg)
+
+## randomSplit：拆分RDD
+
+```scala
+/**
+ * randomSplit:
+ *   根据传入的 Array中每个元素的权重将rdd拆分成Array.size个RDD
+ *  拆分后的RDD中元素数量由权重来决定，数据量不大时不一定准确
+ */
+val rdd = sc.parallelize(1 to 10)
+rdd.randomSplit(Array(0.1,0.2,0.3,0.4)).foreach(x => {println(x.count)})
+```
+
+## zip
+
+![img](RDD-Spark/15051361379636.jpg)
 

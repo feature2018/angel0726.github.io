@@ -99,3 +99,5 @@ categories: SQL
 | GRANT  | 赋予用户特权       |
 | REVOKE | 收回赋予用户的特权 |
 
+
+

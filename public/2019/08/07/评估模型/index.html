@@ -89,8 +89,9 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/08/07/评估模型/1565235635992.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/07/评估模型/1565246937404.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/07/评估模型/1565855471447.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/07/评估模型/6c9cd5825bc443459b66f7b20b6f8588_th.jpg">
-<meta property="og:updated_time" content="2019-08-08T07:21:20.145Z">
+<meta property="og:updated_time" content="2019-08-15T11:29:14.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="评估模型">
 <meta name="twitter:description" content="真实类别 预测为正例 预测为反例     正例 TP(真正例) FN(假反例)   反例 FP(假正例) TN(真反例)">
@@ -456,10 +457,95 @@ x轴-查全率（召回率）R = \frac {TP} {TP+FN}</script><p>在比较两个�
 \frac{1}{F_\beta }=\frac{1}{1+\beta ^2}(\frac{1}{P}+\frac{\beta ^2}{R})\\</script><p>$β=R/P$ ，其中$β$值越大召回率越重要，$β$值越小查准率越重要。$β$值为两者重要性的比例</p>
 <h1 id="G-mean指数"><a href="#G-mean指数" class="headerlink" title="G-mean指数"></a>G-mean指数</h1><p>G-mean是正例准确率与负例准确率的综合指标。<strong>与F1的比较</strong>：在数据平衡度不是很大的情况下，F1和G-mean可以作为较好的评测指标，但是当训练样本很不平衡时，F1更好。</p>
 <script type="math/tex; mode=display">
-G - mean = \sqrt{\frac {TP}{TP+FN}\times \frac {TN}{TN+FP}} = \sqrt {查全率（召回率）\times 查准率（精准率）}</script><h1 id="ROC曲线与AUC"><a href="#ROC曲线与AUC" class="headerlink" title="ROC曲线与AUC"></a>ROC曲线与AUC</h1><h2 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h2><p><img src="/2019/08/07/评估模型/1565246937404.png" alt="1565246937404"></p>
+G - mean = \sqrt{\frac {TP}{TP+FN}\times \frac {TN}{TN+FP}} = \sqrt {查全率（召回率）真正例率 \times 真负例率}</script><h1 id="ROC曲线与AUC"><a href="#ROC曲线与AUC" class="headerlink" title="ROC曲线与AUC"></a>ROC曲线与AUC</h1><h2 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h2><p><img src="/2019/08/07/评估模型/1565246937404.png" alt="1565246937404"></p>
 <script type="math/tex; mode=display">
 y轴-真正例率 TPR = \frac {TP}{TP+FN} \\
 x轴-假正例率 FPR = \frac {FP}{TN+FP}</script><p>真正例率指的是真实正例中有多少被预测为正例，假正例率指的是真实反例中有多少被预测为正例。<strong>可以看出TPR和Recall的形式是一样的，就是查全率了，FPR就是保证这样的查全率你所要付出的代价，就是把多少负样本也分成了正的了。</strong>如果所有西瓜都预测为好瓜则查全率为1，但是假正例率也会升高因为所有坏瓜也预测为了好瓜。</p>
+<h3 id="举例计算"><a href="#举例计算" class="headerlink" title="举例计算"></a>举例计算</h3><p>假设有4个样本，样本的标签分别为 $0,1,0,1$；模型的预测概率分别为$0.1,0.35,0.4,0.8$；</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>0</th>
+<th>1</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pred</td>
+<td>0.1</td>
+<td>0.35</td>
+<td>0.4</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>阈值</td>
+<td>0.1</td>
+<td>0.35</td>
+<td>0.4</td>
+<td>0.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>那么在阈值分别取$0.1, 0.35, 0.4, 0.8$的时候。分别判断出每个<code>pred</code>是<code>TP/FP/TN/FP</code>中的哪个，进而得出当前阈值下的<code>TPR</code>和<code>FPR</code>，也就是<code>(FPR, TPR)</code>这一ROC曲线图上的点；对于所有阈值都计算相应的<code>(FPR, TPR)</code>,则得到完整的ROC曲线上的几个关键点。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>阈值</th>
+<th>样本1</th>
+<th>样本2</th>
+<th>样本3</th>
+<th>样本4</th>
+<th>$TPR=\frac {TP}{TP+FN}$</th>
+<th>$FPR\frac {FP}{TN+FP}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>FP</td>
+<td>TP</td>
+<td>FP</td>
+<td>TP</td>
+<td>$\frac{2}{2+0}=1$</td>
+<td>$\frac{2}{0+2}=1$</td>
+</tr>
+<tr>
+<td>0.35</td>
+<td>TN</td>
+<td>TP</td>
+<td>FP</td>
+<td>TP</td>
+<td>$\frac{2}{2+0}= 1 $</td>
+<td>$\frac{1}{1+1}=0.5$</td>
+</tr>
+<tr>
+<td>0.4</td>
+<td>TN</td>
+<td>FN</td>
+<td>FP</td>
+<td>TP</td>
+<td>$\frac{1}{1+1}=0.5$</td>
+<td>$\frac{1}{1+1}=0.5 $</td>
+</tr>
+<tr>
+<td>0.8</td>
+<td>TN</td>
+<td>FN</td>
+<td>TN</td>
+<td>TP</td>
+<td>$\frac {1} {1+1}=0.5$</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="/2019/08/07/评估模型/1565855471447.png" alt="1565855471447"></p>
 <h2 id="AUC指数"><a href="#AUC指数" class="headerlink" title="AUC指数"></a>AUC指数</h2><p>AUC：<strong>ROC曲线的线下面积。</strong>与P-R曲线类似，如果学习器A的ROC曲线被学习器B完全“包住”，那么后者性能优于前者（相同的假正例率，其真正例率更高）。但是当两个曲线有交点时，则需要比较曲线下的面积AUC(Area Under ROC Curve)。</p>
 <h1 id="k-s指标"><a href="#k-s指标" class="headerlink" title="k-s指标"></a>k-s指标</h1><p>K-S(Kolmogorov-Smirnov)统计量越大，表示模型能够将正、负客户区分开的程度越大。KS值的取值范围是[0，1] </p>
 <h2 id="ks曲线"><a href="#ks曲线" class="headerlink" title="ks曲线"></a>ks曲线</h2><script type="math/tex; mode=display">
@@ -600,7 +686,7 @@ FPR = FP/(FP+TN)</script><p>洛伦兹线：两条线，其横轴是模型评分�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -611,7 +697,7 @@ FPR = FP/(FP+TN)</script><p>洛伦兹线：两条线，其横轴是模型评分�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -622,7 +708,7 @@ FPR = FP/(FP+TN)</script><p>洛伦兹线：两条线，其横轴是模型评分�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -671,7 +757,7 @@ FPR = FP/(FP+TN)</script><p>洛伦兹线：两条线，其横轴是模型评分�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准确率、错误率、召回率、查准率"><span class="nav-number">1.</span> <span class="nav-text">准确率、错误率、召回率、查准率</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P-R曲线、F1指数"><span class="nav-number">2.</span> <span class="nav-text">P-R曲线、F1指数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#P-R曲线"><span class="nav-number">2.1.</span> <span class="nav-text">P-R曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡点"><span class="nav-number">2.2.</span> <span class="nav-text">平衡点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F1指数"><span class="nav-number">2.3.</span> <span class="nav-text">F1指数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-beta-指数"><span class="nav-number">2.4.</span> <span class="nav-text">$F_\beta$指数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G-mean指数"><span class="nav-number">3.</span> <span class="nav-text">G-mean指数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ROC曲线与AUC"><span class="nav-number">4.</span> <span class="nav-text">ROC曲线与AUC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC曲线"><span class="nav-number">4.1.</span> <span class="nav-text">ROC曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUC指数"><span class="nav-number">4.2.</span> <span class="nav-text">AUC指数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#k-s指标"><span class="nav-number">5.</span> <span class="nav-text">k-s指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ks曲线"><span class="nav-number">5.1.</span> <span class="nav-text">ks曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-S统计量"><span class="nav-number">5.2.</span> <span class="nav-text">K-S统计量</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准确率、错误率、召回率、查准率"><span class="nav-number">1.</span> <span class="nav-text">准确率、错误率、召回率、查准率</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P-R曲线、F1指数"><span class="nav-number">2.</span> <span class="nav-text">P-R曲线、F1指数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#P-R曲线"><span class="nav-number">2.1.</span> <span class="nav-text">P-R曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡点"><span class="nav-number">2.2.</span> <span class="nav-text">平衡点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F1指数"><span class="nav-number">2.3.</span> <span class="nav-text">F1指数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-beta-指数"><span class="nav-number">2.4.</span> <span class="nav-text">$F_\beta$指数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G-mean指数"><span class="nav-number">3.</span> <span class="nav-text">G-mean指数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ROC曲线与AUC"><span class="nav-number">4.</span> <span class="nav-text">ROC曲线与AUC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC曲线"><span class="nav-number">4.1.</span> <span class="nav-text">ROC曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#举例计算"><span class="nav-number">4.1.1.</span> <span class="nav-text">举例计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUC指数"><span class="nav-number">4.2.</span> <span class="nav-text">AUC指数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#k-s指标"><span class="nav-number">5.</span> <span class="nav-text">k-s指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ks曲线"><span class="nav-number">5.1.</span> <span class="nav-text">ks曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-S统计量"><span class="nav-number">5.2.</span> <span class="nav-text">K-S统计量</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -713,6 +799,15 @@ FPR = FP/(FP+TN)</script><p>洛伦兹线：两条线，其横轴是模型评分�
 
 
 
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
         
 <div class="busuanzi-count">
