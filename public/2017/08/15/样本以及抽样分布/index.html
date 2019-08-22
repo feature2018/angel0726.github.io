@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/08/15/样本以及抽样分布/样本以及抽样分布-79d1c781.png">
 <meta property="og:image" content="http://yoursite.com/2017/08/15/样本以及抽样分布/样本以及抽样分布-35e6599e.png">
 <meta property="og:image" content="http://yoursite.com/2017/08/15/样本以及抽样分布/样本以及抽样分布-0a6c68e5.png">
-<meta property="og:updated_time" content="2019-07-30T01:54:38.161Z">
+<meta property="og:updated_time" content="2019-08-21T03:37:04.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="样本以及抽样分布">
 <meta name="twitter:description" content="概率论与数理统计的主要区别为，在概率论中所研究的随机变量，其分布都是假设已知的，在这一前提下去研究它的性质（数字特征，分布函数等）；而在数理统计中研究的随机变量其分布是未知的，通过对所研究的随机变量进行重复独立的试验和观察，得到许多观察值，再对观察值进行分析，从而对所研究的随机变量的分布做出各种推断 因此数理统计的主要内容包括两部分，一是如何收集，整理数据资料，二是如何对得到的数据资料进行分析和研">
@@ -409,23 +409,25 @@
 <script type="math/tex; mode=display">B_k = \frac{1}{n} \sum_{i=1}^{n}(X_i - \overline X)^k (k=2,3,4…..)</script><p>这些统计量的定义与概率论中的基本相似，唯一比较奇怪的是为什么样本方差的分母是 $n−1$ 而不是 $n$，原因是通过数学证明可以得到只有当分母取n-1时，用样本来估计总体才是无偏的(无偏指的是估计量的期望与总体的参数一致)，下面是分母取n时得到的有偏估计的证明过程（$S^2_1$为样本方差）</p>
 <p><img src="/2017/08/15/样本以及抽样分布/样本以及抽样分布-7688d0c8.png" alt=""></p>
 <h2 id="统计量的分布"><a href="#统计量的分布" class="headerlink" title="统计量的分布"></a>统计量的分布</h2><p>使用统计量进行统计推断时，常常需要知道其分布，<strong>统计量的分布也称为抽样分布</strong>，下面介绍三种来自正态分布的抽样分布： $χ^2$ 分布，$t$ 分布和 $F$ 分布。</p>
-<h3 id="χ-2-分布"><a href="#χ-2-分布" class="headerlink" title="$χ^2$ 分布"></a>$χ^2$ 分布</h3><p>$χ^2$ 分布的定义如下</p>
-<p>设 $X_1, X_2,…X_n$ 是来自总体 $N(0,1)$ 的样本，则称统计量</p>
-<script type="math/tex; mode=display">\chi^2 = X_1^2 + X_2^2 +….X_n^2</script><p>为服从自由度为 $n$ 的 $χ^2$ 分布</p>
-<p>上面的自由度指的是右端独立变量的个数。</p>
-<p>$χ^2(n)$ 的概率密度函数为</p>
-<script type="math/tex; mode=display">f(y) = \begin{cases}  \frac{1}{2^{\frac{n}{2}}\Gamma(n/2)}y^{n/2-1}e^{-y/2} &{y>0} \\ 0&{其他}\end{cases}</script><p>上式的 $Γ$ 函数定义为</p>
-<script type="math/tex; mode=display">\Gamma = \int_{0}^{\infty} \frac{t^z - 1}{e^t} dt</script><p>$f(y)$ 的图像如下所示</p>
+<h3 id="χ-2-分布"><a href="#χ-2-分布" class="headerlink" title="$χ^2$ 分布"></a>$χ^2$ 分布</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>设 $X_1, X_2,…X_n$ 是来自总体 $N(0,1)$ 的样本，则称统计量</p>
+<script type="math/tex; mode=display">
+\chi^2 = X_1^2 + X_2^2 +….X_n^2</script><p>为服从自由度为 $n$ 的 $χ^2$ 分布，记作 $X$~$χ^2(n)$。其中自由度$n$指的是右端独立变量的个数。</p>
+<h4 id="概率密度函数"><a href="#概率密度函数" class="headerlink" title="概率密度函数"></a>概率密度函数</h4><p>$χ^2(n)$ 的概率密度函数为</p>
+<script type="math/tex; mode=display">
+f(y) = \begin{cases}  \frac{1}{2^{\frac{n}{2}}\Gamma(n/2)}y^{n/2-1}e^{-y/2} &{y>0} \\ 0&{其他}\end{cases}</script><p>上式的 $Γ$ 函数定义为$\Gamma = \int_{0}^{\infty} \frac{t^z - 1}{e^t} dt$。$f(y)$ 的图像如下所示</p>
 <p><img src="/2017/08/15/样本以及抽样分布/样本以及抽样分布-bc11bcfe.png" alt="卡方分布的概率密度函数"></p>
-<p>关于 $χ^2(n)$ 有以下几个有用的结论：</p>
+<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><p>关于 $χ^2(n)$ 有以下几个有用的结论：</p>
 <ul>
-<li>可加性<br>设 $\chi_1^2$~$\chi^2(n_1), \chi_2^2$ ~ $\chi_2^2$ , 并且 $\chi_1^2, \chi_2^2$ 相互独立，则有<script type="math/tex; mode=display">\chi_1^2 + \chi_2^2 \sim \chi^2(n_1 + n_2)</script></li>
-<li>期望和方差<br>若$\chi^2(n)$，则χ2的期望和方差如下所示<script type="math/tex; mode=display">E(\chi^2) = n, D(\chi^2)=2n</script></li>
-<li>分位点<br>分位点的定义如下，给定正数 $a,0&lt;a&lt;1$, 称满足下面条件</li>
-</ul>
-<script type="math/tex; mode=display">P(\chi^2 \gt \chi_a^2(n)) = \int_{\chi_a^2(n)}^{\infty}f(y)dy= a</script><p>的 $\chi_a^2(n)$ 为 $\chi^2(n)$ 上的 $a$ 分位点，其图像如下所示</p>
+<li><p>可加性<br>设 $\chi_1^2$~$\chi^2(n_1), \chi_2^2$ ~ $\chi_2^2(n_2)$ , 并且 $\chi_1^2, \chi_2^2$ 相互独立，则有</p>
+<script type="math/tex; mode=display">\chi_1^2 + \chi_2^2 \sim \chi^2(n_1 + n_2)</script></li>
+<li><p>期望和方差<br>若$\chi^2(n)$，则$χ^2$的期望和方差如下所示</p>
+<script type="math/tex; mode=display">E(\chi^2) = n, D(\chi^2)=2n</script></li>
+<li><p>分位点</p>
+<p>分位点的定义如下，给定正数 $a,0&lt;a&lt;1$, 称满足下面条件的 $\chi_a^2(n)$ 为 $\chi^2(n)$ 上的 $a$ 分位点，其图像如下所示</p>
 <p><img src="/2017/08/15/样本以及抽样分布/样本以及抽样分布-3e85fbb1.png" alt=""></p>
 <p>由定义可知，分位点由 $a,n$ 共同决定，因此对于不同的 $a，n$ 可以查阅表格得到其 $a$ 分位点。</p>
+</li>
+</ul>
 <h3 id="t-分布"><a href="#t-分布" class="headerlink" title="$t$ 分布"></a>$t$ 分布</h3><p>t分布的定义如下：</p>
 <p>设 $X \sim N(0,1), Y \sim \chi^2(n)$, 且 X,Y 相互独立，则称随机变量</p>
 <script type="math/tex; mode=display">t = \frac{X}{\sqrt{Y/n}}</script><p>服从自由度为 $n$ 的 $t$ 分布, 记为 $t∼t(n)$<br>其概率密度函数和对应的图像如下所示：<br><img src="/2017/08/15/样本以及抽样分布/样本以及抽样分布-80c1cca7.png" alt="t分布的概率密度函数和图像"></p>
@@ -604,7 +606,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -675,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#样本"><span class="nav-number">1.</span> <span class="nav-text">样本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽样分布"><span class="nav-number">2.</span> <span class="nav-text">抽样分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#统计量"><span class="nav-number">2.1.</span> <span class="nav-text">统计量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计量的分布"><span class="nav-number">2.2.</span> <span class="nav-text">统计量的分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#χ-2-分布"><span class="nav-number">2.2.1.</span> <span class="nav-text">$χ^2$ 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#t-分布"><span class="nav-number">2.2.2.</span> <span class="nav-text">$t$ 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-分布"><span class="nav-number">2.2.3.</span> <span class="nav-text">$F$ 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正态总体的样本均值与样本方差的分布-统计量的应用"><span class="nav-number">2.2.4.</span> <span class="nav-text">正态总体的样本均值与样本方差的分布(统计量的应用)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定理一"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">定理一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理二"><span class="nav-number">2.2.4.2.</span> <span class="nav-text">定理二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理三"><span class="nav-number">2.2.4.3.</span> <span class="nav-text">定理三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理四"><span class="nav-number">2.2.4.4.</span> <span class="nav-text">定理四</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#样本"><span class="nav-number">1.</span> <span class="nav-text">样本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽样分布"><span class="nav-number">2.</span> <span class="nav-text">抽样分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#统计量"><span class="nav-number">2.1.</span> <span class="nav-text">统计量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计量的分布"><span class="nav-number">2.2.</span> <span class="nav-text">统计量的分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#χ-2-分布"><span class="nav-number">2.2.1.</span> <span class="nav-text">$χ^2$ 分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概率密度函数"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">概率密度函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性质"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#t-分布"><span class="nav-number">2.2.2.</span> <span class="nav-text">$t$ 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-分布"><span class="nav-number">2.2.3.</span> <span class="nav-text">$F$ 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正态总体的样本均值与样本方差的分布-统计量的应用"><span class="nav-number">2.2.4.</span> <span class="nav-text">正态总体的样本均值与样本方差的分布(统计量的应用)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定理一"><span class="nav-number">2.2.4.1.</span> <span class="nav-text">定理一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理二"><span class="nav-number">2.2.4.2.</span> <span class="nav-text">定理二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理三"><span class="nav-number">2.2.4.3.</span> <span class="nav-text">定理三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定理四"><span class="nav-number">2.2.4.4.</span> <span class="nav-text">定理四</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>

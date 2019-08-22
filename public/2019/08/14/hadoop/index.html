@@ -88,7 +88,8 @@
 <meta property="og:description" content="Apache Hadoop软件库是一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。它旨在从单个服务器扩展到数千台计算机，每台计算机都提供本地计算和存储。该库本身不是依靠硬件来提供高可用性，而是设计用于检测和处理应用层的故障，从而在计算机集群之上提供高可用性服务，每个计算机都可能容易出现故障。Hadoop的命令众多，本文重点介绍HDFS与MapReduce">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/08/14/hadoop/1565782138575.png">
-<meta property="og:updated_time" content="2019-08-16T02:16:42.931Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/14/hadoop/14019352-0c530b046636edd0.webp">
+<meta property="og:updated_time" content="2019-08-16T12:40:15.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop">
 <meta name="twitter:description" content="Apache Hadoop软件库是一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。它旨在从单个服务器扩展到数千台计算机，每台计算机都提供本地计算和存储。该库本身不是依靠硬件来提供高可用性，而是设计用于检测和处理应用层的故障，从而在计算机集群之上提供高可用性服务，每个计算机都可能容易出现故障。Hadoop的命令众多，本文重点介绍HDFS与MapReduce">
@@ -386,8 +387,7 @@
         <p><img src="/2019/08/14/hadoop/1565782138575.png" alt="1565782138575"></p>
 <p><code>Apache Hadoop</code>软件库是一个框架，允许使用简单的编程模型跨计算机集群分布式处理大型数据集。它旨在从单个服务器扩展到数千台计算机，每台计算机都提供本地计算和存储。该库本身不是依靠硬件来提供高可用性，而是设计用于检测和处理应用层的故障，从而在计算机集群之上提供高可用性服务，每个计算机都可能容易出现故障。<code>Hadoop</code>的命令众多，本文重点介绍<code>HDFS</code>与<code>MapReduce</code></p>
 <a id="more"></a>
-<center>hadoop.tgn</center>
-
+<p><center>hadoop.tgn</center></p>
 <table>
   <tr>
     <th>类别</th>
@@ -497,8 +497,11 @@
   </tr>
 </table>
 
-<h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a><a href="https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_design.html" target="_blank" rel="noopener">HDFS</a></h3><p><code>Hadoop</code>分布式文件系统(<code>HDFS</code>)被设计成适合运行在通用硬件(commodity hardware)上的分布式文件系统。它和现有的分布式文件系统有很多共同点。但同时，它和其他的分布式文件系统的区别也是很明显的。<code>HDFS</code>是一个高度容错性的系统，适合部署在廉价的机器上。<code>HDFS</code>能提供高吞吐量的数据访问，非常适合大规模数据集上的应用。<code>HDFS</code>放宽了一部分<code>POSIX</code>约束，来实现流式读取文件系统数据的目的。<code>HDFS</code>在最开始是作为<code>Apache Nutch</code>搜索引擎项目的基础架构而开发的。<code>HDFS</code>是<code>Apache Hadoop Core</code>项目的一部分。<a href=""><code>HDFS</code>使用指南</a></p>
-
+<h1 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a><a href="https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_design.html" target="_blank" rel="noopener">HDFS</a></h1><p><code>Hadoop</code>分布式文件系统(<code>HDFS</code>)被设计成适合运行在通用硬件(commodity hardware)上的分布式文件系统。它和现有的分布式文件系统有很多共同点。但同时，它和其他的分布式文件系统的区别也是很明显的。<code>HDFS</code>是一个高度容错性的系统，适合部署在廉价的机器上。<code>HDFS</code>能提供高吞吐量的数据访问，非常适合大规模数据集上的应用。<code>HDFS</code>放宽了一部分<code>POSIX</code>约束，来实现流式读取文件系统数据的目的。<code>HDFS</code>在最开始是作为<code>Apache Nutch</code>搜索引擎项目的基础架构而开发的。<code>HDFS</code>是<code>Apache Hadoop Core</code>项目的一部分。<a href=""><code>HDFS</code>使用指南</a></p>
+<h1 id="Map-Reduce"><a href="#Map-Reduce" class="headerlink" title="Map/Reduce"></a><a href="./MapReduce.md">Map/Reduce</a></h1><p><code>Map/Reduce</code> 是一个分布式运算程序的编程框架，<code>Map/Reduce</code> 核心功能是将用户编写的业务逻辑代码和自带默认组件整合成一个完整的分布式运算程序，并发运行在一个 <code>hadoop</code> 集群上。每个<code>Map/Reduce</code>任务都被初始化为一个<code>Job</code>，每个<code>Job</code>又可以分为两种阶段：<code>map</code>阶段和<code>reduce</code>阶段。这两个阶段分别用两个函数表示，即<code>map</code>函数和<code>reduce</code>函数。一个<code>Map/Reduce</code>作业的输入和输出类型如下所示：</p>
+<p><code>(input) &lt;k1, v1&gt; -&gt; map -&gt; &lt;k2, v2&gt; -&gt; combine -&gt; &lt;k2, v2&gt; -&gt; reduce -&gt; &lt;k3, v3&gt; (output)</code></p>
+<p><img src="/2019/08/14/hadoop/14019352-0c530b046636edd0.webp" alt="img"></p>
+<h1 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a><a href="./hive.md">Hive</a></h1>
       
     </div>
     
@@ -628,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -699,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HDFS"><span class="nav-number">1.</span> <span class="nav-text">HDFS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HDFS"><span class="nav-number">1.</span> <span class="nav-text">HDFS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map-Reduce"><span class="nav-number">2.</span> <span class="nav-text">Map/Reduce</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hive"><span class="nav-number">3.</span> <span class="nav-text">Hive</span></a></li></ol></div>
             
 
           </div>

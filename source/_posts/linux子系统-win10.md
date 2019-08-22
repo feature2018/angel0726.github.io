@@ -7,17 +7,17 @@ categories: linux
 
 # Windows10安装Ubuntu子系统
 
-## 一、启用或关闭Windows功能
-
-![1565005612829](linux子系统-win10/1565005612829.png)
-
-<!--more-->
-
-## 二、开启开发模式
+## 一、开启开发模式
 
 “设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。
 
 ![tempsnip](linux子系统-win10/tempsnip.png)
+
+<!--more-->
+
+## 二、启用或关闭Windows功能
+
+![1565005612829](linux子系统-win10/1565005612829.png)
 
 ## 三、安装 Linux 子系统
 

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com">
+<meta name="description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com pandasDataframe    命令 说明         df[&amp;#39;add_column&amp;#39;]=1 df添加列add_column   df.drop() 删除行或者列labels：删除的行或者列名axis：行-&amp;gt;0；列-&amp;gt;1index ：直接指定要删除的行colu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python">
 <meta property="og:url" content="http://yoursite.com/2019/08/15/python/index.html">
 <meta property="og:site_name" content="黎明晨光">
-<meta property="og:description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com">
+<meta property="og:description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com pandasDataframe    命令 说明         df[&amp;#39;add_column&amp;#39;]=1 df添加列add_column   df.drop() 删除行或者列labels：删除的行或者列名axis：行-&amp;gt;0；列-&amp;gt;1index ：直接指定要删除的行colu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-15T08:58:10.683Z">
+<meta property="og:updated_time" content="2019-08-20T06:53:04.354Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python">
-<meta name="twitter:description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com">
+<meta name="twitter:description" content="matplotlibhttps://serverpoolauth.ops.ctripcorp.com pandasDataframe    命令 说明         df[&amp;#39;add_column&amp;#39;]=1 df添加列add_column   df.drop() 删除行或者列labels：删除的行或者列名axis：行-&amp;gt;0；列-&amp;gt;1index ：直接指定要删除的行colu">
 
 
 
@@ -359,6 +359,54 @@
 
       
         <h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a><a href="https://matplotlib.org/index.html" target="_blank" rel="noopener">matplotlib</a></h1><p><a href="https://serverpoolauth.ops.ctripcorp.com" target="_blank" rel="noopener">https://serverpoolauth.ops.ctripcorp.com</a></p>
+<h1 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a><a href="https://pandas.pydata.org/" target="_blank" rel="noopener">pandas</a></h1><h2 id="Dataframe"><a href="#Dataframe" class="headerlink" title="Dataframe"></a>Dataframe</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>df[&#39;add_column&#39;]=1</code></td>
+<td><code>df</code>添加列<code>add_column</code></td>
+</tr>
+<tr>
+<td><code>df.drop()</code></td>
+<td>删除行或者列<br><code>labels</code>：删除的行或者列名<br><code>axis</code>：行-&gt;0；列-&gt;1<br><code>index</code> ：直接指定要删除的行<br><code>columns</code>：直接指定要删除的列<br><code>inplace=False</code>：默认该删除操作不改变原数据，而是返回一个执行删除操作后的新<code>dataframe</code>；<br><code>inplace=True</code>：则会直接在原数据上进行删除操作，删除后无法返回。</td>
+</tr>
+<tr>
+<td><code>df.rename()</code></td>
+<td><code>df.rename(columns={&#39;A&#39;:&#39;a&#39;, &#39;B&#39;:&#39;b&#39;, &#39;C&#39;:&#39;c&#39;}, inplace = True)</code><br>将列名修改为`[‘a’,’b’,’c’]</td>
+</tr>
+<tr>
+<td><code>df.columns= [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code></td>
+<td>将列名修改为<code>[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]</code></td>
+</tr>
+<tr>
+<td><code>df.reset_index(列名,inplace)</code></td>
+<td>索引转化为列<br>列名：可以有，可以没有。多索引时，可以指定索引<br><code>inplace</code>：替换原<code>DataFrame</code></td>
+</tr>
+<tr>
+<td><code>df.set_index(列名)</code></td>
+<td>列转化为索引</td>
+</tr>
+<tr>
+<td><code>df.T</code></td>
+<td><code>DataFrame</code>转置</td>
+</tr>
+<tr>
+<td><code>df.merge()</code></td>
+<td>类似于数据库的<code>join</code>,返回<code>DataFrame</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
@@ -393,7 +441,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/16/HDFS/HDFS.md/" rel="prev" title="HDFS">
+              <a href="/2019/08/16/hadoop/HDFS.md/" rel="prev" title="HDFS">
                 HDFS <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -481,7 +529,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -552,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matplotlib"><span class="nav-number">1.</span> <span class="nav-text">matplotlib</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matplotlib"><span class="nav-number">1.</span> <span class="nav-text">matplotlib</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pandas"><span class="nav-number">2.</span> <span class="nav-text">pandas</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dataframe"><span class="nav-number">2.1.</span> <span class="nav-text">Dataframe</span></a></li></ol></li></ol></div>
             
 
           </div>

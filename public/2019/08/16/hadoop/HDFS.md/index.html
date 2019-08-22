@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="HDFS shell命令命令格式： bin/hadoop fs &amp;lt;args&amp;gt; URI &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;URI：scheme://authority/pa">
+<meta name="description" content="HDFS框架  主从结构： 主节点，只有一个  ： namenode 从节点，有很多个  ：datanodes   namenode负责： 接收用户请求操作 维护文件信息系统的目录结构 管理文件与block之间的关系，block与datanade之间的关系注意：namenode归根结底要放在磁盘上的以保证数据的持久性，但是为了提高效率，一般在hadoop运行时时放在内存中的   datanode负">
 <meta name="keywords" content="人工智能,分布式系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDFS">
-<meta property="og:url" content="http://yoursite.com/2019/08/16/HDFS/HDFS.md/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/16/hadoop/HDFS.md/index.html">
 <meta property="og:site_name" content="黎明晨光">
-<meta property="og:description" content="HDFS shell命令命令格式： bin/hadoop fs &amp;lt;args&amp;gt; URI &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;URI：scheme://authority/pa">
+<meta property="og:description" content="HDFS框架  主从结构： 主节点，只有一个  ： namenode 从节点，有很多个  ：datanodes   namenode负责： 接收用户请求操作 维护文件信息系统的目录结构 管理文件与block之间的关系，block与datanade之间的关系注意：namenode归根结底要放在磁盘上的以保证数据的持久性，但是为了提高效率，一般在hadoop运行时时放在内存中的   datanode负">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T04:58:47.076Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/16/hadoop/HDFS.md/2608446-66ac838fbd1c4c6d.webp">
+<meta property="og:updated_time" content="2019-08-16T06:49:59.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDFS">
-<meta name="twitter:description" content="HDFS shell命令命令格式： bin/hadoop fs &amp;lt;args&amp;gt; URI &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;URI：scheme://authority/pa">
+<meta name="twitter:description" content="HDFS框架  主从结构： 主节点，只有一个  ： namenode 从节点，有很多个  ：datanodes   namenode负责： 接收用户请求操作 维护文件信息系统的目录结构 管理文件与block之间的关系，block与datanade之间的关系注意：namenode归根结底要放在磁盘上的以保证数据的持久性，但是为了提高效率，一般在hadoop运行时时放在内存中的   datanode负">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/16/hadoop/HDFS.md/2608446-66ac838fbd1c4c6d.webp">
 
 
 
@@ -120,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/16/HDFS/HDFS.md/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/08/16/hadoop/HDFS.md/"/>
 
 
 
@@ -287,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/HDFS/HDFS.md/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/hadoop/HDFS.md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="路西法">
@@ -381,7 +383,25 @@
       
 
       
-        <h1 id="HDFS-shell命令"><a href="#HDFS-shell命令" class="headerlink" title="HDFS shell命令"></a>HDFS shell命令</h1><p><strong>命令格式：</strong> <code>bin/hadoop fs &lt;args&gt; URI</code></p>
+        <h1 id="HDFS框架"><a href="#HDFS框架" class="headerlink" title="HDFS框架"></a>HDFS框架</h1><p><img src="/2019/08/16/hadoop/HDFS.md/2608446-66ac838fbd1c4c6d.webp" alt="img"></p>
+<ul>
+<li>主从结构：<ol>
+<li>主节点，只有一个  ： <code>namenode</code></li>
+<li>从节点，有很多个  ：<code>datanodes</code></li>
+</ol>
+</li>
+<li><code>namenode</code>负责：<ol>
+<li>接收用户请求操作</li>
+<li>维护文件信息系统的目录结构</li>
+<li>管理文件与<code>block</code>之间的关系，<code>block</code>与<code>datanade</code>之间的关系<br>注意：<code>namenode</code>归根结底要放在磁盘上的以保证数据的持久性，但是为了提高效率，一般在<code>hadoop</code>运行时时放在内存中的</li>
+</ol>
+</li>
+<li><code>datanode</code>负责：<pre><code>  1. 存储文件
+     2. 文件被分成`block`存储字磁盘上
+     3. 为保证数据安全，文件会有多个副本
+</code></pre></li>
+</ul>
+<h1 id="HDFS-shell命令"><a href="#HDFS-shell命令" class="headerlink" title="HDFS shell命令"></a>HDFS shell命令</h1><p><strong>命令格式：</strong> <code>bin/hadoop fs &lt;args&gt; URI</code></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>URI</code>：<code>scheme://authority/path</code>—HDFS文件系统<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>file://authority/path</code>—本地文件系统</p>
 <div class="table-container">
 <table>
@@ -541,6 +561,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/08/16/hadoop/MapReduce.md/" rel="prev" title="MapReduce">
+                MapReduce <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -625,7 +649,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">75</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -696,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HDFS-shell命令"><span class="nav-number">1.</span> <span class="nav-text">HDFS shell命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HDFS框架"><span class="nav-number">1.</span> <span class="nav-text">HDFS框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HDFS-shell命令"><span class="nav-number">2.</span> <span class="nav-text">HDFS shell命令</span></a></li></ol></div>
             
 
           </div>
