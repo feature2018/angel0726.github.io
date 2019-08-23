@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="操作系统,开发环境," />
+  <meta name="keywords" content="操作系统,开发环境,WSL," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="Windows10安装Ubuntu子系统一、开启开发模式“设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。">
-<meta name="keywords" content="操作系统,开发环境">
+<meta name="keywords" content="操作系统,开发环境,WSL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux子系统-win10">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/linux子系统-win10/index.html">
@@ -91,8 +91,9 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/1565005612829.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/20171212111834391.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/dff1d38a0f699e19488e71c1ad7ad8805cc.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/1566527134737.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/tempsnip-1565012471202.png">
-<meta property="og:updated_time" content="2019-08-21T08:16:45.462Z">
+<meta property="og:updated_time" content="2019-08-23T04:08:00.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux子系统-win10">
 <meta name="twitter:description" content="Windows10安装Ubuntu子系统一、开启开发模式“设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。">
@@ -397,11 +398,17 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh     #安装oh-my-zsh首先需要安装zsh</span><br><span class="line">zsh --version                #查看版本号</span><br><span class="line"></span><br><span class="line">sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"        #使用curl安装oh-my-zsh</span><br><span class="line">sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"   #使用wget安装oh-my-zsh</span><br></pre></td></tr></table></figure>
 <p>在<code>vim ~/.bash_profile</code>中启用zsh，编辑文件，在末尾添加：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exec zsh</span><br><span class="line">source .zshrc</span><br></pre></td></tr></table></figure>
+<p><code>zsh</code>可以安装插件：</p>
 <h2 id="五、安装配置Cmder命令行终端"><a href="#五、安装配置Cmder命令行终端" class="headerlink" title="五、安装配置Cmder命令行终端"></a>五、安装配置Cmder命令行终端</h2><p>访问<a href="https://cmder.net/" target="_blank" rel="noopener">cmder.net</a>，下载mini版本即可</p>
 <ol>
 <li><p>修改启动参数</p>
-<p>修改启动参数填入<code>bash -cur_console:p</code>，这样我们直接打开cmder后就可以进入到linux系统了</p>
+<p>修改启动参数填入<code>bash -cur_console:p</code>，这样我们直接打开cmder后就可以进入到linux系统了。这种方法一般vim的方向键不可以使用。</p>
 <p><img src="/2019/08/05/linux子系统-win10/dff1d38a0f699e19488e71c1ad7ad8805cc.jpg" alt="img"></p>
+<ul>
+<li><p>或者使用下面的方法对cmder进行修改。</p>
+<p><img src="/2019/08/05/linux子系统-win10/1566527134737.png" alt="1566527134737"></p>
+</li>
+</ul>
 </li>
 <li><p>将cmder添加进win10的右键菜单</p>
 <ol>
@@ -437,6 +444,8 @@
           
             <a href="/tags/开发环境/" rel="tag"># 开发环境</a>
           
+            <a href="/tags/WSL/" rel="tag"># WSL</a>
+          
         </div>
       
 
@@ -448,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/SQL/DCL-SQL.md/" rel="next" title="DCL-SQL">
-                <i class="fa fa-chevron-left"></i> DCL-SQL
+              <a href="/2019/07/31/SQL/DDL-SQL.md/" rel="next" title="DDL-SQL">
+                <i class="fa fa-chevron-left"></i> DDL-SQL
               </a>
             
           </div>
@@ -546,7 +555,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">82</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -557,7 +566,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -568,7 +577,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

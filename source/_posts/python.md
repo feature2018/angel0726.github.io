@@ -1,16 +1,67 @@
 ---
 title: python
 date: 2019-08-15 14:27:07
-tags:
+tags: [语言]
+categories: python
 ---
 
 
 
 
 
+# 基本
+
+| 命令                | 说明                          |
+| ------------------- | ----------------------------- |
+|                     |                               |
+| `max(num,key=func)` | 按照`func`返回`num`中的最大值 |
+|                     |                               |
+|                     |                               |
+|                     |                               |
+|                     |                               |
+|                     |                               |
+|                     |                               |
+|                     |                               |
+
+
+
+# sys
+
+|             |      |
+| ----------- | ---- |
+| getsizeof() |      |
+|             |      |
+|             |      |
+|             |      |
+|             |      |
+|             |      |
+|             |      |
+|             |      |
+|             |      |
+
+
+
 # [matplotlib](https://matplotlib.org/index.html)
 
 https://serverpoolauth.ops.ctripcorp.com
+
+
+
+
+
+# numpy
+
+| 命令                                      | 说明                                           |
+| ----------------------------------------- | ---------------------------------------------- |
+| `random.randint(start,ene,size)`          | `start`与`end`：取值范围<br>`size`：数组的容量 |
+| `np.logical_and(x1, x2, *args, **kwargs)` | 逻辑与                                         |
+| `np.logical_or(x1, x2, *args, **kwargs)`  | 逻辑或                                         |
+| `np.logical_not(x, *args, **kwargs)`      | 逻辑非                                         |
+|                                           |                                                |
+|                                           |                                                |
+|                                           |                                                |
+|                                           |                                                |
+|                                           |                                                |
 
 
 
@@ -30,3 +81,6 @@ https://serverpoolauth.ops.ctripcorp.com
 | `df.T`                         | `DataFrame`转置                                              |
 | `df.merge()`                   | 类似于数据库的`join`,返回`DataFrame`                         |
 
+# 其他
+
+断言 assert

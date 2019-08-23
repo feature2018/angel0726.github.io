@@ -13,7 +13,7 @@ tags:
 |                        |                                                              |
 | `df.fillna(value)`     | 空值填充                                                     |
 | `df.columns`           | 返回`DataFrame`的列名，是一个`list`                          |
-| `df.to_pandas`         | 转换为`pandas`的`dataframe`                                  |
+| `df.toPandas`          | 转换为`pandas`的`dataframe`                                  |
 | `df.describe()`        | 计算数字和字符串列的统计信息。这包括`count`，`mean`，`stddev`，`min`和`max`。 |
 |                        |                                                              |
 |                        |                                                              |

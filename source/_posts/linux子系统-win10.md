@@ -1,7 +1,7 @@
 ---
 title: linux子系统-win10
 date: 2019-08-05 17:29:40
-tags: [操作系统,开发环境]
+tags: [操作系统,开发环境,WSL]
 categories: linux
 ---
 
@@ -44,15 +44,21 @@ exec zsh
 source .zshrc
 ```
 
+`zsh`可以安装插件：
+
 ## 五、安装配置Cmder命令行终端
 
 访问[cmder.net](https://cmder.net/)，下载mini版本即可
 
 1. 修改启动参数
 
-   修改启动参数填入`bash -cur_console:p`，这样我们直接打开cmder后就可以进入到linux系统了
+   修改启动参数填入`bash -cur_console:p`，这样我们直接打开cmder后就可以进入到linux系统了。这种方法一般vim的方向键不可以使用。
 
    ![img](linux子系统-win10/dff1d38a0f699e19488e71c1ad7ad8805cc.jpg)
+
+   - 或者使用下面的方法对cmder进行修改。
+
+     ![1566527134737](linux子系统-win10/1566527134737.png)
 
 2. 将cmder添加进win10的右键菜单
 

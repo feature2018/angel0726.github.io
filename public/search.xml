@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[健身动作]]></title>
+    <url>%2F2019%2F08%2F22%2F%E5%81%A5%E8%BA%AB%E5%8A%A8%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[部位 动作 胸部 上胸肌：上斜卧推中胸肌：平板卧推下胸肌：臂前屈 卧推卧推细节 上合适的杠铃片并用杠铃夹固定住。但当一个人训练时，可以不使用杠铃夹，这样杠铃倾斜的时候，杠铃片会掉落，从而保证不受伤。 杠铃与板凳位于正中间从而确保在卧推的过程中，杠铃两边的力量平衡 杠铃位于眼睛这个上方 握距（大臂与躯干程75°）：确保杠铃在最低点，胳膊与躯干的角度在75°左右。注意千万不能在90°，因为此时肩关节达到最大活动限度，当杠铃到达最低点的时候，很容易造成肩关节损伤。。 握法：不要空握，以免杠铃滑落。手腕不要弯，保证手腕垂直，用你的大小鱼际顶住杠铃，从而使手臂承受杠铃的重量，避免手腕受伤。正确的姿势，大拇指缠绕的方法。 两脚：用力踩地面，臀部用力，感觉力量从脚向上传递，。（腿部驱动技术） 手臂外旋：保证手臂与躯干的夹角，夹角太大会损伤肩膀，配合大拇指缠绕的方式 下降点：胸部，刺激胸肌并保证小臂与地面垂直 最高点：锁骨，刺激胸肌并保证小臂与地面垂直 最重要的是肩胛骨后缩下压 卧推致命错误 卧推时双脚离地 尝试大重量卧推的时候没有人保护或不借用四方架 卧推下架和归架的移动速度过快 手腕疼：正确的办法是全握，手腕立直，中立位的方式推杠铃，用你的大小鱼际顶住杠铃。同时使用大拇指缠绕的方式 过度的外展手臂 杠铃运动轨迹 卧推时没有挺胸 臀部脱离卧推椅 疼痛 部位 原因 肩膀痛 保持肩胛骨后缩下压注意控制大臂外展幅度 手肘疼 伸肘肌群和屈肘肌群的力量失衡。保证从侧面看时前臂始终垂直于地面热身不足 手腕疼 保持手腕中立，用你的大小鱼际顶住杠铃 上斜卧推 与平板卧推不同 1. 卧推凳30°,这个角度最适合上胸肌发力2.下落点锁骨上方—》直上直下 与平板卧推相同 1. 脚像平卧一样提供动力，脚要加紧平板。为上身提供功力2. 臀部坐实不能离开凳子，（与平板卧推一样是力量举的规格）3. 挺胸收紧肩胛骨，以免肩损伤4. 手臂与躯干的夹角不能太大，以免肩损伤 ——-》握距5. 手臂与地面垂直，以免肘关节损伤6. 手臂外旋，以免肘关节损伤7. 手腕保持中立,使用大小鱼际承受重量 是否起桥，感受胸肌的发力]]></content>
+      <categories>
+        <category>健身</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[linux子系统安装spark]]></title>
     <url>%2F2019%2F08%2F22%2Flinux%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85spark%2F</url>
     <content type="text"><![CDATA[123JDK:1.8 Spark-2.2.0Hadoop Release:2.7.4 一般将文件安装在/opt目录下，/opt目录用来存放第三方的应用程序与文件。 安装java 下载Linux环境下的jdk1.8，请去（官网）中下载jdk的安装文件； 解压安装包 1tar -zxvf jdk-8u131-linux-x64.tar.gz 将jdk安装在usr/java当中 12mkdir /usr/java #创建/usr/java文件夹mv /home/cmfchina/jdk1.8.0_131 /usr/java #将jdk1.8.0_131移动到/usr/java文件夹 修改环境变量，使用vim /etc/profile并在末尾添加如下内容，并使用source /etc/profile让命令profile 12345export JAVA_HOME=/usr/java/jdk1.8.0_131export JRE_HOME=$&#123;JAVA_HOME&#125;/jreexport CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib:$CLASSPATHexport JAVA_PATH=$&#123;JAVA_HOME&#125;/bin:$&#123;JRE_HOME&#125;/binexport PATH=$PATH:$&#123;JAVA_PATH&#125; 测试是否安装成功 使用javac命令，不会出现command not found错误 使用java -version，出现版本为java version &quot;1.8.0_131&quot; echo $PATH，看看自己刚刚设置的的环境变量配置是否都正确 安装scala 从官网：http://www.scala-lang.org/ 下载Scala 解压压缩包 1tar -zxvf scala-2.12.2.tgz 将scala安装在usr/scala当中 12mkdir /usr/scala mv scala-2.12.2 /usr/scala 配置Scala环境变量 1export SCALA_HOME=/opt/scala/scala-2.12.2 在该文件的PATH变量中增加下面的内容{SCALA_HOME}/bin 运行环境变量 1source /etc/profile 测试Scala是否安装成功 1scala -version ssh免密登陆 安装ssh，win10的ubuntu子系统使默认安装好的 12sudo apt-get install openssh-clientsudo apt-get install openssh-server 启动、重启ssh服务 12sudo service ssh startsudo service ssh restart 可能报错 123Could not load host key: /etc/ssh/ssh_host_rsa_keyCould not load host key: /etc/ssh/ssh_host_ecdsa_keyCould not load host key: /etc/ssh/ssh_host_ed25519_key 解决方法 123ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_keyssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_keyssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key 配置ssh端口。ssh端口默认是22号端口,修改/etc/ssh/sshd_config 1234Port 22 #如果和win10的端口号冲突，可以改为其他的UsePrivilegeSeparation noPermitRootLogin no #如果你确实要用root方式登录的话设为yesPasswordAuthentication yes 配置免密登陆 123ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa 生成密钥ssh-copy-id -i ~/.ssh/id_rsa.pub &lt;username&gt;@localhost 将公钥发送至Ubuntu ,其中&lt;username&gt; 为你的用户名ssh localhost 查看是否不需要密码登录 安装hadoop 下载hadoop。官网。清华 解压配置环境变量 1234sudo tar -zvxf hadoop-2.7.7.tar.gz #解压缩sudo mv hadoop-2.7.7 /opt/hadoop #复制文件sudo vim /etc/profile #配置全局变量sudo source /etc/profile #生效 设置JAVA_HOME路径。修改etc/hadoop/hadoop-env.sh文件中的JAVA_HOME变量，添加export JAVA_HOME=/mnt/d/usr/local/jdk 修改etc/hadoop/core-site.xml文件。(注意文件夹的权限) 123456789101112&lt;configuration&gt; &lt;!--指定NamNode通信地址--&gt; &lt;property&gt; &lt;name&gt;fs.defaultFS&lt;/name&gt; &lt;value&gt;hdfs://localhost:9000&lt;/value&gt; &lt;/property&gt; &lt;!--指定Hadoop运行时产生文件的存储路径--&gt; &lt;property&gt; &lt;name&gt;hadoop.tmp.dir&lt;/name&gt; &lt;value&gt;file:/opt/hadoop/tmp&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; 修改etc/hadoop/hdfs-site.xml文件 12345678910111213141516171819&lt;configuration&gt; &lt;property&gt; &lt;name&gt;dfs.name.dir&lt;/name&gt; &lt;value&gt;file:/opt/hadoop/hdfs/name&lt;/value&gt; &lt;description&gt;namenode上存储hdfs名字空间元数据 &lt;/description&gt; &lt;/property&gt; &lt;property&gt; &lt;name&gt;dfs.data.dir&lt;/name&gt; &lt;value&gt;file:/opt/hadoop/hdfs/data&lt;/value&gt; &lt;description&gt;datanode上数据块的物理存储位置&lt;/description&gt; &lt;/property&gt; &lt;!-- 设置hdfs副本数量 --&gt; &lt;property&gt; &lt;name&gt;dfs.replication&lt;/name&gt; &lt;value&gt;1&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; 编辑mapred-site.xml配置文件，配置mapreducer框架运行在yarn上： 键入如下命令复制mapred-site.xml配置文件：cp mapred-site.xml.template mapred-site.xml mapred-site.xml配置文件内容如下: 1234567&lt;configuration&gt;&lt;!-- 通知框架MR使用YARN --&gt; &lt;property&gt; &lt;name&gt;mapreduce.framework.name&lt;/name&gt; &lt;value&gt;yarn&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; 编辑yarn配置yarn-site.xml，添加如下内容： 1234567&lt;configuration&gt;&lt;!--reducer取数据的方式是mapreduce_shuffle--&gt; &lt;property&gt; &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt; &lt;value&gt;mapreduce_shuffle&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; 建立文件夹 graph LR A[hadoop]-->B[tmp] A-->C[hdfs] C-->D[data] C-->E[name] 格式化hdfs；启动hdfs和yarn 12hdfs namenode -formatstart-all.sh 检测是否成功 12345678jps5074 SecondaryNameNode2003 NodeManager8008 Jps6505 NameNode6700 DataNode1663 ResourceManager 安装Spark 我们到Spark官网进行下载：http://spark.apache.org/ ，我们选择带有Hadoop版本的Spark，如图所示： 解压Spark，将spark安装进/opt/spark.同上 配置spark 12cp spark/conf/slaves.template ./spark/conf/slavescp spark/conf/spark-env.sh.template ./spark/conf/spark-env.sh 修改spark-env.sh 12345678export SCALA_HOME=/opt/scala/scala-2.12.2export JAVA_HOME=/opt/java/jdk1.8.0_131export HADOOP_HOME=/opt/hadoop/hadoop-2.7.7export HADOOP_CONF_DIR=$&#123;HADOOP_HOME&#125;/etc/hadoopexport SPARK_MASTER_IP=localhostexport SPARK_LOCAL_IP=localhostexport SPAPK_LOCAL_DIRS=/opt/spark/spark-2.4.3-bin-hadoop2.7export SPARK_DRIVER_MEMORY=1G 启动spark-shell]]></content>
@@ -50,7 +58,7 @@
   <entry>
     <title><![CDATA[pyspark-DataFrame]]></title>
     <url>%2F2019%2F08%2F19%2Fpyspark-DataFrame%2F</url>
-    <content type="text"><![CDATA[命令 说明 df.show(n,truncate) n - 要显示的行数。truncate - 如果设置为True，则默认截断超过20个字符的字符串。 如果设置为大于1的数字，则截断长字符串以截断长度并将其右对齐。 df.count() 返回DataFrame的行数 df.select(col) 投影一组表达式并返回一个新的DataFrame。col：列名，或者包含列名的列表 df.filter(condition) 使用给定的条件过滤行。where()是filter()的别名。 df.fillna(value) 空值填充 df.columns 返回DataFrame的列名，是一个list df.to_pandas 转换为pandas的dataframe df.describe() 计算数字和字符串列的统计信息。这包括count，mean，stddev，min和max。 pyspark.sql.functions1from pyspark.sql.functions import * 命令 说明 isnan stddev 计算方差]]></content>
+    <content type="text"><![CDATA[命令 说明 df.show(n,truncate) n - 要显示的行数。truncate - 如果设置为True，则默认截断超过20个字符的字符串。 如果设置为大于1的数字，则截断长字符串以截断长度并将其右对齐。 df.count() 返回DataFrame的行数 df.select(col) 投影一组表达式并返回一个新的DataFrame。col：列名，或者包含列名的列表 df.filter(condition) 使用给定的条件过滤行。where()是filter()的别名。 df.fillna(value) 空值填充 df.columns 返回DataFrame的列名，是一个list df.toPandas 转换为pandas的dataframe df.describe() 计算数字和字符串列的统计信息。这包括count，mean，stddev，min和max。 pyspark.sql.functions1from pyspark.sql.functions import * 命令 说明 isnan stddev 计算方差]]></content>
   </entry>
   <entry>
     <title><![CDATA[MapReduce]]></title>
@@ -79,7 +87,13 @@
   <entry>
     <title><![CDATA[python]]></title>
     <url>%2F2019%2F08%2F15%2Fpython%2F</url>
-    <content type="text"><![CDATA[matplotlibhttps://serverpoolauth.ops.ctripcorp.com pandasDataframe 命令 说明 df[&#39;add_column&#39;]=1 df添加列add_column df.drop() 删除行或者列labels：删除的行或者列名axis：行-&gt;0；列-&gt;1index ：直接指定要删除的行columns：直接指定要删除的列inplace=False：默认该删除操作不改变原数据，而是返回一个执行删除操作后的新dataframe；inplace=True：则会直接在原数据上进行删除操作，删除后无法返回。 df.rename() df.rename(columns={&#39;A&#39;:&#39;a&#39;, &#39;B&#39;:&#39;b&#39;, &#39;C&#39;:&#39;c&#39;}, inplace = True)将列名修改为`[‘a’,’b’,’c’] df.columns= [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;] 将列名修改为[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;] df.reset_index(列名,inplace) 索引转化为列列名：可以有，可以没有。多索引时，可以指定索引inplace：替换原DataFrame df.set_index(列名) 列转化为索引 df.T DataFrame转置 df.merge() 类似于数据库的join,返回DataFrame]]></content>
+    <content type="text"><![CDATA[基本 命令 说明 max(num,key=func) 按照func返回num中的最大值 sys getsizeof() matplotlibhttps://serverpoolauth.ops.ctripcorp.com numpy 命令 说明 random.randint(start,ene,size) start与end：取值范围size：数组的容量 np.logical_and(x1, x2, *args, **kwargs) 逻辑与 np.logical_or(x1, x2, *args, **kwargs) 逻辑或 np.logical_not(x, *args, **kwargs) 逻辑非 pandasDataframe 命令 说明 df[&#39;add_column&#39;]=1 df添加列add_column df.drop() 删除行或者列labels：删除的行或者列名axis：行-&gt;0；列-&gt;1index ：直接指定要删除的行columns：直接指定要删除的列inplace=False：默认该删除操作不改变原数据，而是返回一个执行删除操作后的新dataframe；inplace=True：则会直接在原数据上进行删除操作，删除后无法返回。 df.rename() df.rename(columns={&#39;A&#39;:&#39;a&#39;, &#39;B&#39;:&#39;b&#39;, &#39;C&#39;:&#39;c&#39;}, inplace = True)将列名修改为`[‘a’,’b’,’c’] df.columns= [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;] 将列名修改为[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;] df.reset_index(列名,inplace) 索引转化为列列名：可以有，可以没有。多索引时，可以指定索引inplace：替换原DataFrame df.set_index(列名) 列转化为索引 df.T DataFrame转置 df.merge() 类似于数据库的join,返回DataFrame 其他断言 assert]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>语言</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[hadoop]]></title>
@@ -157,19 +171,20 @@
   <entry>
     <title><![CDATA[linux子系统-win10]]></title>
     <url>%2F2019%2F08%2F05%2Flinux%E5%AD%90%E7%B3%BB%E7%BB%9F-win10%2F</url>
-    <content type="text"><![CDATA[Windows10安装Ubuntu子系统一、开启开发模式“设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。 二、启用或关闭Windows功能 三、安装 Linux 子系统打开 Windows 应用市场，输入 linux 搜索，选择你自己想要的系统版本 四、一个好看的cmdzsh（Z Shell）是一个功能强大的交互式shell脚本命令解释器。它不仅支持bash，还提供一些强大和高效的功能，例如更好的自动补全和纠错。貌似很好用 12345sudo apt-get install zsh #安装oh-my-zsh首先需要安装zshzsh --version #查看版本号sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #使用curl安装oh-my-zshsh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #使用wget安装oh-my-zsh 在vim ~/.bash_profile中启用zsh，编辑文件，在末尾添加： 12exec zshsource .zshrc 五、安装配置Cmder命令行终端访问cmder.net，下载mini版本即可 修改启动参数 修改启动参数填入bash -cur_console:p，这样我们直接打开cmder后就可以进入到linux系统了 将cmder添加进win10的右键菜单 右键点击我的电脑—属性—高级系统设置—环境变量—系统变量，点击新建，变量名设置为：CMDER_HOME，变量值直接粘贴刚才拷贝的地址， 然后点击系统变量中的path，点击新建，输入%CMDER_HOME% 使用管理员权限打开cmder终端运行Cmder.exe /REGISTER ALL 文件夹互相访问win10访问ubuntu1C:\Users\xxx\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xxx ubuntu访问win101/mnt/c/Users # 进入win10的c盘的Users 可以建立一个win10的快捷方式1ln -s /mnt/c/Users/xxx ~/win10 建立链接]]></content>
+    <content type="text"><![CDATA[Windows10安装Ubuntu子系统一、开启开发模式“设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。 二、启用或关闭Windows功能 三、安装 Linux 子系统打开 Windows 应用市场，输入 linux 搜索，选择你自己想要的系统版本 四、一个好看的cmdzsh（Z Shell）是一个功能强大的交互式shell脚本命令解释器。它不仅支持bash，还提供一些强大和高效的功能，例如更好的自动补全和纠错。貌似很好用 12345sudo apt-get install zsh #安装oh-my-zsh首先需要安装zshzsh --version #查看版本号sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #使用curl安装oh-my-zshsh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" #使用wget安装oh-my-zsh 在vim ~/.bash_profile中启用zsh，编辑文件，在末尾添加： 12exec zshsource .zshrc zsh可以安装插件： 五、安装配置Cmder命令行终端访问cmder.net，下载mini版本即可 修改启动参数 修改启动参数填入bash -cur_console:p，这样我们直接打开cmder后就可以进入到linux系统了。这种方法一般vim的方向键不可以使用。 或者使用下面的方法对cmder进行修改。 将cmder添加进win10的右键菜单 右键点击我的电脑—属性—高级系统设置—环境变量—系统变量，点击新建，变量名设置为：CMDER_HOME，变量值直接粘贴刚才拷贝的地址， 然后点击系统变量中的path，点击新建，输入%CMDER_HOME% 使用管理员权限打开cmder终端运行Cmder.exe /REGISTER ALL 文件夹互相访问win10访问ubuntu1C:\Users\xxx\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\xxx ubuntu访问win101/mnt/c/Users # 进入win10的c盘的Users 可以建立一个win10的快捷方式1ln -s /mnt/c/Users/xxx ~/win10 建立链接]]></content>
       <categories>
         <category>linux</category>
       </categories>
       <tags>
         <tag>操作系统</tag>
         <tag>开发环境</tag>
+        <tag>WSL</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[DCL-SQL]]></title>
-    <url>%2F2019%2F07%2F31%2FSQL%2FDCL-SQL.md%2F</url>
-    <content type="text"><![CDATA[用户对不同的数据对象有不同的存取权限 不同的用户对同一对象也有不同的权限 用户还可将其拥有的存取权限转授给其他用户]]></content>
+    <title><![CDATA[DDL-SQL]]></title>
+    <url>%2F2019%2F07%2F31%2FSQL%2FDDL-SQL.md%2F</url>
+    <content type="text"><![CDATA[数据库12345678-- 创建数据库Create database my_db; -- 删除数据库Drop database my_db;-- 指定数据库use my_db;-- 关闭数据库close my_db; 表123456-- 创建表格CREATE TABLE table_name-- 修改表格alter table tablename -- 删除表格DROP TABLE Persons 创建表格12345678CREATE TABLE Persons( P_Id int NOT NULL PRIMARY KEY CHECK (P_Id&gt;0), --不为空，主键，删选条件：P_Id&gt;0 LastName varchar(255) NOT NULL, --不为空 FirstName varchar(255), Address varchar(255), City varchar(255) DEFAULT 'Sandnes' --默认值为'Sandnes'); 1234567CREATE TABLE table_name( 列名1 数据类型(size) 约束条件, 列名2 数据类型(size) 约束条件, 列名3 数据类型(size) 约束条件, ....); 参数 说明 列名 规定表中列的名称 数据类型 例如varchar、integer、decimal、date。不同的数据库有不同的数据类型 约束条件 Primary key 主键约束。每个表只能创建一个主键约束 Unique 唯一性约束（即候选键）。每个表可以有多个唯一性约束，但只能有一个Primary key。 Not null 非空约束。是指该列允许不允许有空值出现，如选择了Not null表明该列不允许有空值出现。 CHECK (search_cond) 约束用于限制列中的值的范围,search_cond为条件。如果对单个列定义 CHECK 约束，那么该列只允许特定的值；如果对一个表定义 CHECK 约束，那么此约束会在特定的列中对值进行限制。 FOREIGN KEY 一个表中的 FOREIGN KEY指向另一个表中的PRIMARY KEY DEFAULT 如果没有规定其他的值，那么会将默认值添加到所有的新记录。 AUTO_INCREMENT 每次插入时，自动生成主键的值 修改表格1234alter table tablename - add 增加新列 - drop 删除列或者完整性约束条件 - modify 修改列定义 12345678-- 在表 "Person" 中添加一个名为 "Birthday" 的新列。ALTER TABLE Person ADD Birthday date;-- 删除 "Person" 表中的 "Birthday" 列：ALTER TABLE Person DROP COLUMN Birthday;-- 删除 "Person" 表中 "P_Id" 的主键：ALTER TABLE Person DROP PRIMARY KEY(P_Id);-- 改变 "Person" 表中 "Birthday" 列的数据类型。ALTER TABLE Person Modify Birthday year; 删除表格1DROP TABLE table_name -- 删除表 视图表中存储的是实际数据，而视图中保存的是从表中取出数据所使用的SELECT语句。一般来说你可以用update，insert，delete等sql语句修改表中的数据，而对视图只能进行select操作。但是也存在可更新的视图，对于这类视图的update，insert和delete等操作最终会作用于与其相关的表中数据。 创建视图**定义视图时不能使用 ORDER BY 子句** 12345CREATE VIEW view_name ASSELECT column_name(s)FROM table_nameWHERE condition[with check option] -- 指明当对视图进行insert，update，delete时，要检查进行insert/update/delete的元组是否满足视图定义中子查询中定义的条件表达式 12345CREATE VIEW CUSTOMERS_VIEW ASSELECT name, ageFROM CUSTOMERSWHERE age IS NOT NULLWITH CHECK OPTION; --这里 WITH CHECK OPTION 使得视图拒绝任何 AGE 字段为 NULL 的条目，因为视图的定义中，AGE 字段不能为空。对视图不管修改前还是修改后都必须遵从此规定。 使用视图1Select * From view_name 视图的更新（增、删、改）一般来说你可以用update，insert，delete等sql语句修改表中的数据，而对视图只能进行select操作。但是也存在可更新的视图，对于这类视图的update，insert和delete等操作最终会作用于与其相关的表中数据。 对于可更新的视图，在视图中的行和基表中的行之间必须具有一对一的关系。还有一些特定的其他结构，这类结构会使得视图不可更新。如果视图包含下述结构中的任何一种，那么它就是不可更新的： 分类 说明 非一对一 DISTINCT关键字、GROUP BY子句、UNION运算符、位于选择列表中的子查询 未知 聚合函数、ORDER BY子句、HAVING子句、FROM子句中包含多个表、WHERE子句中的子查询，引用FROM子句中的表 其他 SELECT语句中引用了不可更新视图ALGORITHM 选项指定为TEMPTABLE（使用临时表总会使视图成为不可更新的） 插入数据12INSERT INTO CUSTOMERS_VIEW VALUES('李牧',50); 修改数据1UPDATE CUSTOMERS_VIEW SET age = 58 where name = '李牧'; 删除数据1DELETE FROM CUSTOMERS_VIEW WHERE name = '李牧'; 删除视图1Drop View view_name]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -179,9 +194,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[DDL-SQL]]></title>
-    <url>%2F2019%2F07%2F31%2FSQL%2FDDL-SQL.md%2F</url>
-    <content type="text"><![CDATA[数据库12345678-- 创建数据库Create database my_db; -- 删除数据库Drop database my_db;-- 指定数据库use my_db;-- 关闭数据库close my_db; 表123456-- 创建表格CREATE TABLE table_name-- 修改表格alter table tablename -- 删除表格DROP TABLE Persons 创建表格12345678CREATE TABLE Persons( P_Id int NOT NULL PRIMARY KEY CHECK (P_Id&gt;0), --不为空，主键，删选条件：P_Id&gt;0 LastName varchar(255) NOT NULL, --不为空 FirstName varchar(255), Address varchar(255), City varchar(255) DEFAULT 'Sandnes' --默认值为'Sandnes'); 1234567CREATE TABLE table_name( 列名1 数据类型(size) 约束条件, 列名2 数据类型(size) 约束条件, 列名3 数据类型(size) 约束条件, ....); 参数 说明 列名 规定表中列的名称 数据类型 例如varchar、integer、decimal、date。不同的数据库有不同的数据类型 约束条件 Primary key 主键约束。每个表只能创建一个主键约束 Unique 唯一性约束（即候选键）。每个表可以有多个唯一性约束，但只能有一个Primary key。 Not null 非空约束。是指该列允许不允许有空值出现，如选择了Not null表明该列不允许有空值出现。 CHECK (search_cond) 约束用于限制列中的值的范围,search_cond为条件。如果对单个列定义 CHECK 约束，那么该列只允许特定的值；如果对一个表定义 CHECK 约束，那么此约束会在特定的列中对值进行限制。 FOREIGN KEY 一个表中的 FOREIGN KEY指向另一个表中的PRIMARY KEY DEFAULT 如果没有规定其他的值，那么会将默认值添加到所有的新记录。 AUTO_INCREMENT 每次插入时，自动生成主键的值 修改表格1234alter table tablename - add 增加新列 - drop 删除列或者完整性约束条件 - modify 修改列定义 12345678-- 在表 "Person" 中添加一个名为 "Birthday" 的新列。ALTER TABLE Person ADD Birthday date;-- 删除 "Person" 表中的 "Birthday" 列：ALTER TABLE Person DROP COLUMN Birthday;-- 删除 "Person" 表中 "P_Id" 的主键：ALTER TABLE Person DROP PRIMARY KEY(P_Id);-- 改变 "Person" 表中 "Birthday" 列的数据类型。ALTER TABLE Person Modify Birthday year; 删除表格1DROP TABLE table_name -- 删除表 视图表中存储的是实际数据，而视图中保存的是从表中取出数据所使用的SELECT语句。一般来说你可以用update，insert，delete等sql语句修改表中的数据，而对视图只能进行select操作。但是也存在可更新的视图，对于这类视图的update，insert和delete等操作最终会作用于与其相关的表中数据。 创建视图**定义视图时不能使用 ORDER BY 子句** 12345CREATE VIEW view_name ASSELECT column_name(s)FROM table_nameWHERE condition[with check option] -- 指明当对视图进行insert，update，delete时，要检查进行insert/update/delete的元组是否满足视图定义中子查询中定义的条件表达式 12345CREATE VIEW CUSTOMERS_VIEW ASSELECT name, ageFROM CUSTOMERSWHERE age IS NOT NULLWITH CHECK OPTION; --这里 WITH CHECK OPTION 使得视图拒绝任何 AGE 字段为 NULL 的条目，因为视图的定义中，AGE 字段不能为空。对视图不管修改前还是修改后都必须遵从此规定。 使用视图1Select * From view_name 视图的更新（增、删、改）一般来说你可以用update，insert，delete等sql语句修改表中的数据，而对视图只能进行select操作。但是也存在可更新的视图，对于这类视图的update，insert和delete等操作最终会作用于与其相关的表中数据。 对于可更新的视图，在视图中的行和基表中的行之间必须具有一对一的关系。还有一些特定的其他结构，这类结构会使得视图不可更新。如果视图包含下述结构中的任何一种，那么它就是不可更新的： 分类 说明 非一对一 DISTINCT关键字、GROUP BY子句、UNION运算符、位于选择列表中的子查询 未知 聚合函数、ORDER BY子句、HAVING子句、FROM子句中包含多个表、WHERE子句中的子查询，引用FROM子句中的表 其他 SELECT语句中引用了不可更新视图ALGORITHM 选项指定为TEMPTABLE（使用临时表总会使视图成为不可更新的） 插入数据12INSERT INTO CUSTOMERS_VIEW VALUES('李牧',50); 修改数据1UPDATE CUSTOMERS_VIEW SET age = 58 where name = '李牧'; 删除数据1DELETE FROM CUSTOMERS_VIEW WHERE name = '李牧'; 删除视图1Drop View view_name]]></content>
+    <title><![CDATA[DCL-SQL]]></title>
+    <url>%2F2019%2F07%2F31%2FSQL%2FDCL-SQL.md%2F</url>
+    <content type="text"><![CDATA[用户对不同的数据对象有不同的存取权限 不同的用户对同一对象也有不同的权限 用户还可将其拥有的存取权限转授给其他用户]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -285,8 +300,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>语言</tag>
         <tag>STL</tag>
+        <tag>语言</tag>
       </tags>
   </entry>
   <entry>
@@ -497,8 +512,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>变量作用域</tag>
         <tag>语言</tag>
+        <tag>变量作用域</tag>
       </tags>
   </entry>
   <entry>
@@ -521,8 +536,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>变量作用域</tag>
         <tag>语言</tag>
+        <tag>变量作用域</tag>
       </tags>
   </entry>
   <entry>
@@ -558,8 +573,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>变量作用域</tag>
         <tag>语言</tag>
+        <tag>变量作用域</tag>
       </tags>
   </entry>
   <entry>
