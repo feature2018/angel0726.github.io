@@ -412,3 +412,14 @@ yum [options] [command] [package ...]
 | **10、设备管理**                                             |                                                              |                                                              |                                                              |
 | [setleds](http://www.runoob.com/linux/linux-comm-setleds.html) | [loadkeys](http://www.runoob.com/linux/linux-comm-loadkeys.html) | [rdev](http://www.runoob.com/linux/linux-comm-rdev.html)     | [dumpkeys](http://www.runoob.com/linux/linux-comm-dumpkeys.html) |
 | [MAKEDEV](http://www.runoob.com/linux/linux-comm-makedev.html) |                                                              |                                                              |                                                              |
+
+
+
+# 其他
+
+## 解压rar
+
+```shell
+sudo apt-get install rar unrar
+```
+

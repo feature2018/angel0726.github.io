@@ -25,7 +25,7 @@ categories: linux
 
 ![Windows10å®è£Linuxå­ç³»ç»Ubuntu](linux子系统-win10/20171212111834391.jpg)
 
-## 四、一个好看的cmd
+## 四、zsh
 
 [zsh](https://link.zhihu.com/?target=http%3A//www.zsh.org/)（Z Shell）是一个功能强大的交互式shell脚本命令解释器。它不仅支持bash，还提供一些强大和高效的功能，例如更好的**自动补全**和**纠错**。貌似很好用
 
@@ -44,7 +44,23 @@ exec zsh
 source .zshrc
 ```
 
-`zsh`可以安装插件：
+### zsh插件
+
+zsh插件可以分为自带插件与第三方插件。
+
+- 官方插件： 将插件填进`~/.oh-my-zsh/plugins`
+- 第三方插件：将插件填进`~/.oh-my-zsh/custom/plugins`
+
+然后在 `~/.zshrc` 配置文件中的 `plugins` 变量中添加对应插件的名称即可，运行`source ~/.zshrc`
+
+1. `z`:自动跳转
+
+2. `colored-man-pages`：手册页高亮
+
+3. `zsh-autosuggestion`：自动补全
+4. `zsh-syntax-highlighting`:命令高亮 
+
+#### 插件说明
 
 ## 五、安装配置Cmder命令行终端
 
