@@ -54,11 +54,10 @@ zsh插件可以分为自带插件与第三方插件。
 然后在 `~/.zshrc` 配置文件中的 `plugins` 变量中添加对应插件的名称即可，运行`source ~/.zshrc`
 
 1. `z`:自动跳转
-
 2. `colored-man-pages`：手册页高亮
-
-3. `zsh-autosuggestion`：自动补全
+3. `zsh-autosuggestion`：自动补全，可能导致乱码
 4. `zsh-syntax-highlighting`:命令高亮 
+5. `incr`：代码提示 。将[`incr`](/download/inrc-0.2.zsh)
 
 #### 插件说明
 
