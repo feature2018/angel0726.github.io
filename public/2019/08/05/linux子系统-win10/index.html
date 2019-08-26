@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/dff1d38a0f699e19488e71c1ad7ad8805cc.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/1566527134737.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/05/linux子系统-win10/tempsnip-1565012471202.png">
-<meta property="og:updated_time" content="2019-08-23T04:08:00.940Z">
+<meta property="og:updated_time" content="2019-08-26T05:28:52.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux子系统-win10">
 <meta name="twitter:description" content="Windows10安装Ubuntu子系统一、开启开发模式“设置 - 更新和安全 - 针对开发人员”设置页面，选中“开发人员模式”。">
@@ -394,12 +394,24 @@
 <h2 id="二、启用或关闭Windows功能"><a href="#二、启用或关闭Windows功能" class="headerlink" title="二、启用或关闭Windows功能"></a>二、启用或关闭Windows功能</h2><p><img src="/2019/08/05/linux子系统-win10/1565005612829.png" alt="1565005612829"></p>
 <h2 id="三、安装-Linux-子系统"><a href="#三、安装-Linux-子系统" class="headerlink" title="三、安装 Linux 子系统"></a>三、安装 Linux 子系统</h2><p>打开 Windows 应用市场，输入 linux 搜索，选择你自己想要的系统版本</p>
 <p><img src="/2019/08/05/linux子系统-win10/20171212111834391.jpg" alt="Windows10å®è£Linuxå­ç³»ç»Ubuntu"></p>
-<h2 id="四、一个好看的cmd"><a href="#四、一个好看的cmd" class="headerlink" title="四、一个好看的cmd"></a>四、一个好看的cmd</h2><p><a href="https://link.zhihu.com/?target=http%3A//www.zsh.org/" target="_blank" rel="noopener">zsh</a>（Z Shell）是一个功能强大的交互式shell脚本命令解释器。它不仅支持bash，还提供一些强大和高效的功能，例如更好的<strong>自动补全</strong>和<strong>纠错</strong>。貌似很好用</p>
+<h2 id="四、zsh"><a href="#四、zsh" class="headerlink" title="四、zsh"></a>四、zsh</h2><p><a href="https://link.zhihu.com/?target=http%3A//www.zsh.org/" target="_blank" rel="noopener">zsh</a>（Z Shell）是一个功能强大的交互式shell脚本命令解释器。它不仅支持bash，还提供一些强大和高效的功能，例如更好的<strong>自动补全</strong>和<strong>纠错</strong>。貌似很好用</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh     #安装oh-my-zsh首先需要安装zsh</span><br><span class="line">zsh --version                #查看版本号</span><br><span class="line"></span><br><span class="line">sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"        #使用curl安装oh-my-zsh</span><br><span class="line">sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"   #使用wget安装oh-my-zsh</span><br></pre></td></tr></table></figure>
 <p>在<code>vim ~/.bash_profile</code>中启用zsh，编辑文件，在末尾添加：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exec zsh</span><br><span class="line">source .zshrc</span><br></pre></td></tr></table></figure>
-<p><code>zsh</code>可以安装插件：</p>
-<h2 id="五、安装配置Cmder命令行终端"><a href="#五、安装配置Cmder命令行终端" class="headerlink" title="五、安装配置Cmder命令行终端"></a>五、安装配置Cmder命令行终端</h2><p>访问<a href="https://cmder.net/" target="_blank" rel="noopener">cmder.net</a>，下载mini版本即可</p>
+<h3 id="zsh插件"><a href="#zsh插件" class="headerlink" title="zsh插件"></a>zsh插件</h3><p>zsh插件可以分为自带插件与第三方插件。</p>
+<ul>
+<li>官方插件： 将插件填进<code>~/.oh-my-zsh/plugins</code></li>
+<li>第三方插件：将插件填进<code>~/.oh-my-zsh/custom/plugins</code></li>
+</ul>
+<p>然后在 <code>~/.zshrc</code> 配置文件中的 <code>plugins</code> 变量中添加对应插件的名称即可，运行<code>source ~/.zshrc</code></p>
+<ol>
+<li><code>z</code>:自动跳转</li>
+<li><code>colored-man-pages</code>：手册页高亮</li>
+<li><code>zsh-autosuggestion</code>：自动补全，可能导致乱码</li>
+<li><code>zsh-syntax-highlighting</code>:命令高亮 </li>
+<li><code>incr</code>：代码提示 。将<a href="/download/inrc-0.2.zsh"><code>incr</code></a></li>
+</ol>
+<h4 id="插件说明"><a href="#插件说明" class="headerlink" title="插件说明"></a>插件说明</h4><h2 id="五、安装配置Cmder命令行终端"><a href="#五、安装配置Cmder命令行终端" class="headerlink" title="五、安装配置Cmder命令行终端"></a>五、安装配置Cmder命令行终端</h2><p>访问<a href="https://cmder.net/" target="_blank" rel="noopener">cmder.net</a>，下载mini版本即可</p>
 <ol>
 <li><p>修改启动参数</p>
 <p>修改启动参数填入<code>bash -cur_console:p</code>，这样我们直接打开cmder后就可以进入到linux系统了。这种方法一般vim的方向键不可以使用。</p>
@@ -457,8 +469,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/SQL/DDL-SQL.md/" rel="next" title="DDL-SQL">
-                <i class="fa fa-chevron-left"></i> DDL-SQL
+              <a href="/2019/07/31/SQL/DML-SQL.md/" rel="next" title="DML-SQL">
+                <i class="fa fa-chevron-left"></i> DML-SQL
               </a>
             
           </div>
@@ -555,7 +567,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">82</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -566,7 +578,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -626,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows10安装Ubuntu子系统"><span class="nav-number">1.</span> <span class="nav-text">Windows10安装Ubuntu子系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、开启开发模式"><span class="nav-number">1.1.</span> <span class="nav-text">一、开启开发模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、启用或关闭Windows功能"><span class="nav-number">1.2.</span> <span class="nav-text">二、启用或关闭Windows功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装-Linux-子系统"><span class="nav-number">1.3.</span> <span class="nav-text">三、安装 Linux 子系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、一个好看的cmd"><span class="nav-number">1.4.</span> <span class="nav-text">四、一个好看的cmd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装配置Cmder命令行终端"><span class="nav-number">1.5.</span> <span class="nav-text">五、安装配置Cmder命令行终端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件夹互相访问"><span class="nav-number">2.</span> <span class="nav-text">文件夹互相访问</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#win10访问ubuntu"><span class="nav-number">2.1.</span> <span class="nav-text">win10访问ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu访问win10"><span class="nav-number">2.2.</span> <span class="nav-text">ubuntu访问win10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可以建立一个win10的快捷方式"><span class="nav-number">2.2.1.</span> <span class="nav-text">可以建立一个win10的快捷方式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows10安装Ubuntu子系统"><span class="nav-number">1.</span> <span class="nav-text">Windows10安装Ubuntu子系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、开启开发模式"><span class="nav-number">1.1.</span> <span class="nav-text">一、开启开发模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、启用或关闭Windows功能"><span class="nav-number">1.2.</span> <span class="nav-text">二、启用或关闭Windows功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装-Linux-子系统"><span class="nav-number">1.3.</span> <span class="nav-text">三、安装 Linux 子系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、zsh"><span class="nav-number">1.4.</span> <span class="nav-text">四、zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh插件"><span class="nav-number">1.4.1.</span> <span class="nav-text">zsh插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#插件说明"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">插件说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装配置Cmder命令行终端"><span class="nav-number">1.5.</span> <span class="nav-text">五、安装配置Cmder命令行终端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件夹互相访问"><span class="nav-number">2.</span> <span class="nav-text">文件夹互相访问</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#win10访问ubuntu"><span class="nav-number">2.1.</span> <span class="nav-text">win10访问ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu访问win10"><span class="nav-number">2.2.</span> <span class="nav-text">ubuntu访问win10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可以建立一个win10的快捷方式"><span class="nav-number">2.2.1.</span> <span class="nav-text">可以建立一个win10的快捷方式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
