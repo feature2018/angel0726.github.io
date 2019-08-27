@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="黎明晨光">
 <meta property="og:description" content="查看表结构    命令 说明     show tables like &amp;#39;*name*&amp;#39; hive模糊搜索表   desc formatted table_namedesc table_name 查看表结构信息   show partitions table_name 查看分区信息   select table_coulm from table_name where partiti">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T06:24:10.182Z">
+<meta property="og:updated_time" content="2019-08-27T07:16:02.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hive">
 <meta name="twitter:description" content="查看表结构    命令 说明     show tables like &amp;#39;*name*&amp;#39; hive模糊搜索表   desc formatted table_namedesc table_name 查看表结构信息   show partitions table_name 查看分区信息   select table_coulm from table_name where partiti">
@@ -410,9 +410,47 @@
 <td><code>dfs -ls /user/hive/warehouse/table02;</code></td>
 <td>查看hdfs文件信息</td>
 </tr>
+<tr>
+<td><code>dfs -tail /user/hive/warehouse/table02;</code></td>
+<td>显示hdfs文件的一行信息</td>
+</tr>
 </tbody>
 </table>
 </div>
+<h1 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>create table as</code></td>
+<td>选中表格创建表格</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="create-table-as"><a href="#create-table-as" class="headerlink" title="create table as"></a>create table as</h2><p>create创建部分可以指定表的存储格式等属性，比如指定新表的行列分隔符，存储格式等。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> temp_copy</span><br><span class="line">   <span class="keyword">ROW</span> <span class="keyword">FORMAT</span> <span class="keyword">DELIMITED</span></span><br><span class="line">      <span class="keyword">FIELDS</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">'\t'</span></span><br><span class="line">      <span class="keyword">LINES</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">'\n'</span>;</span><br><span class="line">   STORED AS textfile</span><br><span class="line">AS</span><br><span class="line"><span class="keyword">SELECT</span> *  <span class="keyword">FROM</span> temp <span class="keyword">WHERE</span> start_date <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p><code>hive</code>中用<code>CTAS</code>创建表，所创建的表统一都是非分区表，不管源表是否是分区表。所以对于分区表的创建使用<code>create table ..as</code>一定要注意分区功能的丢失。当然创建表以后可以添加分区，成为分区表。</p>
+</li>
+<li><p>如果使用<code>create table as  select  *</code>创建表时源表是分区表，则新建的表会多字段，具体多的字段个数和名称就是源表分区的个数和名称。当然如果<code>select</code>选择的是指定的列则不会有这种问题。</p>
+</li>
+<li>如果源表的存储格式不是<code>textfile</code>。则使用<code>CTAS</code>创建的表存储格式会变成默认的格式<code>textfile</code>。比如这里源表是<code>RCFILE</code>。而新建的表则是<code>textfile</code>。当然可以在使用<code>create table ....as</code>创建表时指定存储格式和解析格式，甚至是列的名称等属性。具体参考博客：hive使用create as创建表指定存储格式等属性</li>
+<li>使用<code>CTAS</code>方式创建的表不能是外部表。</li>
+<li>使用<code>CTAS</code>创建的表不能分桶表。对于每一个表或者是分区，Hive可以进一步组织成桶，也就是说桶是更为细粒度的数据范围划分。</li>
+</ol>
 
       
     </div>
@@ -543,7 +581,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -614,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看表结构"><span class="nav-number">1.</span> <span class="nav-text">查看表结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看表结构"><span class="nav-number">1.</span> <span class="nav-text">查看表结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建表格"><span class="nav-number">2.</span> <span class="nav-text">创建表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#create-table-as"><span class="nav-number">2.1.</span> <span class="nav-text">create table as</span></a></li></ol></li></ol></div>
             
 
           </div>

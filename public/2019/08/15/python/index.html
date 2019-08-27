@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="黎明晨光">
 <meta property="og:description" content="基本    命令 说明         max(num,key=func) 按照func返回num中的最大值                                sys          getsizeof()                                     matplotlibhttps://serverpoolauth.ops.ctripcorp.com nu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-23T09:34:28.729Z">
+<meta property="og:updated_time" content="2019-08-27T12:09:39.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python">
 <meta name="twitter:description" content="基本    命令 说明         max(num,key=func) 按照func返回num中的最大值                                sys          getsizeof()                                     matplotlibhttps://serverpoolauth.ops.ctripcorp.com nu">
@@ -533,8 +533,12 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><code>df.iloc[]</code></td>
+<td>指定行</td>
+</tr>
+<tr>
+<td><code>df(df.b.isin([5,13]))</code></td>
+<td>删除<code>b</code>列包含<code>5、13</code>的列</td>
 </tr>
 <tr>
 <td><code>df[&#39;add_column&#39;]=1</code></td>
@@ -543,6 +547,10 @@
 <tr>
 <td><code>df.drop()</code></td>
 <td>删除行或者列<br><code>labels</code>：删除的行或者列名<br><code>axis</code>：行-&gt;0；列-&gt;1<br><code>index</code> ：直接指定要删除的行<br><code>columns</code>：直接指定要删除的列<br><code>inplace=False</code>：默认该删除操作不改变原数据，而是返回一个执行删除操作后的新<code>dataframe</code>；<br><code>inplace=True</code>：则会直接在原数据上进行删除操作，删除后无法返回。</td>
+</tr>
+<tr>
+<td><code>df.dropna()</code></td>
+<td>删除空行<br><code>axis</code>：0-行操作（默认），1-列操作 <br><code>how</code>：<code>any</code>-只要有空值就删除（默认），<code>all</code>-全部为空值才删除 <br><code>inplace</code>：<code>False</code>-返回新的数据集（默认），<code>True</code>-在愿数据集上操作</td>
 </tr>
 <tr>
 <td><code>df.rename()</code></td>
@@ -567,6 +575,10 @@
 <tr>
 <td><code>df.merge()</code></td>
 <td>类似于数据库的<code>join</code>,返回<code>DataFrame</code></td>
+</tr>
+<tr>
+<td><code>df[&#39;列名&#39;].tolist()</code></td>
+<td>将列转换为<code>list</code></td>
 </tr>
 </tbody>
 </table>
@@ -700,7 +712,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

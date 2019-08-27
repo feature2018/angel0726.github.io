@@ -286,6 +286,329 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/29/C-运算符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/29/C-运算符/" itemprop="url">C++运算符</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T16:18:02+08:00">
+                2017-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>把两个操作数相加</td>
+<td>A + B 将得到 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>从第一个操作数中减去第二个操作数</td>
+<td>A - B 将得到 -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>把两个操作数相乘</td>
+<td>A * B 将得到 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>分子除以分母</td>
+<td>B / A 将得到 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取模运算符，整除后的余数</td>
+<td>B % A 将得到 0</td>
+</tr>
+<tr>
+<td>++</td>
+<td>自增运算符，整数值增加 1</td>
+<td>A++ 将得到 11</td>
+</tr>
+<tr>
+<td>—</td>
+<td>自减运算符，整数值减少 1</td>
+<td>A— 将得到 9</td>
+</tr>
+<tr>
+<td>==</td>
+<td>检查两个操作数的值是否相等，如果相等则条件为真。</td>
+<td>(A == B) 不为真。</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>检查两个操作数的值是否相等，如果不相等则条件为真。</td>
+<td>(A != B) 为真。</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>检查左操作数的值是否大于右操作数的值，如果是则条件为真。</td>
+<td>(A &gt; B) 不为真。</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>检查左操作数的值是否小于右操作数的值，如果是则条件为真。</td>
+<td>(A &lt; B) 为真。</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>检查左操作数的值是否大于或等于右操作数的值，如果是则条件为真。</td>
+<td>(A &gt;= B) 不为真。</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>检查左操作数的值是否小于或等于右操作数的值，如果是则条件为真。</td>
+<td>(A &lt;= B) 为真。</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>称为逻辑与运算符。如果两个操作数都非零，则条件为真。</td>
+<td>(A &amp;&amp; B) 为假。</td>
+</tr>
+<tr>
+<td>&#124;&#124;</td>
+<td>称为逻辑或运算符。如果两个操作数中有任意一个非零，则条件为真。</td>
+<td>(A &#124;&#124; B) 为真。</td>
+</tr>
+<tr>
+<td>!</td>
+<td>称为逻辑非运算符。用来逆转操作数的逻辑状态。如果条件为真则逻辑非运算符将使其为假。</td>
+<td>!(A &amp;&amp; B) 为真。</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>如果同时存在于两个操作数中，二进制 AND 运算符复制一位到结果中。</td>
+<td>(A &amp; B) 将得到 12，即为 0000 1100</td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td>如果存在于任一操作数中，二进制 OR 运算符复制一位到结果中。</td>
+<td>(A &#124; B) 将得到 61，即为 0011 1101</td>
+</tr>
+<tr>
+<td>^</td>
+<td>如果存在于其中一个操作数中但不同时存在于两个操作数中，二进制异或运算符复制一位到结果中。</td>
+<td>(A ^ B) 将得到 49，即为 0011 0001</td>
+</tr>
+<tr>
+<td>~</td>
+<td>二进制补码运算符是一元运算符，具有”翻转”位效果，即0变成1，1变成0。</td>
+<td>(~A ) 将得到 -61，即为 1100 0011，一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>二进制左移运算符。左操作数的值向左移动右操作数指定的位数。</td>
+<td>A &lt;&lt; 2 将得到 240，即为 1111 0000</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>二进制右移运算符。左操作数的值向右移动右操作数指定的位数。</td>
+<td>A &gt;&gt; 2 将得到 15，即为 0000 1111</td>
+</tr>
+<tr>
+<td>=</td>
+<td>简单的赋值运算符，把右边操作数的值赋给左边操作数</td>
+<td>C = A + B 将把 A + B 的值赋给 C</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>加且赋值运算符，把右边操作数加上左边操作数的结果赋值给左边操作数</td>
+<td>C += A 相当于 C = C + A</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>减且赋值运算符，把左边操作数减去右边操作数的结果赋值给左边操作数</td>
+<td>C -= A 相当于 C = C - A</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>乘且赋值运算符，把右边操作数乘以左边操作数的结果赋值给左边操作数</td>
+<td>C <em>= A 相当于 C = C </em> A</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>除且赋值运算符，把左边操作数除以右边操作数的结果赋值给左边操作数</td>
+<td>C /= A 相当于 C = C / A</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>求模且赋值运算符，求两个操作数的模赋值给左边操作数</td>
+<td>C %= A 相当于 C = C % A</td>
+</tr>
+<tr>
+<td>&lt;&lt;=</td>
+<td>左移且赋值运算符</td>
+<td>C &lt;&lt;= 2 等同于 C = C &lt;&lt; 2</td>
+</tr>
+<tr>
+<td>&gt;&gt;=</td>
+<td>右移且赋值运算符</td>
+<td>C &gt;&gt;= 2 等同于 C = C &gt;&gt; 2</td>
+</tr>
+<tr>
+<td>&amp;=</td>
+<td>按位与且赋值运算符</td>
+<td>C &amp;= 2 等同于 C = C &amp; 2</td>
+</tr>
+<tr>
+<td>^=</td>
+<td>按位异或且赋值运算符</td>
+<td>C ^= 2 等同于 C = C ^ 2</td>
+</tr>
+<tr>
+<td>&#124;=</td>
+<td>按位或且赋值运算符</td>
+<td>C &#124;= 2 等同于 C = C &#124; 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/29/C-运算符/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/29/C-变量作用域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1799,152 +2122,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/梯度类方法与对偶算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/18/梯度类方法与对偶算法/" itemprop="url">梯度类方法与对偶算法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T20:37:34+08:00">
-                2017-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="梯度类方法"><a href="#梯度类方法" class="headerlink" title="梯度类方法"></a>梯度类方法</h1><p>梯度类方法是无约束优化中非常常用的方法，其依据的最根本的事实就是梯度的负方向是函数值下降最快的方向。但是常用的 <strong>gradient descent 必须要求函数的连续可导</strong>，而对于某些<strong>连续不可导</strong>的问题（如lasso regression），gradient descent 无能为力，这是需要用到<strong>subgradient descent</strong>和<strong>proximal gradient descent</strong>.<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/18/梯度类方法与对偶算法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1999,7 +2176,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-count">84</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
