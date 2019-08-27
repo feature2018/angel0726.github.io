@@ -35,6 +35,11 @@ DROP TABLE Persons
 ## 创建表格
 
 ```sql
+create table 表名 as 
+	select 列名 from 表名
+```
+
+```sql
 CREATE TABLE Persons
 (
     P_Id int NOT NULL PRIMARY KEY CHECK (P_Id>0),  --不为空，主键，删选条件：P_Id>0

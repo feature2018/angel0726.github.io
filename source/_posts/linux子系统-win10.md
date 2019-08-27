@@ -57,7 +57,9 @@ zsh插件可以分为自带插件与第三方插件。
 2. `colored-man-pages`：手册页高亮
 3. `zsh-autosuggestion`：自动补全，可能导致乱码
 4. `zsh-syntax-highlighting`:命令高亮 
-5. `incr`：代码提示 。将[`incr`](/download/inrc-0.2.zsh)
+5. `incr`：代码提示 。将zsh（[自动补全版本](/download/incr-0.2.zsh) 、[非自动补全版本](/download/incr-0.2.1.zsh)）放进`~/.oh-my-zsh/custom/plugins/incr/incr-0.2.zsh`；在`~/.zshrc`文件末尾加入`source ~/.oh-my-zsh/custom/plugins/incr/incr*.zsh
+   export LC_ALL=en_US.UTF-8
+   export LANG=en_US.UTF-8`
 
 #### 插件说明
 
