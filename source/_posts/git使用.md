@@ -178,9 +178,3 @@ git分为工作区、暂存器和版本库。
 | git fetch               | 拉取远程分支更新到本地仓库                                   |
 | git merge origin/master | 把远程下载下来的代码合并到本地仓库，远程的和本地的合并       |
 
-？？？？checkout orign/hexo source合并指定文件夹
-
-**注意：**
-
-拉取特定文件只需要使用`git fetch` 与`git checkout origin/hexo source`
-
