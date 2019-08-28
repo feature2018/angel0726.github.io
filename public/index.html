@@ -286,6 +286,342 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/git使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="路西法">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tou_xiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黎明晨光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/28/git使用/" itemprop="url">git使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T10:14:10+08:00">
+                2019-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/版本管理/" itemprop="url" rel="index">
+                    <span itemprop="name">版本管理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。知名的<code>git</code>管理平台有<code>github</code></p>
+<h1 id="本地git"><a href="#本地git" class="headerlink" title="本地git"></a>本地git</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>git分为工作区、暂存器和版本库。</p>
+<ul>
+<li><strong>工作区</strong>：就是你在电脑里能看到的目录。</li>
+<li><strong>暂存区</strong>：英文叫stage, 或index。一般存放在 “.git目录下” 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。</li>
+<li><strong>版本库</strong>：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。图中”HEAD” 实际是指向 master 分支的一个”游标”。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。</li>
+<li><strong>object：</strong>Git 的对象库，实际位于 “.git/objects” 目录下，里面包含了创建的各种对象及内容。</li>
+</ul>
+<p><img src="/2019/08/28/git使用/1566977176119.png" alt="1566977176119"></p>
+<h2 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h2><table>
+  <tr>
+    <th rowspan="7">基本操作</th>
+    <th>git init</th>
+    <th>创建版本库</th>
+  </tr>
+  <tr>
+    <td>git add &lt;文件&gt;</td>
+    <td>将文件从工作区添加到暂存区</td>
+  </tr>
+  <tr>
+    <td>git commit -m“&lt;说明&gt;”</td>
+    <td>将文件从暂存区添加到版本库</td>
+  </tr>
+  <tr>
+    <td>git checkout  &lt;文件&gt;</td>
+    <td>将文件从暂存区添加到工作区</td>
+  </tr>
+  <tr>
+    <td>git rm --cached &lt;文件&gt;</td>
+    <td>将暂存区中的文件删除</td>
+  </tr>
+  <tr>
+    <td>git reset head</td>
+    <td>将文件从版本库添加到暂存区</td>
+  </tr>
+  <tr>
+    <td>git checkout head &lt;文件&gt;</td>
+    <td>将文件从版本库添加到工作区</td>
+  </tr>
+  <tr>
+    <td rowspan="3">版本管理</td>
+    <td>git log</td>
+    <td>查看版本信息 ——查找commit id<br>--graph：以图的形式展现信息<br></td>
+  </tr>
+  <tr>
+    <td>git reflog</td>
+    <td>查看历史操作信息——查找commit id<br>以防因为版本回滚导致git log中的信息丢失</td>
+  </tr>
+  <tr>
+    <td>git reset --hard HEAD^<br>git reset --hard HEAD^^<br>git reset --HEAD~100<br>git reset --hard 1094<br></td>
+    <td># 回退上一个版本<br># 回退上两个版本<br># 回退上100个版本<br># 回退到指定版本，后面的1094a是commit的版本号</td>
+  </tr>
+  <tr>
+    <td rowspan="5">标签</td>
+    <td>git tag -a v0.1 -m "version 0.1 released" 1094adb</td>
+    <td>-a指定标签名，-m指定说明文字</td>
+  </tr>
+  <tr>
+    <td>git tag v0.1  commit id</td>
+    <td>默认标签是打在最新提交的commit id<br>如果添加commit id就会打在指定的commit id上</td>
+  </tr>
+  <tr>
+    <td>git tag -d v0.1</td>
+    <td>删除标签</td>
+  </tr>
+  <tr>
+    <td>git push origin v1.0<br>git push origin --tags<br></td>
+    <td>推送标签到远程<br>一次性推送全部标签<br></td>
+  </tr>
+  <tr>
+    <td>git tag<br>git show &lt;标签名&gt;<br></td>
+    <td>查看标签<br>查看标签的说明文字</td>
+  </tr>
+  <tr>
+    <td rowspan="5">保存工作区与缓存区</td>
+    <td>git stash <br></td>
+    <td>将工作区与暂存区的内容保存起来</td>
+  </tr>
+  <tr>
+    <td>git stash list </td>
+    <td>查看保存的工作区与暂存区  <br></td>
+  </tr>
+  <tr>
+    <td>git stash apply </td>
+    <td>恢复制定的stash，但是stash内容并不删除。git stash apply stash@{0}  <br></td>
+  </tr>
+  <tr>
+    <td>git stash drop </td>
+    <td>删除制定的stash。git stash drop stash@{0}  <br></td>
+  </tr>
+  <tr>
+    <td>git stash pop </td>
+    <td>恢复并删除最新的工作区与暂存区</td>
+  </tr>
+  <tr>
+    <td rowspan="5">分支管理</td>
+    <td>git branch</td>
+    <td>查看分支</td>
+  </tr>
+  <tr>
+    <td>git branch  &lt;分支名&gt;</td>
+    <td>新建分支，并且新分支有老分支的内容</td>
+  </tr>
+  <tr>
+    <td>git checkout &lt;分支名&gt;</td>
+    <td>切换分支</td>
+  </tr>
+  <tr>
+    <td>git branch -d &lt;分支名&gt;</td>
+    <td>删除分支</td>
+  </tr>
+  <tr>
+    <td>git merge &lt;分支名&gt;<br>git merge --no-ff &lt;分支名&gt;<br></td>
+    <td>合并分支到当前分支下<br>如果有冲突修改冲突，使用git add与git commit 提交</td>
+  </tr>
+  <tr>
+    <td rowspan="9">其他</td>
+    <td>git status</td>
+    <td>查看状态</td>
+  </tr>
+  <tr>
+    <td rowspan="7">git diff<br>git diff [--options] &lt;commit&gt; &lt;commit&gt; [--] [&lt;path&gt;...]<br></td>
+    <td>git diff：比较工作区与暂存区</td>
+  </tr>
+  <tr>
+    <td>git diff --cached：比较暂存区与最新本地版本库</td>
+  </tr>
+  <tr>
+    <td>git diff --cached &lt;commit-id&gt;：比较暂存区与版本库指定commit-id的差异</td>
+  </tr>
+  <tr>
+    <td>git diff HEAD：比较工作区与最新本地版本库</td>
+  </tr>
+  <tr>
+    <td>git diff &lt;commit-id&gt;：比较工作区与版本库指定commit-id的差异</td>
+  </tr>
+  <tr>
+    <td>git diff &lt;commit-id&gt;&lt;commit-id&gt;：比较版本库两个commit-id之间的差异</td>
+  </tr>
+  <tr>
+    <td>git diff &lt;分支&gt;&lt;分支&gt;：比较两个分支</td>
+  </tr>
+  <tr>
+    <td>git rm</td>
+    <td>删除文件</td>
+  </tr>
+</table>
+
+
+
+<h1 id="远程"><a href="#远程" class="headerlink" title="远程"></a>远程</h1><p><img src="/2019/08/28/git使用/1566980274372.png" alt="1566980274372"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git remote</td>
+<td>查看当前配置有哪些远程仓库<br>-v：执行时加上 -v 参数，你还可以看到每个别名的实际链接地址。</td>
+</tr>
+<tr>
+<td>git remote add</td>
+<td>连接远程版本库<br>git remote add [shortname] [url]<br>shortname：远程版本库的别名<br>url：远程版本库的链接</td>
+</tr>
+<tr>
+<td>git remote rm [别名]</td>
+<td>删除远程仓库</td>
+</tr>
+<tr>
+<td>git push</td>
+<td>本地库内容推送到远程库中 <br>git push [alias] [branch]：推送成为 [alias] 远程仓库上的 [branch] 分支</td>
+</tr>
+<tr>
+<td>git clone</td>
+<td>克隆远程版本库</td>
+</tr>
+<tr>
+<td>git pull</td>
+<td>拉取远程分支更新到本地仓库，再与本地指定分支合并。<br>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</td>
+</tr>
+<tr>
+<td>git fetch</td>
+<td>拉取远程分支更新到本地仓库</td>
+</tr>
+<tr>
+<td>git merge origin/master</td>
+<td>把远程下载下来的代码合并到本地仓库，远程的和本地的合并</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/26/机器学习/PSI.md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -700,7 +1036,7 @@
 <tbody>
 <tr>
 <td>胸部</td>
-<td>上胸肌：上斜卧推<br>中胸肌：平板卧推<br>下胸肌：臂前屈</td>
+<td>上胸肌：上斜卧推<br>中胸肌：平板卧推<br>下胸肌：双杠臂屈伸</td>
 </tr>
 <tr>
 <td></td>
@@ -1811,283 +2147,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/hadoop/HDFS.md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="路西法">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/tou_xiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黎明晨光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/16/hadoop/HDFS.md/" itemprop="url">HDFS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-16T10:17:08+08:00">
-                2019-08-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">Hadoop</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="HDFS框架"><a href="#HDFS框架" class="headerlink" title="HDFS框架"></a>HDFS框架</h1><p><img src="/2019/08/16/hadoop/HDFS.md/2608446-66ac838fbd1c4c6d.webp" alt="img"></p>
-<ul>
-<li>主从结构：<ol>
-<li>主节点，只有一个  ： <code>namenode</code></li>
-<li>从节点，有很多个  ：<code>datanodes</code></li>
-</ol>
-</li>
-<li><code>namenode</code>负责：<ol>
-<li>接收用户请求操作</li>
-<li>维护文件信息系统的目录结构</li>
-<li>管理文件与<code>block</code>之间的关系，<code>block</code>与<code>datanade</code>之间的关系<br>注意：<code>namenode</code>归根结底要放在磁盘上的以保证数据的持久性，但是为了提高效率，一般在<code>hadoop</code>运行时时放在内存中的</li>
-</ol>
-</li>
-<li><code>datanode</code>负责：<pre><code>  1. 存储文件
-     2. 文件被分成`block`存储字磁盘上
-     3. 为保证数据安全，文件会有多个副本
-</code></pre></li>
-</ul>
-<h1 id="HDFS-shell命令"><a href="#HDFS-shell命令" class="headerlink" title="HDFS shell命令"></a>HDFS shell命令</h1><p><strong>命令格式：</strong> <code>bin/hadoop fs &lt;args&gt; URI</code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>URI</code>：<code>scheme://authority/path</code>—HDFS文件系统<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>file://authority/path</code>—本地文件系统</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cat</code></td>
-<td>使用方法：<code>hadoop fs -cat URI [URI …]</code><br><strong>将路径指定文件的内容输出到<code>stdout,</code>成功返回0，失败返回-1。</strong><br>eg:<code>hadoop fs -cat hdfs://host1:port1/file1 hdfs://host2:port2/file2</code><br>&emsp;&nbsp;&nbsp;<code>hadoop fs -cat file:///file3 /user/hadoop/file4</code></td>
-</tr>
-<tr>
-<td><code>chgrp</code></td>
-<td>使用方法：<code>hadoop fs -chgrp [-R] GROUP URI [URI …]</code><br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; <code>-R</code>：递归改变文件的目录结构<br><strong>改变文件所属的组。</strong></td>
-</tr>
-<tr>
-<td><code>chmod</code></td>
-<td>使用方法：<code>hadoop fs -chmod [-R] &lt;MODE[,MODE]...  OCTALMODE&gt; URI [URI …]</code><br> &nbsp; &emsp; &emsp;&emsp;&emsp;<code>-R</code>：递归改变文件的目录结构<br><strong>改变文件的权限。</strong></td>
-</tr>
-<tr>
-<td><code>chown</code></td>
-<td>使用方法：<code>hadoop fs -chown [-R] [OWNER][:[GROUP]] URI [URI ]</code><br>&emsp;&emsp;&emsp;&emsp;&emsp;<code>-R</code>：递归改变文件的目录结构<br><strong>改变文件的拥有者。</strong></td>
-</tr>
-<tr>
-<td><code>copyFromLocal</code></td>
-<td>使用方法：<code>hadoop fs -copyFromLocal &lt;localsrc&gt; URI</code><br><strong>除了限定源路径是一个本地文件外，和<a href="https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_shell.html#putlink" target="_blank" rel="noopener"><code>put</code></a>命令相似</strong></td>
-</tr>
-<tr>
-<td><code>copyToLocal</code></td>
-<td>使用方法：<code>hadoop fs -copyToLocal [-ignorecrc] [-crc] URI &lt;localdst&gt;</code><br><strong>除了限定目标路径是一个本地文件外，和<a href="https://hadoop.apache.org/docs/r1.0.4/cn/hdfs_shell.html#getlink" target="_blank" rel="noopener">get</a>命令类似。</strong></td>
-</tr>
-<tr>
-<td><code>cp</code></td>
-<td>使用方法：<code>hadoop fs -cp URI [URI …] &lt;dest&gt;</code><br><strong>将文件从源路径复制到目标路径。这个命令允许有多个源路径，此时目标路径必须是一个目录。成功返回0，失败返回-1。</strong><br>eg：<code>hadoop fs -cp /user/hadoop/file1 /user/hadoop/file2 /user/hadoop/dir</code></td>
-</tr>
-<tr>
-<td><code>du</code></td>
-<td>使用方法：<code>hadoop fs -du URI [URI …]</code><br><strong>显示目录中所有文件的大小，或者当只指定一个文件时，显示此文件的大小。成功返回0，失败返回-1。</strong><br>eg：<code>hadoop fs -du /user/hadoop/dir1 /user/hadoop/file1 hdfs://host:port/user/hadoop/dir1</code></td>
-</tr>
-<tr>
-<td><code>dus</code></td>
-<td>使用方法：<code>hadoop fs -dus &lt;args&gt;</code><br><strong>显示文件的大小。</strong></td>
-</tr>
-<tr>
-<td><code>expunge</code></td>
-<td>使用方法：<code>hadoop fs -expunge</code><br><strong>清空回收站。</strong></td>
-</tr>
-<tr>
-<td><code>get</code></td>
-<td>使用方法：<code>hadoop fs -get [-ignorecrc] [-crc] &lt;src&gt; &lt;localdst&gt;</code><br><strong>复制文件到本地文件系统。可用<code>-ignorecrc</code>选项复制<code>CRC</code>校验失败的文件。使用<code>-crc</code>选项复制文件以及CRC信息。</strong><br>eg：<code>hadoop fs -get /user/hadoop/file localfile</code><br>&emsp;&emsp;<code>hadoop fs -get hdfs://host:port/user/hadoop/file localfile</code></td>
-</tr>
-<tr>
-<td><code>getmerge</code></td>
-<td>使用方法：<code>hadoop fs -getmerge &lt;src&gt; &lt;localdst&gt; [addnl]</code><br>接受一个源目录和一个目标文件作为输入，并且将源目录中所有的文件连接成本地目标文件。<code>addnl</code>是可选的，用于指定在每个文件结尾添加一个换行符。</td>
-</tr>
-<tr>
-<td><code>ls</code></td>
-<td>使用方法：<code>hadoop fs -ls &lt;args&gt;</code><br>如果是文件，则按照如下格式返回文件信息：<code>文件名 &lt;副本数&gt; 文件大小 修改日期 修改时间 权限 用户ID 组ID</code><br>如果是目录，则返回它直接子文件的一个列表，就像在Unix中一样。目录返回列表的信息如下<code>目录名 &lt;dir&gt; 修改日期 修改时间 权限 用户ID 组ID</code><br>成功返回0，失败返回-1。</td>
-</tr>
-<tr>
-<td><code>lsr</code></td>
-<td><code>ls</code>命令的递归版本。类似于Unix中的<code>ls -R</code>。</td>
-</tr>
-<tr>
-<td><code>mkdir</code></td>
-<td>使用方法：<code>hadoop fs -mkdir &lt;paths&gt;</code><br><strong>接受路径指定的<code>uri</code>作为参数，创建这些目录。其行为类似于<code>Unix</code>的<code>mkdir -p</code>，它会创建路径中的各级父目录。成功返回0，失败返回-1。</strong><br>eg：<code>hadoop fs -mkdir /user/hadoop/dir1 /user/hadoop/dir2</code></td>
-</tr>
-<tr>
-<td><code>movefromLocal</code></td>
-<td>使用方法：<code>dfs -moveFromLocal &lt;src&gt; &lt;dst&gt;</code></td>
-</tr>
-<tr>
-<td><code>mv</code></td>
-<td>使用方法：<code>hadoop fs -mv URI [URI …] &lt;dest&gt;</code><br><strong>将文件从源路径移动到目标路径。这个命令允许有多个源路径，此时目标路径必须是一个目录。不允许在不同的文件系统间移动文件。</strong><br>eg：<code>hadoop fs -mv /user/hadoop/file1 /user/hadoop/file2</code></td>
-</tr>
-<tr>
-<td><code>put</code></td>
-<td>使用方法：<code>hadoop fs -put &lt;localsrc&gt; ... &lt;dst&gt;</code><br><strong>从本地文件系统中复制单个或多个源路径到目标文件系统。也支持从标准输入中读取输入写入目标文件系统。成功返回0，失败返回-1。</strong><br>eg：<code>hadoop fs -put localfile /user/hadoop/hadoopfile</code></td>
-</tr>
-<tr>
-<td><code>rm</code></td>
-<td>使用方法：<code>hadoop fs -rm URI [URI …]</code><br><strong>删除指定的文件。只删除非空目录和文件。请参考<code>rmr</code>命令了解递归删除。成功返回0，失败返回-1。</strong><br>eg：<code>hadoop fs -rm hdfs://host:port/file /user/hadoop/emptydir</code></td>
-</tr>
-<tr>
-<td><code>rmr</code></td>
-<td>使用方法：<code>hadoop fs -rmr URI [URI …]</code><br><code>delete</code>的递归版本。<br><code>hadoop fs -rmr /user/hadoop/dir</code></td>
-</tr>
-<tr>
-<td><code>setrep</code></td>
-<td>使用方法：<code>hadoop fs -setrep [-R] &lt;path&gt;</code><br><strong>改变一个文件的副本系数。-R选项用于递归改变目录下所有文件的副本系数。成功返回0，失败返回-1。</strong><br><code>hadoop fs -setrep -w 3 -R /user/hadoop/dir1</code></td>
-</tr>
-<tr>
-<td><code>stat</code></td>
-<td>使用方法：<code>hadoop fs -stat URI [URI …]</code><br><strong>返回指定路径的统计信息。</strong><br><code>hadoop fs -stat path</code></td>
-</tr>
-<tr>
-<td><code>tail</code></td>
-<td>使用方法：<code>hadoop fs -tail [-f] URI</code><br><strong>将文件尾部1K字节的内容输出到<code>stdout</code>。支持-f选项，行为和<code>Unix</code>中一致。成功返回0，失败返回-1。</strong></td>
-</tr>
-<tr>
-<td><code>test</code></td>
-<td>使用方法：<code>hadoop fs -test -[ezd] URI</code><br>&emsp;&emsp;&emsp;&emsp;&emsp;<code>-e</code> 检查文件是否存在。如果存在则返回<code>0</code>。<br>&emsp;&emsp;&emsp;&emsp;&emsp;<code>-z</code> 检查文件是否是<code>0</code>字节。如果是则返回<code>0</code>。 <br>&emsp;&emsp;&emsp;&emsp;&emsp;<code>-d</code>如果路径是个目录，则返回<code>1</code>，否则返回<code>0</code>。</td>
-</tr>
-<tr>
-<td><code>text</code></td>
-<td>使用方法：<code>hadoop fs -text &lt;src&gt;</code><br><strong>将源文件输出为文本格式。允许的格式是<code>zip</code>和<code>TextRecordInputStream</code>。</strong></td>
-</tr>
-<tr>
-<td><code>touchz</code></td>
-<td>使用方法：<code>hadoop fs -touchz URI [URI …]</code><br><strong>创建一个0字节的空文件。成功返回0，失败返回-1。</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2142,7 +2201,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2153,7 +2212,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2164,7 +2223,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
