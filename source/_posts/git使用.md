@@ -205,3 +205,17 @@ git指针问题
 
 
 ![../images/git-diff.png](git使用/git-diff.png)
+
+git原理与基本命令
+
+https://www.cnblogs.com/kekec/p/9248487.html
+
+https://drprincess.github.io/2018/02/27/Git-%E4%BD%A0%E5%A5%BDHEAD%E5%90%8C%E5%AD%A6/
+
+https://coding.net/help/doc/practice/git-principle.html
+
+
+
+
+
+https://yanhaijing.com/git/2017/02/08/deep-git-3/

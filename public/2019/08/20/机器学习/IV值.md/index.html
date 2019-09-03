@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="黎明晨光">
 <meta property="og:description" content="$IV$的全称是Information Value，中文意思是信息价值，或者信息量。在特征选择的过程中，可以定量的描述模型的预测能力。每一个特征对应一个$IV$值。     IV值 IV&amp;lt;0.02 0.02$\leqslant$IV&amp;lt;0.1 0.1$\leqslant$IV&amp;lt;0.3 IV$\geqslant$0.3     预测能力 不具有预测能力 预测能力很弱 中等程度预测能力">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T14:59:31.207Z">
+<meta property="og:updated_time" content="2019-08-29T07:26:47.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IV值">
 <meta name="twitter:description" content="$IV$的全称是Information Value，中文意思是信息价值，或者信息量。在特征选择的过程中，可以定量的描述模型的预测能力。每一个特征对应一个$IV$值。     IV值 IV&amp;lt;0.02 0.02$\leqslant$IV&amp;lt;0.1 0.1$\leqslant$IV&amp;lt;0.3 IV$\geqslant$0.3     预测能力 不具有预测能力 预测能力很弱 中等程度预测能力">
@@ -559,6 +559,15 @@ IV=\sum_i^n IV_i= IV_1+IV_2+IV_3+IV_4 = 0.492706</script><h2 id="WOE的理解"><
 <li><p>如果上面两种方法都无法使用，建议人工把该分组的响应数和非响应的数量进行一定的调整。如果响应数原本为0，可以人工调整响应数为1，如果非响应数原本为0，可以人工调整非响应数为1.</p>
 </li>
 </ol>
+<h2 id="随机森林特征重要性Identifying-churn-drivers-with-Random-Forests"><a href="#随机森林特征重要性Identifying-churn-drivers-with-Random-Forests" class="headerlink" title="随机森林特征重要性Identifying churn drivers with Random Forests"></a>随机森林特征重要性Identifying churn drivers with Random Forests</h2><p>决策树类算法的特点之一就是有良好的模型解释性。我们可以分析出得到相应结果的数据原因，也可以得到哪些特征比较重要。下面来回顾一下得到这些的主要方法：</p>
+<p>1，<strong>平均不纯度减少（MDI）</strong>：表示每个特征对误差的平均减少程度。《统计学习要素》的作者非常简洁的解释了这种方法：“在每一棵树的每一个分裂中，分裂准则的改进是对分裂变量的重要度量，并分别在森林中的所有树上为每个变量累积。”让我们详细说明一下这段话的意思。如我们所知，决策树根据一些规则，将结点分裂为两个子结点。每次分裂都是针对一个可以使误差最小化的特征。误差的计算可以使均方误差，基尼纯度，信息增益，或者其他一些根据需要设置的指标。我们总结了所有树上，这个特定变量得到的所有分割使误差减少的情况。在sk-learn包中，每次分裂带来的提升效果，是由到达节点的样本数加权得到的，然后对特征的重要性进行归一化处理。值得注意的是，这种方法往往高估了具有许多类别的特性的重要性。这里描述了一种纠正MDI偏置的替代方法。</p>
+<p>2，<strong>平均精确率减少（MDA）</strong>：打乱每个特征的特征值顺序，并且度量顺序变动对模型的精确率的影响。这种巧妙的方法利用袋外数据来计算重要性。OOB数据是训练集的一部分，但不用于训练这种特殊的树。用OOB数据计算出基本误差，然后对每个特征，随机打乱顺序。实际上，这就像用相同的分布使用随机数据替换变量一样，并忽视树对该特性的已有知识。对于不重要的特征来说，打乱顺序对模型的精确率影响不会太大，但是对于重要的特征来说，打乱顺序就会降低模型的精确率。</p>
+<p>3，<strong>Boruta</strong>：重复删除比最佳特征差的特征。主要思想就是检查比随机噪声重要的特征。首先我们要建立影子变量将所有特征混合。这就像在“减少平均精度”中描述的变量打乱一样，但这个方法是同时对所有变量进行操作。我们将影子特征加入到原有特征中，然后用随机森林进行训练。使用上述介绍的MDA或者MDI方法，我们可以看到哪个原始变量比影子变量重要。如果不相关的特征较少，则重要性度量更精确。因此，上述过程重复到预定义的次数，或者直到达到最小特征计数为止。这个算法从最不相关的特征开始删除，因此我们可以用删除顺序作为特征重要性排序。Boruta是一个“相关”的特征选择算法。这与通过确定最佳预测精度得到的最小数据集方法有细微的区别。正如该方法的作者所说的那样：“这个算法尝试找到所有对预测结果有用的特征，而不是找到一个使误差最小的特征集合。”</p>
+<p>1：对于随机森林中的每一颗决策树,使用相应的OOB(袋外数据)数据来计算它的袋外数据误差,记为errOOB1.</p>
+<p>2:  随机地对袋外数据OOB所有样本的特征X加入噪声干扰(就可以随机的改变样本在特征X处的值),再次计算它的袋外数据误差,记为errOOB2.</p>
+<p>3：假设随机森林中有Ntree棵树,那么对于特征X的重要性=∑(errOOB2-errOOB1)/Ntree,之所以可以用这个表达式来作为相应特征的重要性的度量值是因为：若给某个特征随机加入噪声之后,袋外的准确率大幅度降低,则说明这个特征对于样本的分类结果影响很大,也就是说它的重要程度比较高。</p>
+<p>我们这里只介绍用基尼指数来评价的方法，想了解另一种方法的可以参考文献2。<br>我们将变量重要性评分（variable importance measures）用VIMVIM来表示，将Gini指数用GIGI来表示，假设有mm个特征X1，X2，X3，…，XcX1，X2，X3，…，Xc，现在要计算出每个特征XjXj的Gini指数评分VIM(Gini)jVIMj(Gini)，亦即第jj个特征在RF所有决策树中节点分裂不纯度的平均改变量。<br>Gini指数的计算公式为<br>GIm=∑|K|k=1∑k′≠kpmkpmk′=1−∑|K|k=1p2mkGIm=∑k=1|K|∑k′≠kpmkpmk′=1−∑k=1|K|pmk2<br>其中，KK表示有KK个类别，pmkpmk表示节点mm中类别kk所占的比例。<br>直观地说，就是随便从节点mm中随机抽取两个样本，其类别标记不一致的概率。<br>特征XjXj在节点mm的重要性，即节点mm分枝前后的GiniGini指数变化量为<br>VIM(Gini)jm=GIm−GIl−GIrVIMjm(Gini)=GIm−GIl−GIr<br>其中，GIlGIl和GIrGIr分别表示分枝后两个新节点的GiniGini指数。<br>如果，特征XjXj在决策树ii中出现的节点在集合MM中，那么XjXj在第ii颗树的重要性为<br>VIM(Gini)ij=∑m∈MVIM(Gini)jmVIMij(Gini)=∑m∈MVIMjm(Gini)   一个决策树中多次出现特征<br>假设RFRF中共有nn颗树，那么<br>VIM(Gini)j=∑ni=1VIM(Gini)ijVIMj(Gini)=∑i=1nVIMij(Gini)<br>最后，把所有求得的重要性评分做一个归一化处理即可。<br>VIMj=VIMj∑ci=1VIMi<br> ————————————————<br>版权声明：本文为CSDN博主「zjuPeco」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/zjuPeco/article/details/77371645" target="_blank" rel="noopener">https://blog.csdn.net/zjuPeco/article/details/77371645</a></p>
+<p>xgboost使用得分作为特征的重要性</p>
 
       
     </div>
@@ -689,7 +698,7 @@ IV=\sum_i^n IV_i= IV_1+IV_2+IV_3+IV_4 = 0.492706</script><h2 id="WOE的理解"><
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -760,7 +769,7 @@ IV=\sum_i^n IV_i= IV_1+IV_2+IV_3+IV_4 = 0.492706</script><h2 id="WOE的理解"><
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IV值的直观理解"><span class="nav-number">1.</span> <span class="nav-text">IV值的直观理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算方法"><span class="nav-number">2.</span> <span class="nav-text">计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算实例"><span class="nav-number">3.</span> <span class="nav-text">计算实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WOE的理解"><span class="nav-number">3.1.</span> <span class="nav-text">WOE的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么用IV而不是直接用WOE"><span class="nav-number">3.2.</span> <span class="nav-text">为什么用IV而不是直接用WOE</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IV的极端情况以及处理方式"><span class="nav-number">4.</span> <span class="nav-text">IV的极端情况以及处理方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IV值的直观理解"><span class="nav-number">1.</span> <span class="nav-text">IV值的直观理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算方法"><span class="nav-number">2.</span> <span class="nav-text">计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算实例"><span class="nav-number">3.</span> <span class="nav-text">计算实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WOE的理解"><span class="nav-number">3.1.</span> <span class="nav-text">WOE的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么用IV而不是直接用WOE"><span class="nav-number">3.2.</span> <span class="nav-text">为什么用IV而不是直接用WOE</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IV的极端情况以及处理方式"><span class="nav-number">4.</span> <span class="nav-text">IV的极端情况以及处理方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林特征重要性Identifying-churn-drivers-with-Random-Forests"><span class="nav-number">4.1.</span> <span class="nav-text">随机森林特征重要性Identifying churn drivers with Random Forests</span></a></li></ol></li></ol></div>
             
 
           </div>

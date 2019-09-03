@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/06/21/决策树/决策树-2ab90e01.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/21/决策树/决策树-49620760.png">
 <meta property="og:image" content="http://yoursite.com/2017/06/21/决策树/决策树-4abd1db5.png">
-<meta property="og:updated_time" content="2019-08-27T14:59:31.778Z">
+<meta property="og:updated_time" content="2019-08-29T06:52:26.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="简介分类决策树模型是一种描述对实例进行分类的树形结构。决策树由结点（node）和有向边（directed edge）组成。结点有两种类型：内部结点（internal node）和叶结点（leaf node）。内部结点表示一个特征或属性，叶结点表示一个类。决策树案例图如下图所示。     算法 特征选择 目标     ID3 信息增益$g(D,A)=H(D)-H(D\mid A)$ 信息增益最大的">
@@ -422,15 +422,23 @@
 <a id="more"></a>
 <h1 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h1><h2 id="信息增益（用于ID3算法）"><a href="#信息增益（用于ID3算法）" class="headerlink" title="信息增益（用于ID3算法）"></a>信息增益（用于ID3算法）</h2><p>信息熵表示的是不确定度。均匀分布时，不确定度最大，此时熵就最大。当选择某个特征对数据集进行分类时，分类后的数据集信息熵会比分类前的小，其差值表示为信息增益。信息增益可以衡量某个特征对分类结果的影响大小。<strong>信息增益=信息熵-条件熵；换句话说，信息增益代表了在一个条件下，信息复杂度（不确定性）减少的程度</strong></p>
 <ul>
-<li>定义<br>特征 $A$ 对训练数据集 $D$ 的信息增益 $g(D,A)$，定义为集合 $D$ 的信息熵 $H(D)$ 与特征 $A$ 给定条件下 $D$ 的条件熵 $H(D|A)$ 之差，即<script type="math/tex; mode=display">g(D,A)=H(D)-H(D|A)</script></li>
-<li>算法<br>设训练数据集为 $D$，$|D|$ 表示其样本容量，即样本个数。设有 $K$ 个类 $C_k，k＝1,2,…,K$ ，$|C_k|$ 为属于类 $C_k$ 的样本个数。设特征 $A$ 有 $n$ 个不同的取值 ${a_1，a_2,…,a_n}$ ，根据特征 $A$ 的取值将 $D$ 划分为$n$个子集 $D_1,D_2,…,D_n$，$|D_i|$ 为 $D_i$ 的样本个数，$\sum_{i=1}^{n}|D_i|=|D|$。记子集 $D_i$ 中属于类 $C_k$ 的样本的集合为 $D_{ik}$，即 $D_{ik}＝D_i⋂C_k$，$|D_{ik}|$ 为 $D_{ik}$ 的样本个数。于是信息增益的算法如下：<br>输入：训练数据集$D$和特征$A$；<br>输出：特征$A$对训练数据集$D$的信息增益$g(D,A)$。<ol>
-<li>计算数据集$D$的信息熵$H(D)$<script type="math/tex; mode=display">H(D)=-\sum_{k=1}^{K}\frac{|C_k|}{|D|}log_2\frac{|C_k|}{|D|}</script></li>
-<li>计算特征$A$对数据集$D$的经验条件熵$H(D|A)$<script type="math/tex; mode=display">H(D|A)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}H(D_i)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}\sum_{k=1}^{K}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}</script></li>
+<li><p>定义<br>特征 $A$ 对训练数据集 $D$ 的信息增益 $g(D,A)$，定义为集合 $D$ 的信息熵 $H(D)$ 与特征 $A$ 给定条件下 $D$ 的条件熵 $H(D|A)$ 之差，即</p>
+<script type="math/tex; mode=display">
+g(D,A)=H(D)-H(D|A)</script></li>
+<li><p>算法<br>设训练数据集为 $D$，$|D|$ 表示其样本容量，即样本个数。设有 $K$ 个类 $C_k，k＝1,2,…,K$ ，$|C_k|$ 为属于类 $C_k$ 的样本个数。设特征 $A$ 有 $n$ 个不同的取值 ${a_1，a_2,…,a_n}$ ，根据特征 $A$ 的取值将 $D$ 划分为$n$个子集 $D_1,D_2,…,D_n$，$|D_i|$ 为 $D_i$ 的样本个数，$\sum_{i=1}^{n}|D_i|=|D|$。记子集 $D_i$ 中属于类 $C_k$ 的样本的集合为 $D_{ik}$，即 $D_{ik}＝D_i⋂C_k$，$|D_{ik}|$ 为 $D_{ik}$ 的样本个数。于是信息增益的算法如下：<br>输入：训练数据集$D$和特征$A$；<br>输出：特征$A$对训练数据集$D$的信息增益$g(D,A)$。</p>
+<ol>
+<li>计算数据集$D$的信息熵$H(D)$<script type="math/tex; mode=display">
+H(D)=-\sum_{k=1}^{K}\frac{|C_k|}{|D|}log_2\frac{|C_k|}{|D|}</script></li>
 </ol>
 </li>
 </ul>
+<ol>
+<li>计算特征$A$对数据集$D$的经验条件熵$H(D|A)$<script type="math/tex; mode=display">
+H(D|A)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}H(D_i)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}\sum_{k=1}^{K}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}</script></li>
+</ol>
 <h2 id="信息增益比"><a href="#信息增益比" class="headerlink" title="信息增益比"></a>信息增益比</h2><p>当特征的取值较多时，根据此特征划分更容易得到纯度更高的子集，因此划分之后的熵更低，由于划分前的熵是一定的，因此信息增益更大，因此<strong>信息增益比较偏向取值较多的特征</strong>。例如面对连续增益(体重、身高、年龄等)，(极端情况下所有数据都独一无二)，在这种情况下，我们采用信息增益比。</p>
-<script type="math/tex; mode=display">\begin{align*}
+<script type="math/tex; mode=display">
+\begin{align*}
 g_{R}(D,A)&=\frac{g(D,A)}{H_A(D)}\\
 H_A(D)&=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}log_2\frac{|D_{i}|}{|D|}
 \end{align*}</script><h3 id="为什么使用信息增益比"><a href="#为什么使用信息增益比" class="headerlink" title="为什么使用信息增益比"></a>为什么使用信息增益比</h3><div class="table-container">
@@ -562,7 +570,8 @@ H_A(D)&=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}log_2\frac{|D_{i}|}{|D|}
 </table>
 </div>
 <p>还是以此表为例，假如我们想用Day来做为特征(当然实际上一般人也不会傻到用Day用做特征)，显然，每一天都可以将样本分开，也就是形成了一颗叶子数量为14，深度只有两层的树。</p>
-<h4 id="信息增益"><a href="#信息增益" class="headerlink" title="信息增益"></a>信息增益</h4><script type="math/tex; mode=display">\begin{align*}
+<h4 id="信息增益"><a href="#信息增益" class="headerlink" title="信息增益"></a>信息增益</h4><script type="math/tex; mode=display">
+\begin{align*}
 H(D) &= -\sum_{k=1}^{K}\frac{|C_k|}{|D|}log_2\frac{|C_k|}{|D|}\\
 &=-{5\over14}log {5\over14} - {9\over14}log {9\over14} =0.9403\\
 H(D|A) &=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}H(D_i)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}\sum_{k=1}^{K}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}\\
@@ -574,12 +583,14 @@ H_A(D) &=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}\\
 &=-\sum_{i=1}^{14}\frac{1}{14}log_2\frac{1}{14}=3.807\\
 g_{R}(D,A)&=\frac{g(D,A)}{H_A(D)} \\
 &=\frac{0.9403}{3.807}=0.247
-\end{align*}</script><h2 id="基尼指数"><a href="#基尼指数" class="headerlink" title="基尼指数"></a>基尼指数</h2><p>分类问题中，假设有 $K$ 个类，样本点属于第k类的概率为$p_k$，则概率分布的基尼指数定义为</p>
-<script type="math/tex; mode=display">\begin{align*}
+\end{align*}</script><h2 id="基尼指数"><a href="#基尼指数" class="headerlink" title="基尼指数"></a>基尼指数</h2><p><strong>基尼系数与熵同样反映了信息的不确定性，而且比信息熵的计算复杂度更小</strong>，分类问题中，假设有 $K$ 个类，样本点属于第k类的概率为$p_k$，则概率分布的基尼指数定义为</p>
+<script type="math/tex; mode=display">
+\begin{align*}
 Gini(p)&=\sum_{k=1}^{K}p_k(1-p_k)=1-\sum_{k=1}^{K}p_k^2\\
 Gini(D)&=1-\sum_{k=1}^{K}\left ( \frac{|c_k|}{D} \right )^2
 \end{align*}</script><p>如果样本集合 $D$ 根据特征 $A$ 是否取某一可能值 $a$ 被分割成 $D_1$ 和 $D_2$ 两部分，则在特征 $A$ 的条件下，集合 $D$ 的基尼指数定义为</p>
-<script type="math/tex; mode=display">Gini(D,A)=\frac{|D_1|}{D}Gini(D_1)+\frac{|D_2|}{D}Gini(D_2)</script><p>基尼指数 $Gini(D,A)$ 表示集合 $D$ 的不确定性，基尼指数 $Gini(D,A)$ 表示经 $A=a$ 分割后集合 $D$ 的不确定性。基尼指数值越大，样本集合的不确定性也就越强</p>
+<script type="math/tex; mode=display">
+Gini(D,A)=\frac{|D_1|}{D}Gini(D_1)+\frac{|D_2|}{D}Gini(D_2)</script><p>基尼指数 $Gini(D,A)$ 表示集合 $D$ 的不确定性，基尼指数 $Gini(D,A)$ 表示经 $A=a$ 分割后集合 $D$ 的不确定性。基尼指数值越大，样本集合的不确定性也就越强</p>
 <h1 id="决策树生成"><a href="#决策树生成" class="headerlink" title="决策树生成"></a>决策树生成</h1><p>迭代终止条件：</p>
 <ol>
 <li>所有的特征都用了，没有特征可以继续来进行特征选择</li>
@@ -635,8 +646,8 @@ Ent(\tilde{D}) &= -\sum_{k=1}^{\left | \gamma  \right |}\tilde{p_k}log_2\; \tild
 <h2 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h2><p>在某些情况下，可供使用的数据可能缺少某些属性的值。假如$〈x，c(x)〉$是样本集$S$中的一个训练实例，但是其属性$A$的值$A(x)$未知。处理缺少属性值的一种策略是赋给它结点$n$所对应的训练实例中该属性的最常见值；另外一种更复杂的策略是为$A$的每个可能值赋予一个概率。例如，给定一个布尔属性$A$，如果结点$n$包含6个已知$A=1$和4个$A=0$的实例，那么$A(x)=1$的概率是0.6，而$A(x)=0$的概率是0.4。于是，实例$x$的60%被分配到$A=1$的分支，40%被分配到另一个分支。这些片断样例的目的是计算信息增益，另外，如果有第二个缺少值的属性必须被测试，这些样例可以在后继的树分支中被进一步细分。C4.5就是使用这种方法处理缺少的属性值。</p>
 <ol>
 <li>计算属性$A$的增益或者增益率时，如果有些样本没有属性$A$，可以有这么几种处理方式： <br>(1). 忽略这些缺失属性$A$的样本。 <br>(2). 给缺失属性$A$的样本赋予属性$A$一个均值或者最常用的的值。<br>(3). 计算增益或者增益率时根据缺失属性样本个数所占的比率对增益/增益率进行相应的“打折”。 （请看周志华的机器学习）<br>(4). 根据其他未知的属性想办法把这些样本缺失的属性补全。</li>
-<li>当属性$A$已经被选择，该对样本进行分支的时候，如果有些样本缺失了属性$A$,那么： <br>(1).忽略这些样本。 <br>(2).把这些样本的属性$A$赋予一个均值或者最常出现的值，然后再对他们进行处理。<br>(3).把属性缺失样本分配给所有的子集，也就是说每个子集都有这些属性缺失样本。 <br>(4).单独为属性缺失的样本划分一个分支子集。<br>(5).对于缺失属性$A$的样本，尝试着根据其他属性给他分配一个属性$A$的值，然后继续处理将其划分到相应的子集。</li>
-<li>对于一个确实属性$A$的待分类样本，有这么几种解释<br>(1).如果有单独的确实分支，依据此分支<br>(2).把待分类的样本的属性$A$值分配一个最常见出现的$A$的属性值，然后进行分支预测<br>(3).估计其他属性为该待分类样本填充一个属性$A$值，然后进行分支处理<br>(4).在决策树中属性$A$结点的分支上，遍历属性$A$结点的所有分支，探索可能所有的分类结果，然后把这些分类结果结合起来一起考虑，按照概率决定一个分类。<br>(5).待分类样本在到达属性$A$结点时就终止分类，然后根据此时$A$结点所覆盖的叶子节结点类别状况其分配一个发生概率最高的类</li>
+<li>当属性$A$已经被选择，该对样本进行分支的时候，如果有些样本缺失了属性$A$,那么： <br>  (1).忽略这些样本。 <br>  (2).把这些样本的属性$A$赋予一个均值或者最常出现的值，然后再对他们进行处理。<br>  (3).把属性缺失样本分配给所有的子集，也就是说每个子集都有这些属性缺失样本。 <br>  (4).单独为属性缺失的样本划分一个分支子集。<br>  (5).对于缺失属性$A$的样本，尝试着根据其他属性给他分配一个属性$A$的值，然后继续处理将其划分到相应的子集。</li>
+<li>对于一个确实属性$A$的待分类样本，有这么几种解释<br>  (1).如果有单独的确实分支，依据此分支<br>  (2).把待分类的样本的属性$A$值分配一个最常见出现的$A$的属性值，然后进行分支预测<br>  (3).估计其他属性为该待分类样本填充一个属性$A$值，然后进行分支处理<br>  (4).在决策树中属性$A$结点的分支上，遍历属性$A$结点的所有分支，探索可能所有的分类结果，然后把这些分类结果结合起来一起考虑，按照概率决定一个分类。<br>  (5).待分类样本在到达属性$A$结点时就终止分类，然后根据此时$A$结点所覆盖的叶子节结点类别状况其分配一个发生概率最高的类</li>
 </ol>
 
       
@@ -766,7 +777,7 @@ Ent(\tilde{D}) &= -\sum_{k=1}^{\left | \gamma  \right |}\tilde{p_k}log_2\; \tild
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
