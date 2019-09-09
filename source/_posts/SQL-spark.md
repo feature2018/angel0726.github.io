@@ -420,7 +420,7 @@ peopleDS.show();
 // +----+-------+
 ```
 
-## [与RDD互相转换](https://spark-reference-doc-cn.readthedocs.io/zh_CN/latest/programming-guide/sql-guide.html#rdd)？？？？？？
+## [与RDD互相转换](https://spark-reference-doc-cn.readthedocs.io/zh_CN/latest/programming-guide/sql-guide.html#rdd)
 
 Spark SQL 支持两种不同的方法将RDDs 转换成 Datasets.
 

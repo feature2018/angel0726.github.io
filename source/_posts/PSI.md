@@ -18,7 +18,7 @@ permalink: 机器学习/PSI.md
 # 计算
 
 $$
-PSI=\sum_i^n \frac{Ac-Ex}{ln (Ac/Ex)}
+PSI=\sum_i^n {(Ac-Ex)} \times {ln (Ac/Ex)}
 $$
 
 其中：$Ac$是实际占比；$Ex$是期望占比
@@ -32,12 +32,12 @@ $$
 1. 将基准数据集`base`的score划分为10个区间，将测试数据集`test`的score按照相同的边界值划分为10个区间
 2. 分别统计各个分区基准score的个数$B_i$、预测score的个数$T_i$
 3. 分别统计各个分区基准score的个数比例$P_B$、预测score的个数比例$T_B$
-4. 计算 $PSI=\sum \frac{P_B(i)-P_T(i)}{ln(P_B(i)/P_T(i))}$
+4. 计算 $PSI=\sum {\left(P_B(i)-P_T(i) \right)} \times {ln(P_B(i)/P_T(i))}$
 
 ### 特征
 
 1. 将基准数据集`base`的特征划分为10个区间，将测试数据集`test`的特征按照相同的边界值划分为10个区间
 2. 分别统计各个分区基准`feature`的个数$B_i$、预测`feature`的个数$T_i$
 3. 分别统计各个分区基准`feature`的个数比例$P_B$、预测`feature`的个数比例$T_B$
-4. 计算 $PSI=\sum \frac{P_B(i)-P_T(i)}{ln(P_B(i)/P_T(i))}$
+4. 计算 $PSI=\sum {(P_B(i)-P_T(i))} \times {ln(P_B(i)/P_T(i))}$
    

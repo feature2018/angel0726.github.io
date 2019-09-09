@@ -134,3 +134,5 @@ categories: Hadoop
 ![img](MapReduce/14019352-0c530b046636edd0.webp)
 
 # [Hive](./hive.md)
+
+有了`MapReduce`之后，程序员发现，`MapReduce`的程序写起来真麻烦。他们希望简化这个过程。这就好比你有了汇编语言，虽然你几乎什么都能干了，但是你还是觉得繁琐。你希望有个更高层更抽象的语言层来描述算法和数据处理流程。于是就有了`Pig`和`Hive`。`Pig`是接近脚本方式去描述`MapReduce`，`Hive`则用的是`SQL`。它们把脚本和`SQL`语言翻译成`MapReduce`程序，丢给计算引擎去计算，而你就从繁琐的`MapReduce`程序中解脱出来，用更简单更直观的语言去写程序了。
