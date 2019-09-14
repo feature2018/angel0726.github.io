@@ -127,7 +127,7 @@ object对象包括Blob对象、Tree对象与Commit对象，对象的所有索引
 
 ![img](git原理/164217_rcn1_3452433.png)
 
-<center>分支合并</center>>
+<center>分支合并</center>
 ## 远程分支
 
 | 命令        | 注释 | 备注                       |

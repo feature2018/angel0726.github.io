@@ -41,12 +41,6 @@ categories: python
 
 
 
-# [matplotlib](https://matplotlib.org/index.html)
-
-https://serverpoolauth.ops.ctripcorp.com
-
-
-
 
 
 # numpy
@@ -71,7 +65,7 @@ https://serverpoolauth.ops.ctripcorp.com
 
 | 命令                           | 说明                                                         |
 | ------------------------------ | ------------------------------------------------------------ |
-| `df.iloc[]`                    | 指定行                                                       |
+| `df.iloc[num]`                 | 指定行。`df.iloc[0]`指定第一行                               |
 | `df(df.b.isin([5,13]))`        | 删除`b`列包含`5、13`的列                                     |
 | `df['add_column']=1`           | `df`添加列`add_column`                                       |
 | `df.drop()`                    | 删除行或者列<br>`labels`：删除的行或者列名<br>`axis`：行->0；列->1<br>`index` ：直接指定要删除的行<br/>`columns `：直接指定要删除的列<br/>`inplace=False`：默认该删除操作不改变原数据，而是返回一个执行删除操作后的新`dataframe`；<br/>`inplace=True`：则会直接在原数据上进行删除操作，删除后无法返回。 |
@@ -83,6 +77,50 @@ https://serverpoolauth.ops.ctripcorp.com
 | `df.T`                         | `DataFrame`转置                                              |
 | `df.merge()`                   | 类似于数据库的`join`,返回`DataFrame`                         |
 | `df['列名'].tolist()`          | 将列转换为`list`                                             |
+
+
+
+# [matplotlib](https://matplotlib.org/index.html)
+
+https://serverpoolauth.ops.ctripcorp.com
+
+
+
+# sklearn
+
+
+
+## [特征工程](https://scikit-learn.org/stable/modules/preprocessing.html#k-bins-discretization)
+
+```python
+from sklearn.preprocessing import *
+```
+
+| 命令               | 说明                                                         |
+| ------------------ | ------------------------------------------------------------ |
+|                    |                                                              |
+|                    |                                                              |
+| `KBinsDiscretizer` | -&nbsp;对数据进行分箱（离散化） ,不能处理空值<br>-&nbsp;返回`np.array`数据<br>-&nbsp;参数 <br>&nbsp;&nbsp;n_bins:分箱的数量，默认值是5，也可以是列表，指定各个特征的分箱数量，例如，[feature1_bins,feature2_bins,...]<br> |
+
+
+
+n_bins：分箱的数量，默认值是5，也可以是列表，指定各个特征的分箱数量，例如，[feature1_bins,feature2_bins,...]
+
+encode：编码方式，{‘onehot’, ‘onehot-dense’, ‘ordinal’}, (default=’onehot’)
+
+- onehot：以onehot方式编码，返回稀疏矩阵
+- onehot-dense：以onehot方式编码，返回密集矩阵
+- ordinal：以ordinal方式编码，返回分箱的序号
+
+strategy：定义分箱宽度的策略，{‘uniform’, ‘quantile’, ‘kmeans’}, (default=’quantile’)
+
+- uniform：每个分箱等宽
+- quantile：每个分箱中拥有相同数量的数据点
+- kmeans：每个箱中的值具有与1D k均值簇最近的中心
+
+
+
+
 
 # 其他
 

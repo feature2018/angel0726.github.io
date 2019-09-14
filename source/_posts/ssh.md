@@ -5,6 +5,25 @@ tags: [git,分布式]
 categories: 远程登陆
 ---
 
+# 生成ssh密钥对
+
+```shell
+ssh-keygen -t rsa -C 'xxx@xxx.com'
+```
+
+按3次回车（不使用密码）生成下图。密钥对在`~/.ssh`文件夹中,将`id_rsa.pub`（公钥）提交到github或者gitlab中
+
+![1568460515778](ssh/1568460515778.png)
+
+# 安装ssh
+
+```shell
+sudo apt-get install openssh-client  #客户端 类似于xshell，登陆服务器
+sudo apt-get install openssh-server  #服务端 用于服务器，让其他客户端远程登陆
+```
+
+
+
 # 远程登陆服务器
 
 ## shell脚本远程自动登陆服务器
