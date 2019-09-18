@@ -161,6 +161,20 @@ git分为工作区、暂存器和版本库。
   </tr>
 </table>
 
+# .gitignore
+
+添加到`.gitignore`中的文件，不会被添加到暂存区，因此不会被保存到版本库中，进而不会存在版本管理。在不同文件夹下建立`.gitignore`可以忽略不同的文件。
+
+```shell
+├── .vscode   
+├── feture        
+│   ├── dev.py
+│   └── test            #测试文件夹
+│   │   ├── test_dev.py #本地仓库对应分支所有操作
+│   └── .gitignore      #写入test/ 可以忽略同级目录下test的文件夹 
+├── .gitignore   #写入.vscode/ 可以忽略同级目录下.vscode的文件夹   
+```
+
 
 
 # 远程
