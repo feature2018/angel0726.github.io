@@ -27,8 +27,8 @@ Hadoop Release:2.7.4
 3. 将`jdk`安装在`usr/java`当中
 
    ```shell
-   mkdir /usr/java   #创建/usr/java文件夹
-   mv /home/cmfchina/jdk1.8.0_131 /usr/java  #将jdk1.8.0_131移动到/usr/java文件夹
+   mkdir /opt/java   #创建/usr/java文件夹
+   mv /home/cmfchina/jdk1.8.0_131 /opt/java  #将jdk1.8.0_131移动到/opt/java文件夹
    ```
 
    ![img](linux子系统安装spark/506829-20170927215620215-1679478260.png)
@@ -36,7 +36,7 @@ Hadoop Release:2.7.4
 4. 修改环境变量，使用`vim /etc/profile`并在末尾添加如下内容，并使用`source /etc/profile`让命令`profile`
 
    ```shell
-   export JAVA_HOME=/usr/java/jdk1.8.0_131
+   export JAVA_HOME=/opt/java/jdk1.8.0_131
    export JRE_HOME=${JAVA_HOME}/jre
    export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
    export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
@@ -61,21 +61,22 @@ Hadoop Release:2.7.4
    tar  -zxvf  scala-2.12.2.tgz
    ```
 
-3. 将`scala`安装在`usr/scala`当中
+3. 将`scala`安装在opt/scala`当中
 
    ```shell
-   mkdir /usr/scala 
+   mkdir /opt/scala 
    mv scala-2.12.2 /usr/scala
    ```
 
 4. 配置Scala环境变量
    ```shell
-   export  SCALA_HOME=/opt/scala/scala-2.12.2
+   export SCALA_HOME=/opt/scala/scala-2.12.2
+   export PATH=$PATH:${SCALA_HOME}/bin
    ```
    在该文件的PATH变量中增加下面的内容`{SCALA_HOME}/bin`
    
-   ![1566379770191](linux子系统安装spark/1566379770191.png)
-
+![1566379770191](linux子系统安装spark/1566379770191.png)
+   
 5. 运行环境变量
 
    ```
@@ -85,7 +86,7 @@ Hadoop Release:2.7.4
 6. 测试Scala是否安装成功
 
    ```
-   scala    -version
+   scala -version
    ```
 
 # ssh免密登陆

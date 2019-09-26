@@ -1,7 +1,7 @@
 ---
 title: linux子系统-win10
 date: 2019-08-05 17:29:40
-tags: [操作系统,开发环境,WSL]
+tags: [操作系统,WSL]
 categories: linux
 ---
 

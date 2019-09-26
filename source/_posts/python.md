@@ -39,7 +39,15 @@ categories: python
 |             |      |
 |             |      |
 
+# os
 
+## environ()函数
+
+|                     |                 |
+| ------------------- | --------------- |
+| os.environ['USER']  | 当前使用用户    |
+| os.environ['SHELL'] | 使用shell的类型 |
+| os.environ['LAN']   | 使用的语言      |
 
 
 
